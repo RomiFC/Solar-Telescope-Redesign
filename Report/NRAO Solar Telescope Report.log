@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.9)  21 JUN 2023 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.9)  23 JUN 2023 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,45 +376,105 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip65
 \backup@length=\skip66
 \ar@cellbox=\box68
-) (c:/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2023/02/11{} The CircuiTikz circuit drawing package version 1.6.1
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen274
+\pgfarrowlength=\dimen275
+\pgfarrowwidth=\dimen276
+\pgfarrowlinewidth=\dimen277
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgftransformnonlinearflatness=\dimen278
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@curvilinear@time@a=\dimen279
+\pgf@curvilinear@length@a=\dimen280
+\pgf@curvilinear@length@b=\dimen281
+\pgf@curvilinear@length@c=\dimen282
+\pgf@curvilinear@length@d=\dimen283
+)
+\pgf@arrows@the@rigidity=\dimen284
+)) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count300
+\pgf@circ@count@b=\count301
+\pgf@circ@count@c=\count302
+\pgf@circ@res@up=\dimen285
+\pgf@circ@res@down=\dimen286
+\pgf@circ@res@zero=\dimen287
+\pgf@circ@res@left=\dimen288
+\pgf@circ@res@right=\dimen289
+\pgf@circ@res@other=\dimen290
+\pgf@circ@res@step=\dimen291
+\pgf@circ@res@temp=\dimen292
+\pgf@circ@Rlen=\dimen293
+\pgf@circ@scaled@Rlen=\dimen294
+\pgfstartlinewidth=\dimen295
+) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box69
+) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count303
+) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen296
+) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (c:/texlive/2023/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) (c:/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count300
-\c@@ppsavesec=\count301
-\c@@ppsaveapp=\count302
+\c@@pps=\count304
+\c@@ppsavesec=\count305
+\c@@ppsaveapp=\count306
+) (c:/texlive/2023/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks44
+\minrowclearance=\skip67
+\rownum=\count307
+) (c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip68
+\enit@outerparindent=\dimen297
+\enit@toks=\toks45
+\enit@inbox=\box70
+\enit@count@id=\count308
+\enitdp@description=\count309
 ) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count303
-\l__pdf_internal_box=\box69
+\l__color_backend_stack_int=\count310
+\l__pdf_internal_box=\box71
 ) (./NRAO Solar Telescope Report.aux)
 \openout1 = `"NRAO Solar Telescope Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
-\scratchdimen=\dimen274
-\scratchbox=\box70
-\nofMPsegments=\count305
-\nofMParguments=\count306
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count307
-\MPscratchDim=\dimen275
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count311
+\scratchdimen=\dimen298
+\scratchbox=\box72
+\nofMPsegments=\count312
+\nofMParguments=\count313
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen299
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
+\everyMPtoPDFconversion=\toks47
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -426,7 +486,7 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 <images/NRAO Logo Badge.png, id=4, 391.4625pt x 391.4625pt>
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 40.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 47.
 (pdftex.def)             Requested size: 142.26378pt x 142.26439pt.
 [1
 
@@ -434,58 +494,39 @@ Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 40.
 \tf@toc=\write4
 \openout4 = `"NRAO Solar Telescope Report.toc"'.
 
+ (./NRAO Solar Telescope Report.lof)
+\tf@lof=\write5
+\openout5 = `"NRAO Solar Telescope Report.lof"'.
+
+ [1]
+Underfull \hbox (badness 2409) in paragraph at lines 78--78
+[]|\OT1/cmr/m/n/10 Desiderata for So-lar Ob-serv-ing with the
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.54448pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.54448pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-10.54448pt}.
-
-[1]
-Overfull \hbox (19.80664pt too wide) in paragraph at lines 67--73
+Overfull \hbox (19.80664pt too wide) in paragraph at lines 75--83
  [] 
  []
 
 
-Overfull \hbox (19.80664pt too wide) in paragraph at lines 78--84
+Overfull \hbox (19.80664pt too wide) in paragraph at lines 88--95
  [] 
  []
 
-(./NRAO Solar Telescope Report.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 23.
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.54448pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.54448pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-10.54448pt}.
-
-[2]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.54448pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.54448pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-10.54448pt}.
-
-[3] (./NRAO Solar Telescope Report.aux) ) 
+[2] [3] [4] (./NRAO Solar Telescope Report.bbl) [5] (./NRAO Solar Telescope Report.aux) ) 
 Here is how much of TeX's memory you used:
- 23086 strings out of 476017
- 604527 string characters out of 5793761
- 1860660 words of memory out of 5000000
- 43189 multiletter control sequences out of 15000+600000
- 515211 words of font info for 42 fonts, out of 8000000 for 9000
+ 40109 strings out of 476017
+ 1114329 string characters out of 5793761
+ 1870660 words of memory out of 5000000
+ 60128 multiletter control sequences out of 15000+600000
+ 517484 words of font info for 50 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 102i,11n,104p,812b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "NRAO Solar Telescope Report.pdf" (4 pages, 127471 bytes).
+ 102i,15n,104p,940b,932s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "NRAO Solar Telescope Report.pdf" (6 pages, 231489 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

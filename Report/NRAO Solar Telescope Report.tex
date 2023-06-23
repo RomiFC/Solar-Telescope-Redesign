@@ -1,6 +1,7 @@
 
-
 \documentclass[titlepage]{article}
+\setlength{\headheight}{23pt}
+\addtolength{\topmargin}{-11pt}
 
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -10,29 +11,35 @@
 \usepackage{amsmath}
 \usepackage{url}
 \hyphenation{op-tical net-works semi-conduc-tor}	% Correct bad hyphenation
-\usepackage{graphicx}  % For including figures and pictures
-\usepackage{float}  % Used to fix location of images i.e.\begin{figure}[H]
+\usepackage{graphicx}   % For including figures and pictures
+\usepackage{float}      % Used to fix location of images i.e.\begin{figure}[H]
 \usepackage{fancyhdr}   % For headers and footers
 \pagestyle{fancy}
 \usepackage{titling}    % To reference title, author, and date
 \usepackage{array}      % For fixed-width tables
+\usepackage{circuitikz} % Used to draw circuit and block diagrams
 \usepackage{appendix}   
+\usepackage{colortbl}   % For coloring table cells
+\usepackage{enumitem}   % For formatting enumerated lists
+\setenumerate[1]{label={(\arabic*)}}
 
-% TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS,
+
+% ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
 \title{Redesign of the Visitor Center Solar Telescope}
 \author{Remy Nguyen
     }% <-this % stops a space
 \date{June 21, 2023}
-\def\docnum{Assign Here}
-\def\status{Draft}
+\def\docnum{[Assign Here]}
+\def\status{\textcolor{red}{Draft}}
 
 % HEADERS AND FOOTERS
 % If title is too long, write in text and use \\ to make line breaks
-\fancyhead[L]{\textit{\thetitle} \\ \textit{NRAO Doc. \#: \docnum}}
+\fancyhead[L]{\textit{\thetitle} \\ \textit{NRAO Doc. \#:} \docnum}
 \fancyhead[R]{\textit{\theauthor} \\ \thedate}
 
  % DOCUMENT STARTS HERE
 \begin{document}
+\definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
 
 \begin{titlepage}
 \begin{center}
@@ -41,33 +48,36 @@
      \vspace*{0.5cm}
      \textbf{\Huge\thetitle} \\
      \vspace*{0.5cm}
-     \large\docnum \\
+     \large\docnum\\
      \huge Status: \status
-     
 \end{center}
 \end{titlepage}
 
+
 \tableofcontents
+\listoffigures
 \thispagestyle{fancy}
 \newpage
         
 \section{Introduction}
-Located behind the Visitor Center at the Very Large Array (VLA) is a telescope that converts RF solar energy into a DC voltage through amplification. It was originally constructed in 2013 and is no longer functioning as of June 2023. Weathered components and lack of sufficient documentation to repair the telescope to its original state has warranted a redesign of the entire system to be more appealing to visitors and resistant to wear.
 
 \subsection{Purpose}
-
+Located behind the Visitor Center at the Very Large Array (VLA) is a radio telescope that converts RF solar energy into a DC voltage through amplification. It was originally constructed in 2013 and is no longer functioning as of June 2023. Weathered components and lack of sufficient documentation to repair the telescope to its original state has warranted a redesign of the entire system to be more appealing to visitors and resistant to wear.
 
 \subsection{Scope}
-The heart of the telescope is an X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Additionally, DC power is supplied through a +28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
+This document will describe the design choices made in development of the new solar telescope. Calculations and experiments to support design decisions will be demonstrated along with constraints and requirements.
+
 
 \section{Related Documents and Drawings}
 \subsection{Applicable Documents}
 The following documents may not be directly referenced herin, but may provide necessary context or supporting material.
 \begin{center}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
+    \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No. \\ \hline
-    AD01 & Title 1 & 0001 \\
-    AD02 & Title 2 & 0002 \\
+    AD01 & Desiderata for Solar Observing with the EVLA & EVLAM\_70 \\ 
+    \hline
+    AD02 & EVLA Hardware Modifications in Support of Solar Observing & EVLAM\_72 \\
     \hline
 \end{tabular}
 \end{center}
@@ -76,21 +86,88 @@ The following documents may not be directly referenced herin, but may provide ne
 The following documents are referenced within this text:
 \begin{center}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
+    \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No. \\ \hline
-    AD01 & Title 1 & 0001 \\
-    AD02 & Title 2 & 0002 \\
+    RD01 & Title 1 & 0001 \\
+    RD02 & Title 2 & 0002 \\
     \hline
 \end{tabular}
 \end{center}
 
-\section{Heading 1}
+\section{System Overview}
+The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Additionally, power is supplied through a 28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
+
+The system consists of a gain block to amplify the antenna signal, a bandpass filter, a rectifier to convert the RF signal into a DC voltage, and a voltmeter that provides feedback for the user. A simplified block diagram is shown in Fig.~\ref{fig:block1} that shows what is required to convert the signal to a DC voltage.
+
+\subsection{Requirements}
+As a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
+\begin{enumerate}
+    \item Utilizes a transparent enclosure or panel to view electronics, ideally one which does not yellow or fade easily.
+    \item Must be dustproof and resilient to accumulation of debris inside the enclosure while still venting heat from electronics.
+    \item Use readily available parts when possible to keep costs low.
+    \item Electronics must be powered by 28 VDC and be easily serviceable.
+\end{enumerate}
 
 
-\subsection{Heading 2}
+\section{Design Constraints and Calculations}
+The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements are to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
+
+\begin{figure}
+\begin{center}
+\begin{circuitikz} \draw
+    (0, 0) node[rxantenna, xscale=-1, label = X-band feed]{}
+    to[amp = LNA]++(4, 0)
+    to[bandpass = 7.8--8.9 GHz]++(1,0)
+    to[empty Schottky diode = Rectifier]++(3,0)
+    to[capacitor]++(0, -2)
+    (8,-2) node[tlground]{};
+    \draw (8, 0)
+    to[short = DC Out, -o]++(1,0);
+\end{circuitikz}
+\caption{Solar RF energy to DC voltage block diagram}
+\label{fig:block1}
+\end{center}
+\end{figure}
+
+\subsection{Calculating Antenna Input Power}
+In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a certain dynamic range but antenna input power may vary daily and annualy depending on solar cycle\cite[Fig.~2]{solartemp}.
+
+The first step will be to determine the range of antenna input power when pointed at the sun. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
+\begin{equation}
+    P_R = S A_e \Delta f
+\label{eq:power}
+\end{equation}
+where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\cite[eq.~(41-2)]{aeh}. Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
+\begin{equation} \label{eq:ae}
+\begin{split}
+    A_e &= \frac{\lambda^2}{4\pi}G \\
+    &= \frac{\pi d^2}{4} \eta_a
+\end{split}
+\end{equation}
+where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\cite[pg.~(15-27)]{aeh}\cite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximated value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\cite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
+
+Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:block1}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
+
+Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\cite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\cite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\cite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
+\begin{table}[!ht]
+\centering
+\begin{tabular}{c|c|c|c}
+    & $S_{min}$ & $S_{\mu}$ & $S_{max}$ \\ \hline
+    2.8 GHz & 70 SFU & 150 SFU & 280 SFU \\
+    8.8 GHz & 152 SFU & 326 SFU & 608 SFU
+\end{tabular}
+\label{tab:sfd}
+\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\cite{solartemp} at 2.8 GHz by a factor of 2.17.}
+\end{table}
+
+With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{min}$ and $S_{max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\cite{sfd1986}.
 
 
-\subsubsection{Heading 3}
+\subsubsection{Antenna Power Measurements}
+In order to confirm these calulations, the antenna was connected to a 
 
+
+\section{System Architecture}
 
 \appendix
 \section{Appendix Title}
