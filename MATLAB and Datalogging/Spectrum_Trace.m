@@ -14,7 +14,7 @@ tiledlayout('flow')
 nexttile
 plot(freq, pwr, freq, avgpwr, freq, noisepwr, 'LineWidth', 1.5);
 grid on
-title('Spectrum Analyzer Plot: Mean Signal Power = ', mean(pwr))
+title('Spectrum Analyzer Plot: Mean Signal Power (dBm) = ', mean(pwr))
 axis([freq(1, 1) freq(end, 1) -110 -85])
 legend('Incident Power', 'Averaged Power', 'Noise Power')
 xlabel('Frequency (MHz)')

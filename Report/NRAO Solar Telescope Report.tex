@@ -3,6 +3,7 @@
 \setlength{\headheight}{23pt}
 \addtolength{\topmargin}{-11pt}
 
+\usepackage{geometry}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -40,16 +41,53 @@
  % DOCUMENT STARTS HERE
 \begin{document}
 \definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
+\setlength{\leftmargin}{1in}
+\setlength{\rightmargin}{1in}
 
 \begin{titlepage}
 \begin{center}
-     \vspace*{1cm}
      \includegraphics[width=5cm]{images/NRAO Logo Badge.png} \\
      \vspace*{0.5cm}
      \textbf{\Huge\thetitle} \\
      \vspace*{0.5cm}
      \large\docnum\\
-     \huge Status: \status
+     \huge Status: \status \\
+     \vspace*{1cm} \large
+     % FIRST TABLE HERE
+     \begin{tabular}{|m{6.5cm}|m{5cm}|m{2cm}|} \hline
+        \rowcolor{nraoblue}
+        \textbf{Prepared By} & \textbf{Organization} & \textbf{Date} \\ \hline
+        R. Nguyen & NRAO Electronics Div. & 6/21/2023 \\ 
+        \hline
+    \end{tabular} \\
+    \vspace*{1cm}
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|} \hline
+        \rowcolor{nraoblue}
+        \textbf{Approvals} & \textbf{Organization} & \textbf{Signatures} \\ \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.5}
+    % CONTENT OF SECOND TABLE HERE
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|}
+        T. Mobraten & NRAO Electronics Division &  \\ 
+        \hline
+        S. Wimbrow & NRAO Electronics Division &  \\ 
+        \hline
+        D. Schafer & NRAO Electronics Division &  \\ 
+        \hline
+    \end{tabular} \\
+    \renewcommand{\arraystretch}{1}
+    \vspace*{1cm}
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|} \hline
+        \rowcolor{nraoblue}
+        \textbf{Released By} & \textbf{Organization} & \textbf{Signature} \\ \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{2}
+    % CONTENT OF THIRD TABLE HERE
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|}
+        D. Schafer & NRAO Electronics Division &  \\ 
+        \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
 \end{center}
 \end{titlepage}
 
@@ -95,7 +133,7 @@ The following documents are referenced within this text:
 \end{center}
 
 \section{System Overview}
-The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Additionally, power is supplied through a 28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
+The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a 28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
 The system consists of a gain block to amplify the antenna signal, a bandpass filter, a rectifier to convert the RF signal into a DC voltage, and a voltmeter that provides feedback for the user. A simplified block diagram is shown in Fig.~\ref{fig:block1} that shows what is required to convert the signal to a DC voltage.
 
@@ -109,20 +147,24 @@ As a visitor center attraction, the device must be engaging and appealing to vis
 \end{enumerate}
 
 
+\section{System Architecture}
+
+
 \section{Design Constraints and Calculations}
 The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements are to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
 
 \begin{figure}
 \begin{center}
 \begin{circuitikz} \draw
-    (0, 0) node[rxantenna, xscale=-1, label = X-band feed]{}
-    to[amp = LNA]++(4, 0)
-    to[bandpass = 7.8--8.9 GHz]++(1,0)
-    to[empty Schottky diode = Rectifier]++(3,0)
+    (0, 0) node[rxantenna, xscale=-1, label = {[xshift=-1.4cm, yshift=-0.5cm]X-band feed}]{}
+    to[amp = LNA]++(2, 0)
+    to[bandpass = Filter, a =, n=bpf]++(2,0)
+    to[empty Schottky diode = Rectifier]++(2,0)
+    to[short]++(0.5,0)
     to[capacitor]++(0, -2)
-    (8,-2) node[tlground]{};
-    \draw (8, 0)
-    to[short = DC Out, -o]++(1,0);
+    (6.5,-2) node[tlground]{};
+    \draw (6.5,0)
+    to[short = DC Out, -o]++(1.5,0);
 \end{circuitikz}
 \caption{Solar RF energy to DC voltage block diagram}
 \label{fig:block1}
@@ -164,10 +206,22 @@ With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the anten
 
 
 \subsubsection{Antenna Power Measurements}
-In order to confirm these calulations, the antenna was connected to a 
+In order to confirm these calulations, the antenna was connected to an Anritsu Model MS2720T/720 Spectrum Analyzer centered at 8.4 GHz spanning 100 MHz and pointed towards the sun.
+\begin{figure}[H]%[!ht]
+\begin {center}
+\includegraphics[width=0.65\textwidth]{images/specan1.png}
+\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs. Resolution bandwidth is 100 kHz.}
+\label{fig:specan1}
+\end {center}
+\end{figure}
+The Anritsu is not capable of performing channel power measurements, so, assuming the mean signal power in Fig.~\ref{fig:specan1} can be extrapolated to the entire receiver bandwidth, channel power is calculated as follows:
+\begin{align*}
+    P_R &= P_{\mu} - G_{dB} - \left(RBW\right)_{dB} + \left(BW\right)_{dB}\\
+        &= -92.6\ \text{dBm} - 30 - 50 + 90.4\\
+        &= -82.2\ \text{dBm}
+\end{align*}
+This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency.
 
-
-\section{System Architecture}
 
 \appendix
 \section{Appendix Title}
