@@ -1,0 +1,1 @@
+This directory contains KiCad files for the PCB. The PCB contains a 15V/5V 1A power supply, an ADL5902 power detector, and a dual LM358 non-inverting amplifier. It was designed to allow users to utilize the individual stages on projects outside of this application.
