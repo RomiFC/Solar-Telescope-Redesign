@@ -1270,6 +1270,10 @@
     (stroke (width 0) (type default))
     (uuid 314d82cc-4e7c-4f58-8ae2-355cec037c50)
   )
+  (wire (pts (xy 190.5 71.12) (xy 190.5 80.01))
+    (stroke (width 0) (type default))
+    (uuid 33af7c1f-c0c6-4a50-8a62-8e52aa2a172a)
+  )
   (wire (pts (xy 69.85 158.75) (xy 77.47 158.75))
     (stroke (width 0) (type default))
     (uuid 391e1560-2733-4590-80b1-59bb3a1cc58d)
@@ -1544,7 +1548,7 @@
     (uuid ffb63587-45ad-477f-ab6b-be51339febd5)
   )
 
-  (text "6/26/2023" (at 207.01 194.31 0)
+  (text "6/28/2023" (at 207.01 194.31 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 115004c5-5b21-4c16-98a3-cc88203a266f)
   )
@@ -1609,10 +1613,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "+15VDC" (shape input) (at 140.97 49.53 180) (fields_autoplaced)
+  (global_label "GND" (shape input) (at 140.97 55.88 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 2af53d7d-e9b9-46ea-8e86-531ab7f3bcf8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 130.4442 49.53 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 55.88 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1627,6 +1631,13 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 39aa6a21-57f8-4d73-a787-bae209b145cf)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 238.6362 143.51 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "RFIN" (shape input) (at 190.5 71.12 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 3dad6827-1e7b-499e-9476-38db65a33cc9)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 183.3003 71.12 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1651,10 +1662,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "+5VDC" (shape input) (at 140.97 54.61 180) (fields_autoplaced)
+  (global_label "+5VDC" (shape input) (at 140.97 50.8 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 552555aa-50ed-40e6-8561-12e772686692)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 131.6537 54.61 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 131.6537 50.8 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1679,10 +1690,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "Vin" (shape input) (at 140.97 44.45 180) (fields_autoplaced)
+  (global_label "GND" (shape input) (at 140.97 60.96 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 6f4b0793-1d96-4be9-953c-45f34f9f494f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 135.2218 44.45 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 60.96 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1707,10 +1718,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "+15VDC" (shape input) (at 140.97 46.99 180) (fields_autoplaced)
+  (global_label "GND" (shape input) (at 140.97 58.42 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 741add2a-1b8f-42fb-b6f3-49e6d4463d04)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 130.4442 46.99 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 58.42 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1728,10 +1739,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "GND" (shape input) (at 140.97 59.69 180) (fields_autoplaced)
+  (global_label "+15VDC" (shape input) (at 140.97 45.72 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 84bb154c-970b-46f9-bc6a-17aceebc2572)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 59.69 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 130.4442 45.72 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1784,10 +1795,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "GND" (shape input) (at 140.97 62.23 180) (fields_autoplaced)
+  (global_label "Vin" (shape input) (at 140.97 43.18 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid bd0fb6b8-c3bd-40c6-a2b5-f6b66538ea7c)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 62.23 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 135.2218 43.18 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1805,17 +1816,17 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "GND" (shape input) (at 140.97 57.15 180) (fields_autoplaced)
+  (global_label "+15VDC" (shape input) (at 140.97 48.26 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid e3ce696c-fb41-4418-8940-1c94af765a7b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.1937 57.15 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 130.4442 48.26 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "+5VDC" (shape input) (at 140.97 52.07 180) (fields_autoplaced)
+  (global_label "+5VDC" (shape input) (at 140.97 53.34 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid f86fb8a1-5f0d-4b08-abdc-38c77ce41bfa)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 131.6537 52.07 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 131.6537 53.34 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1845,7 +1856,7 @@
     (pin "1" (uuid ccdce807-4df9-4260-b35f-2c8310b0180b))
     (pin "2" (uuid 312db99a-0b15-4a86-b7b4-843e48b130a5))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J6") (unit 1)
         )
@@ -1870,7 +1881,7 @@
     )
     (pin "1" (uuid 98aae126-de5c-4355-b8c0-eda6ba1137d4))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#FLG01") (unit 1)
         )
@@ -1896,7 +1907,7 @@
     (pin "1" (uuid 4e2f2f15-8e51-467f-be68-987ebcf68669))
     (pin "2" (uuid 31b0a125-616d-4614-ad47-2b5161b32194))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R1") (unit 1)
         )
@@ -1921,7 +1932,7 @@
     )
     (pin "1" (uuid e7506a9f-c3a6-468f-9a5e-7f271bf47040))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR04") (unit 1)
         )
@@ -1947,7 +1958,7 @@
     (pin "1" (uuid 04d5a266-e143-4ac1-8ead-57726b5e969e))
     (pin "2" (uuid 33adae74-044f-4d13-ba16-91eff9bf2bcc))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C9") (unit 1)
         )
@@ -1979,7 +1990,7 @@
     (pin "4" (uuid 3c54978c-de68-429c-835d-35b33fc54657))
     (pin "8" (uuid 13807296-d770-49d3-84b7-d76d585c1be5))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 3)
         )
@@ -2006,7 +2017,7 @@
     (pin "2" (uuid 09709b48-4d5e-4ad9-8ecf-2d8687dda88b))
     (pin "3" (uuid bd0422ee-f3ad-464f-b957-ffef19c646c0))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U1") (unit 1)
         )
@@ -2032,7 +2043,7 @@
     (pin "1" (uuid bfaa9c14-17c8-4fea-bc6e-0432a85df13c))
     (pin "2" (uuid e0f2a534-63b1-486c-8c18-4aa124fa6bf7))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "D1") (unit 1)
         )
@@ -2058,7 +2069,7 @@
     (pin "1" (uuid e1dd77b9-96a2-4584-a085-46757acaaf92))
     (pin "2" (uuid a5c225f2-ff32-4cec-aa41-810545bc3ec7))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R9") (unit 1)
         )
@@ -2083,7 +2094,7 @@
     )
     (pin "1" (uuid ce9c6d70-8c91-43f7-818e-b66bfff31d21))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#FLG02") (unit 1)
         )
@@ -2109,7 +2120,7 @@
     (pin "1" (uuid 3de3982d-9faf-4605-bbac-46892d5d6ae6))
     (pin "2" (uuid 60921073-9766-4b5e-8905-39edf50f2627))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J4") (unit 1)
         )
@@ -2135,7 +2146,7 @@
     (pin "1" (uuid 5f5179e3-293f-4243-912d-058586d9595a))
     (pin "2" (uuid bb05e2a3-6a8d-4591-8216-72308ffd7bcf))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "Rf1") (unit 1)
         )
@@ -2161,7 +2172,7 @@
     (pin "1" (uuid fd72d296-7e36-42df-a246-62165069eba8))
     (pin "2" (uuid a70c3d79-50bc-4d84-a428-7377c60a3ce9))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R3") (unit 1)
         )
@@ -2186,7 +2197,7 @@
     )
     (pin "1" (uuid 74ac34cd-23cc-4d55-815c-79edf874a79c))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR01") (unit 1)
         )
@@ -2211,7 +2222,7 @@
     )
     (pin "1" (uuid ba6358b9-2756-4900-ba6a-e49437f98f98))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR016") (unit 1)
         )
@@ -2236,7 +2247,7 @@
     )
     (pin "1" (uuid 4832dfb6-2db3-4ea9-934f-c492778b7755))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR09") (unit 1)
         )
@@ -2262,7 +2273,7 @@
     (pin "1" (uuid 852a4d5f-10fb-4511-b67a-14aa0edc2bf8))
     (pin "2" (uuid 0392f1b5-9f22-4af0-ae1e-7721486cbaf2))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R6") (unit 1)
         )
@@ -2287,7 +2298,7 @@
     )
     (pin "1" (uuid 0c8cf8b2-286e-486e-8268-3822cc37a81e))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR03") (unit 1)
         )
@@ -2312,7 +2323,7 @@
     )
     (pin "1" (uuid d1b3a257-9a0e-4e05-a089-343c1f614fae))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR08") (unit 1)
         )
@@ -2337,7 +2348,7 @@
     )
     (pin "1" (uuid dc884796-cc10-4282-bb0a-69472a6d3936))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR017") (unit 1)
         )
@@ -2363,7 +2374,7 @@
     (pin "1" (uuid d0c462a9-6d34-4a91-94e9-7bd2242a59d0))
     (pin "2" (uuid 6233af10-e554-4a6c-a23c-256bddcc806d))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C4") (unit 1)
         )
@@ -2388,7 +2399,7 @@
     )
     (pin "1" (uuid 3107807c-c673-40ab-9cfe-4a44a6caa3fb))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR012") (unit 1)
         )
@@ -2415,7 +2426,7 @@
     (pin "2" (uuid 7917a0c1-ec43-42fb-83e2-2a499a8a37ce))
     (pin "3" (uuid 53130151-aa6b-4ebb-a4b8-d1f3d7db2447))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R_pot2") (unit 1)
         )
@@ -2440,7 +2451,7 @@
     )
     (pin "1" (uuid f2a65c61-f4a2-4b5e-8ecb-46eb340336e0))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR05") (unit 1)
         )
@@ -2451,7 +2462,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x01") (at 251.46 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 70b8b925-f3f2-4e36-8983-867cc2609385)
-    (property "Reference" "J8" (at 254 142.24 0)
+    (property "Reference" "J2" (at 254 142.24 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x01" (at 254 144.78 0)
@@ -2465,9 +2476,9 @@
     )
     (pin "1" (uuid e672d519-1608-4506-9bb1-5f6e405d98bf))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
-          (reference "J8") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -2491,7 +2502,7 @@
     (pin "1" (uuid 2c3521b7-2048-40da-a4ec-ff7ab76b4f03))
     (pin "2" (uuid ef73c988-6047-4fbb-b140-b975095b687f))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C10") (unit 1)
         )
@@ -2517,7 +2528,7 @@
     (pin "1" (uuid 04bd8993-b735-4c2b-b487-201a45b9e67c))
     (pin "2" (uuid ad026def-522a-4950-9411-6d783578711e))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R2") (unit 1)
         )
@@ -2544,7 +2555,7 @@
     (pin "2" (uuid 19c8f59e-8ce7-4c98-b243-51b08b62d85d))
     (pin "3" (uuid 3de8a8e9-66e1-4ede-bc85-22cf6bfa8d98))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R_pot1") (unit 1)
         )
@@ -2569,7 +2580,7 @@
     )
     (pin "1" (uuid e06e3dc7-9eee-4d23-9669-70f03f2c7a81))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR07") (unit 1)
         )
@@ -2595,7 +2606,7 @@
     (pin "1" (uuid 615066ab-bf84-441d-909e-eb682cf0f3ae))
     (pin "2" (uuid 618dfb10-d002-4725-92ce-cf57db8abedb))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R11") (unit 1)
         )
@@ -2620,7 +2631,7 @@
     )
     (pin "1" (uuid f8c3d0bc-21e4-4dc8-b157-c444cca9a9d0))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR06") (unit 1)
         )
@@ -2631,7 +2642,7 @@
   (symbol (lib_id "Connector:Conn_Coaxial") (at 106.68 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8b866dda-2e96-4442-99fc-d06d0f07a732)
-    (property "Reference" "J7" (at 110.49 154.94 0)
+    (property "Reference" "J8" (at 110.49 154.94 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMA" (at 110.49 157.48 0)
@@ -2646,9 +2657,9 @@
     (pin "1" (uuid b4ec4566-e414-4f82-88e6-f621b537e9df))
     (pin "2" (uuid 8230f08a-9035-40af-be58-f52fb43d535f))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
-          (reference "J7") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -2672,7 +2683,7 @@
     (pin "1" (uuid fcfce932-ccdf-4d4c-bd6c-000d4eda6330))
     (pin "2" (uuid 5db81d02-447e-4ae0-945e-3edbc079e9f0))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J3") (unit 1)
         )
@@ -2697,7 +2708,7 @@
     )
     (pin "1" (uuid f20439bc-1c19-4ceb-a0c2-bae854ab9bc8))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR02") (unit 1)
         )
@@ -2708,7 +2719,7 @@
   (symbol (lib_id "Connector:Conn_Coaxial") (at 41.91 124.46 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a1597f06-b388-4142-a468-fcbc6cd47aa0)
-    (property "Reference" "J2" (at 38.1 123.19 0)
+    (property "Reference" "J5" (at 38.1 123.19 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMA" (at 38.1 125.73 0)
@@ -2723,9 +2734,9 @@
     (pin "1" (uuid 9b4f8565-322d-4bd6-94a0-cff85bd7e0f3))
     (pin "2" (uuid c50a3c7c-ed1a-439f-9df2-7925c7383614))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
-          (reference "J2") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -2755,7 +2766,7 @@
     (pin "4" (uuid c2a472b2-d551-463f-8ff1-412489f9ac78))
     (pin "8" (uuid 2c5ee734-7a7f-4226-929a-2cdbf65564d2))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 1)
         )
@@ -2780,7 +2791,7 @@
     )
     (pin "1" (uuid c3781589-282e-470d-982d-ab525cb6a48d))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR013") (unit 1)
         )
@@ -2806,7 +2817,7 @@
     (pin "1" (uuid 83c69a6f-28b0-4c1d-8528-31a3771024e1))
     (pin "2" (uuid 617a92ac-5164-4f1a-b880-07da3b6eec9f))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R15") (unit 1)
         )
@@ -2832,7 +2843,7 @@
     (pin "1" (uuid b7e319bf-93d6-4d48-8f60-5643ee0f7a3c))
     (pin "2" (uuid 4f53282e-da51-4ecd-ac99-9af3f57dca70))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C1") (unit 1)
         )
@@ -2857,7 +2868,7 @@
     )
     (pin "1" (uuid 4e7723d8-b51a-4808-9441-ea461e26bfbd))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR015") (unit 1)
         )
@@ -2884,7 +2895,7 @@
     (pin "2" (uuid a04e57e0-5921-4173-b86d-4e49d382ffe7))
     (pin "3" (uuid f6d37372-e685-4148-9041-ea3b4a78831a))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U2") (unit 1)
         )
@@ -2909,7 +2920,7 @@
     )
     (pin "1" (uuid 7f9df5e7-eb4e-454c-8b35-2aae880e4f50))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR011") (unit 1)
         )
@@ -2935,7 +2946,7 @@
     (pin "1" (uuid 4d492a1e-56af-41be-94d6-2c5d800f43d0))
     (pin "2" (uuid f966f332-9ff8-46a3-9960-29b40e8b09f0))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "Rf2") (unit 1)
         )
@@ -2946,7 +2957,7 @@
   (symbol (lib_id "Connector:Conn_Coaxial") (at 41.91 157.48 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d3cfcd46-17eb-40c4-9a4e-cf0c72ed13ef)
-    (property "Reference" "J5" (at 38.1 156.21 0)
+    (property "Reference" "J7" (at 38.1 156.21 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMA" (at 38.1 158.75 0)
@@ -2961,9 +2972,9 @@
     (pin "1" (uuid b4e3d89f-90cd-4068-8fd1-f19c52de4cda))
     (pin "2" (uuid a188ffa6-7f5e-4c64-8415-df462c12ecb8))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
-          (reference "J5") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -2987,7 +2998,7 @@
     (pin "1" (uuid 8a1abde6-0427-4b34-805d-b108b0654f1e))
     (pin "2" (uuid 3e3af245-d8db-4705-81b3-41366c284d66))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R12") (unit 1)
         )
@@ -3012,7 +3023,7 @@
     )
     (pin "1" (uuid 5c1c52ba-4707-4098-9381-2da62b850ac6))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR014") (unit 1)
         )
@@ -3038,7 +3049,7 @@
     (pin "1" (uuid f0ea1c8c-cefa-4cff-9ef0-39d173d2b142))
     (pin "2" (uuid fd446f0c-96c1-4730-9ee9-33db9ae56d3b))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C2") (unit 1)
         )
@@ -3064,7 +3075,7 @@
     (pin "1" (uuid 51853d78-c401-4833-95d4-b9337a9a3a55))
     (pin "2" (uuid 4f3ebe80-f174-41c2-8cd0-0f6c9cc10afa))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R10") (unit 1)
         )
@@ -3072,31 +3083,31 @@
     )
   )
 
-  (symbol (lib_id "Connector:Screw_Terminal_01x08") (at 146.05 52.07 0) (unit 1)
+  (symbol (lib_id "Connector:Screw_Terminal_01x08") (at 146.05 53.34 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid de0bc2d3-9763-4fa4-a0aa-bb37c645a68e)
-    (property "Reference" "J1" (at 144.78 38.1 0)
+    (property "Reference" "J1" (at 144.78 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Screw_Terminal_01x08" (at 127 40.64 0)
+    (property "Value" "Screw_Terminal_01x08" (at 125.73 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-8-5.08_1x08_P5.08mm_Horizontal" (at 146.05 52.07 0)
+    (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-8-5.08_1x08_P5.08mm_Horizontal" (at 146.05 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 146.05 52.07 0)
+    (property "Datasheet" "~" (at 146.05 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0e1fca13-3eb3-4a5c-ba25-8c9cb0bcb709))
-    (pin "2" (uuid a3aabed9-87e9-4806-beaf-1b1e2381c80a))
-    (pin "3" (uuid cc169c86-ea94-49d2-abea-5c7ad5bce215))
-    (pin "4" (uuid 9ec20be4-b058-428c-9228-2c5469634df5))
-    (pin "5" (uuid a2c5c843-7aed-47bd-aa81-921e65093327))
-    (pin "6" (uuid d88b5359-64b4-417d-851d-a148db1dab40))
-    (pin "7" (uuid 05615080-d86b-4e21-8aa9-5a619b183030))
-    (pin "8" (uuid b7261a46-f4ab-4755-8575-8e2d0aaf984c))
+    (pin "1" (uuid 690f0c61-0de8-4ffe-9098-7cfdfbe2653a))
+    (pin "2" (uuid ec6284a3-5aea-4d17-b1bc-1b60234a979d))
+    (pin "3" (uuid 33d79855-c071-4de2-a73f-e3e4d7308dd2))
+    (pin "4" (uuid ab9bcc7d-2b1e-4f72-8115-3e3cd647b1a9))
+    (pin "5" (uuid b282e2ce-4a93-4c5b-aaeb-337b0953315b))
+    (pin "6" (uuid 9fc8a57a-5692-4e08-9bca-6fbb901c6d6c))
+    (pin "7" (uuid b3b26f86-87dc-49ac-a6d2-5d7a84d4bc7c))
+    (pin "8" (uuid 009a66cd-813e-4620-bbc4-6db582def193))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J1") (unit 1)
         )
@@ -3137,7 +3148,7 @@
     (pin "8" (uuid 47f05dac-d684-48f8-9fba-9a93553b0038))
     (pin "9" (uuid 79e8ecc1-f36f-4539-85d2-61c9fbc77b67))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U3") (unit 1)
         )
@@ -3169,7 +3180,7 @@
     (pin "4" (uuid 965c222e-13b3-4107-a3ed-33f8d5ba73cc))
     (pin "8" (uuid ba1c1b7f-7594-4711-9a78-7904f9802f8e))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 2)
         )
@@ -3195,7 +3206,7 @@
     (pin "1" (uuid 7f2b2b44-1c55-447d-a10b-ce901eb7df4c))
     (pin "2" (uuid 84447936-cae7-4cab-b181-4a6c3395f8f7))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C3") (unit 1)
         )
@@ -3221,7 +3232,7 @@
     (pin "1" (uuid 5cf115a4-7bb5-4dcc-8bb1-ee2fbe22dbca))
     (pin "2" (uuid 974ff41c-18f3-40eb-b08c-fe5f8f02cf20))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C12") (unit 1)
         )
@@ -3246,7 +3257,7 @@
     )
     (pin "1" (uuid b0f58c4d-b438-4a64-a14f-c92a62c6145e))
     (instances
-      (project "VoltageRegulator"
+      (project "S_Tele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR010") (unit 1)
         )
