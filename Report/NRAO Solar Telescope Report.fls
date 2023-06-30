@@ -654,6 +654,8 @@ INPUT NRAO Solar Telescope Report.lof
 INPUT NRAO Solar Telescope Report.lof
 OUTPUT NRAO Solar Telescope Report.lof
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT c:/texlive/2023/texmf-dist/tex/generic/circuitikz/ctikzstyle-legacy.tex
+INPUT c:/texlive/2023/texmf-dist/tex/generic/circuitikz/ctikzstyle-legacy.tex
 INPUT ./images/specan1.png
 INPUT ./images/specan1.png
 INPUT images/specan1.png

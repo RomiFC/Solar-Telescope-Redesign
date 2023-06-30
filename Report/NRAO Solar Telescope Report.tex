@@ -112,7 +112,7 @@ The following documents may not be directly referenced herin, but may provide ne
 \begin{center}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
     \rowcolor{nraoblue}
-    Ref. No. & Document Title & Rev/Doc. No. \\ \hline
+    Ref. No. & Document Title & Rev/Doc. No.\\ \hline
     AD01 & Desiderata for Solar Observing with the EVLA & EVLAM\_70 \\ 
     \hline
     AD02 & EVLA Hardware Modifications in Support of Solar Observing & EVLAM\_72 \\
@@ -125,7 +125,7 @@ The following documents are referenced within this text:
 \begin{center}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
     \rowcolor{nraoblue}
-    Ref. No. & Document Title & Rev/Doc. No. \\ \hline
+    Ref. No. & Document Title & Rev/Doc. No.\\ \hline
     RD01 & Title 1 & 0001 \\
     RD02 & Title 2 & 0002 \\
     \hline
@@ -133,9 +133,11 @@ The following documents are referenced within this text:
 \end{center}
 
 \section{System Overview}
-The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a 28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
+The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a linear DC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
-The system consists of a gain block to amplify the antenna signal, a bandpass filter, a rectifier to convert the RF signal into a DC voltage, and a voltmeter that provides feedback for the user. A simplified block diagram is shown in Fig.~\ref{fig:rfblock} that shows what is required to convert the signal to a DC voltage.
+
+As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 5 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease noticably.
+
 
 \subsection{Requirements}
 As a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
@@ -148,7 +150,11 @@ As a visitor center attraction, the device must be engaging and appealing to vis
 
 
 \section{System Architecture}
-Most of the RF components were either reused from the previous design or gathered at no cost. The RF gain block utilizes 4 low noise amplifiers (LNAs) and an attenuator to provide better impedance matching. The first 3 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz
+Most of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} utilizes 4 low noise amplifiers (LNAs) and an attenuator to provide better impedance matching. The first 3 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz.
+
+The bandpass filter does not have an attached datasheet but measured a 3 dB passband of about 7.8--8.9 GHz and seems resemble an equiripple filter.
+
+The rectifier and DC gain block are integrated into a PCB with SMA connectors. The former utilizes an Analog Devices ADL5902, providing a linear-in-decibel output that can be scaled by the choice of resistors on the board or the following gain element. The DC gain block utilizes an LM358 op amp with an adjustable gain via potentiometer.
 \begin{figure}
 \begin{center}
     \begin{circuitikz}
@@ -161,15 +167,16 @@ Most of the RF components were either reused from the previous design or gathere
         to[qvprobe = Voltmeter] ++ (2,0)
         -| ++ (0.5,-1) node[ground]{};
     \end{circuitikz}
-\caption{RF signal block diagram}
-\label{fig:rfblock}
+\caption{RF signal block diagram}\label{fig:rfblock}
 \end{center}
 \end{figure}
     
 
-\subsection{PCB Design}
+\subsection{Power Distribution}
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a double layer PCB that contains the voltage regulators to produce 15 and 5 volts, the RF power detector IC, and the dual noninverting op amps. 15 volts is used to power the ALS-04-0149 LNA and bias the op amps, whereas 5 volts is used to power the ADL5902, the ZX60-83LN-S+ LNAs, and the fans.
 \begin{figure}
 \begin{center}
+\ctikzloadstyle{legacy}
 \begin{circuitikz}
     \draw(0,0)
     to[vsource, v_ = $V_{in}$] ++ (0,-3)
@@ -193,26 +200,35 @@ Most of the RF components were either reused from the previous design or gathere
     node[plain mono amp, anchor=up, scale = 0.75, name = lna1]{LNA};
     \draw(5v1.south)
     to[short, f = 75 mA] ++ (0,-2)
-    node[plain mono amp, anchor=up, scale = 0.75, name= lna2]{LNA};
+    node[plain mono amp, anchor=up, scale = 0.75, name = lna2]{LNA};
     \draw(5v2.south)
     to[short, f = 75 mA] ++ (0,-2)
-    node[plain mono amp, anchor=up, scale = 0.75, name= lna3]{LNA};
+    node[plain mono amp, anchor=up, scale = 0.75, name = lna3]{LNA};
     \draw(5v3.south)
     to[short, f = 75 mA] ++ (0,-2)
-    node[plain mono amp, anchor=up, scale = 0.75, name= lna4]{LNA};
+    node[plain mono amp, anchor=up, scale = 0.75, name = lna4]{LNA};
     \draw(lna1.out) to[open, o-o] (lna2.in);
     \draw(lna2.out) -- (lna3.in);
     \draw(lna3.out) -- (lna4.in);
     \draw(lna1.in) to[short, o-] ++ (0,0);
     \draw(lna4.out) to[short, o-] ++ (0,0);
+    % ADL5902
+    \draw(5v1.south)
+    to[short, f_ = 90 mA] ++ (0,2)
+    node[qfpchip, anchor = pin 3, hide numbers, external pins width = 0, label = {[scale = 0.8]ADL5902}, name = U3]{}
+    (U3.north) node[anchor = south]{U3};
+    % Fan
+    \draw(5v3.south)
+    to[short, f_ = 40 mA] ++ (0,2)
+    node[elmech, anchor = bottom, name = fan]{M}
+    (fan.top) node[anchor = south]{Fan};
 \end{circuitikz}
-\caption{DC power distribution block diagram}
-\label{fig:dcblock}
+\caption{DC power distribution block diagram}\label{fig:dcblock}
 \end{center}
 \end{figure}
 
 
-\section{Design Constraints and Calculations}
+\section{Design Calculations}
 The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements are to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
 
 
@@ -239,7 +255,7 @@ Lastly, values for solar flux density $S$ must be found within the operating fre
 \begin{table}[!ht]
 \centering
 \begin{tabular}{c|c|c|c}
-    & $S_{min}$ & $S_{\mu}$ & $S_{max}$ \\ \hline
+    & $S_{\min}$ & $S_{\mu}$ & $S_{\max}$ \\ \hline
     2.8 GHz & 70 SFU & 150 SFU & 280 SFU \\
     8.8 GHz & 152 SFU & 326 SFU & 608 SFU
 \end{tabular}
@@ -247,7 +263,7 @@ Lastly, values for solar flux density $S$ must be found within the operating fre
 \caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\cite{solartemp} at 2.8 GHz by a factor of 2.17.}
 \end{table}
 
-With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{min}$ and $S_{max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\cite{sfd1986}.
+With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{\min}$ and $S_{\max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\cite{sfd1986}.
 
 
 \subsubsection{Antenna Power Measurements}
