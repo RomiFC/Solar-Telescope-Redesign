@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex NRAO Solar Telescope Report"] 1688051533 "NRAO Solar Telescope Report.aux" "NRAO Solar Telescope Report.bbl" "NRAO Solar Telescope Report" 1688080014 0
+["bibtex NRAO Solar Telescope Report"] 0 "NRAO Solar Telescope Report.aux" "NRAO Solar Telescope Report.bbl" "NRAO Solar Telescope Report" 1688136422 -1
   "./references.bib" 1687534819 1142 cbd8508a745e2cad21cf12e13a6342b4 ""
-  "NRAO Solar Telescope Report.aux" 1688080013 2771 e2eb3e1dd696cae842cbf928ae8fde63 "pdflatex"
+  "NRAO Solar Telescope Report.aux" 1688136421 2771 e2eb3e1dd696cae842cbf928ae8fde63 "pdflatex"
   "c:/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1681071584 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   (generated)
   "NRAO Solar Telescope Report.bbl"
   "NRAO Solar Telescope Report.blg"
   (rewritten before read)
-["pdflatex"] 1688080009 "c:/Users/remyv/Documents/NRAO/Solar Telescope Redesign/Report/NRAO Solar Telescope Report.tex" "NRAO Solar Telescope Report.pdf" "NRAO Solar Telescope Report" 1688080014 0
-  "NRAO Solar Telescope Report.aux" 1688080013 2771 e2eb3e1dd696cae842cbf928ae8fde63 "pdflatex"
-  "NRAO Solar Telescope Report.bbl" 1688051534 1717 fad971380f59e5f18d0dbdc92efd2381 "bibtex NRAO Solar Telescope Report"
-  "NRAO Solar Telescope Report.lof" 1688080013 321 5beb507a4ce72e442d56e22a592b03a6 "pdflatex"
-  "NRAO Solar Telescope Report.tex" 1688080008 13743 a3f836bddbd7050371d3ade87d03bce3 ""
-  "NRAO Solar Telescope Report.toc" 1688080013 958 14cc66bff0653e59bb08e39b1e502d5d "pdflatex"
-  "c:/Users/remyv/Documents/NRAO/Solar Telescope Redesign/Report/NRAO Solar Telescope Report.tex" 1688080008 13743 a3f836bddbd7050371d3ade87d03bce3 ""
+["pdflatex"] 1688136419 "c:/Users/remyv/Documents/NRAO/Solar Telescope Redesign/Report/NRAO Solar Telescope Report.tex" "NRAO Solar Telescope Report.pdf" "NRAO Solar Telescope Report" 1688136422 0
+  "NRAO Solar Telescope Report.aux" 1688136421 2771 e2eb3e1dd696cae842cbf928ae8fde63 "pdflatex"
+  "NRAO Solar Telescope Report.bbl" 1688135890 1717 fad971380f59e5f18d0dbdc92efd2381 "bibtex NRAO Solar Telescope Report"
+  "NRAO Solar Telescope Report.lof" 1688136421 321 5beb507a4ce72e442d56e22a592b03a6 "pdflatex"
+  "NRAO Solar Telescope Report.tex" 1688136419 14157 4f37b93bf3c49d571fa1174b62c19f3d ""
+  "NRAO Solar Telescope Report.toc" 1688136421 958 14cc66bff0653e59bb08e39b1e502d5d "pdflatex"
+  "c:/Users/remyv/Documents/NRAO/Solar Telescope Redesign/Report/NRAO Solar Telescope Report.tex" 1688136419 14157 4f37b93bf3c49d571fa1174b62c19f3d ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1681070500 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1681065895 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1681065895 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""

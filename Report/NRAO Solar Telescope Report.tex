@@ -155,26 +155,39 @@ As a visitor center attraction, the device must be engaging and appealing to vis
 \begin{center}
 \begin{circuitikz}
     \draw(0,0)
-    to[vsource, v_ = $V_{in}$]
-    ++ (0,-3) node[tlground]{}
-    (0,0) -- ++ (1.5,0)
-    ++ (0,-0.5) rectangle ++ (1.5,1)
-    ++ (-0.75, 0) node[anchor=north]{L7815} node[anchor=south]{U1}
+    to[vsource, v_ = $V_{in}$] ++ (0,-3)
+    node[tlground]{} (0,0)
+    -- ++ (1.5,0) ++ (0,-0.5)
+
+    rectangle ++ (1.5,1) ++ (-0.75, 0)
+    node[anchor=north]{L7815} node[anchor=south]{U1}
     ++ (0.75, -0.5) -- ++ (1,0) node[anchor=south, name=15v]{15 V}
-    -- ++ (1,0)
-    ++ (0,-0.5) rectangle ++ (1.5,1)
-    ++ (-0.75, 0) node[anchor=north]{L7805} node[anchor=south]{U2}
-    ++ (0.75, -0.5) -- ++ (1,0) node[anchor=south, name=5v]{5 V}
+    -- ++ (1,0) ++ (0,-0.5)
+
+    rectangle ++ (1.5,1) ++ (-0.75, 0)
+    node[anchor=north]{L7805} node[anchor=south]{U2}
+    ++ (0.75, -0.5) -- ++ (1,0) node[anchor=south, name=5v1]{}
+    -- ++ (2,0) node[anchor=south, name=5v2]{5 V}
+    -- ++ (2,0) node[anchor=south, name=5v3]{}
     to[short, -o] ++ (1,0);
+
     \draw(15v.south)
     to[short, f = 150 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna1]{LNA};
-    \draw(5v.south)
-    to[short, f = 500 mA] ++ (0,-2)
+    \draw(5v1.south)
+    to[short, f = 75 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name= lna2]{LNA};
+    \draw(5v2.south)
+    to[short, f = 75 mA] ++ (0,-2)
+    node[plain mono amp, anchor=up, scale = 0.75, name= lna3]{LNA};
+    \draw(5v3.south)
+    to[short, f = 75 mA] ++ (0,-2)
+    node[plain mono amp, anchor=up, scale = 0.75, name= lna4]{LNA};
     \draw[dashed](lna1.out) -- (lna2.in);
+    \draw(lna2.out) -- (lna3.in);
+    \draw(lna3.out) -- (lna4.in);
     \draw(lna1.in) to[short, o-] ++ (0,0);
-    \draw(lna2.out) to[short, o-] ++ (0,0);
+    \draw(lna4.out) to[short, o-] ++ (0,0);
 \end{circuitikz}
 \caption{}
 \label{fig:block2}
