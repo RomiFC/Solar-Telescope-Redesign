@@ -108,7 +108,7 @@ This document will describe the design choices made in development of the new so
 
 \section{Related Documents and Drawings}
 \subsection{Applicable Documents}
-The following documents may not be directly referenced herin, but may provide necessary context or supporting material.
+The following documents may not be directly referenced herein, but may provide necessary context or supporting material.
 \begin{center}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
     \rowcolor{nraoblue}
@@ -136,7 +136,7 @@ The following documents are referenced within this text:
 The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a linear DC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
 
-As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 5 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease noticably.
+As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 5 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease noticeably.
 
 
 \subsection{Requirements}
@@ -229,11 +229,11 @@ As part of the effort to make the telescope more modern and visually appealing, 
 
 
 \section{Design Calculations}
-The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements are to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
+The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements is to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
 
 
 \subsection{Calculating Antenna Input Power}
-In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a certain dynamic range but antenna input power may vary daily and annualy depending on solar cycle\cite[Fig.~2]{solartemp}.
+In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a certain dynamic range but antenna input power may vary daily and annually depending on solar cycle\cite[Fig.~2]{solartemp}.
 
 The first step will be to determine the range of antenna input power when pointed at the sun. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
 \begin{equation}
@@ -247,7 +247,7 @@ where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effec
     &= \frac{\pi d^2}{4} \eta_a
 \end{split}
 \end{equation}
-where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\cite[pg.~(15-27)]{aeh}\cite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximated value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\cite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
+where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\cite[pg.~(15-27)]{aeh}\cite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\cite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
 
 Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:rfblock}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
 
@@ -267,7 +267,7 @@ With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the anten
 
 
 \subsubsection{Antenna Power Measurements}
-In order to confirm these calulations, the antenna was connected to an Anritsu Model MS2720T/720 Spectrum Analyzer centered at 8.4 GHz spanning 100 MHz and pointed towards the sun.
+In order to confirm these calculations, the antenna was connected to an Anritsu Model MS2720T/720 Spectrum Analyzer centered at 8.4 GHz spanning 100 MHz and pointed towards the sun.
 \begin{figure}[H]%[!ht]
 \begin {center}
 \includegraphics[width=0.65\textwidth]{images/specan1.png}
