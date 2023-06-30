@@ -135,7 +135,7 @@ The following documents are referenced within this text:
 \section{System Overview}
 The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a 28VDC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
-The system consists of a gain block to amplify the antenna signal, a bandpass filter, a rectifier to convert the RF signal into a DC voltage, and a voltmeter that provides feedback for the user. A simplified block diagram is shown in Fig.~\ref{fig:block1} that shows what is required to convert the signal to a DC voltage.
+The system consists of a gain block to amplify the antenna signal, a bandpass filter, a rectifier to convert the RF signal into a DC voltage, and a voltmeter that provides feedback for the user. A simplified block diagram is shown in Fig.~\ref{fig:rfblock} that shows what is required to convert the signal to a DC voltage.
 
 \subsection{Requirements}
 As a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
@@ -143,12 +143,29 @@ As a visitor center attraction, the device must be engaging and appealing to vis
     \item Utilizes a transparent enclosure or panel to view electronics, ideally one which does not yellow or fade easily.
     \item Must be dustproof and resilient to accumulation of debris inside the enclosure while still venting heat from electronics.
     \item Use readily available parts when possible to keep costs low.
-    \item Electronics must be powered by 28 VDC and be easily serviceable.
+    \item Electronics must be powered by a fixed DC linear power supply and be easily serviceable.
 \end{enumerate}
 
 
 \section{System Architecture}
-
+Most of the RF components were either reused from the previous design or gathered at no cost. The RF gain block utilizes 4 low noise amplifiers (LNAs) and an attenuator to provide better impedance matching. The first 3 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz
+\begin{figure}
+\begin{center}
+    \begin{circuitikz}
+            \draw(0, 0)
+        node[rxantenna, xscale=-1, label = {[xshift=-1.4cm, yshift=-0.5cm]X-band feed}]{}
+        to[amp = RF Gain Block] ++ (2, 0)
+        to[bandpass = Filter] ++ (2,0)
+        to[detector = Rectifier, fill = white] ++ (2,0)
+        to[amp = DC Gain Block] ++ (3,0)
+        to[qvprobe = Voltmeter] ++ (2,0)
+        -| ++ (0.5,-1) node[ground]{};
+    \end{circuitikz}
+\caption{RF signal block diagram}
+\label{fig:rfblock}
+\end{center}
+\end{figure}
+    
 
 \subsection{PCB Design}
 \begin{figure}
@@ -157,20 +174,20 @@ As a visitor center attraction, the device must be engaging and appealing to vis
     \draw(0,0)
     to[vsource, v_ = $V_{in}$] ++ (0,-3)
     node[tlground]{} (0,0)
+    % U1
     -- ++ (1.5,0) ++ (0,-0.5)
-
     rectangle ++ (1.5,1) ++ (-0.75, 0)
     node[anchor=north]{L7815} node[anchor=south]{U1}
     ++ (0.75, -0.5) -- ++ (1,0) node[anchor=south, name=15v]{15 V}
+    % U2
     -- ++ (1,0) ++ (0,-0.5)
-
     rectangle ++ (1.5,1) ++ (-0.75, 0)
     node[anchor=north]{L7805} node[anchor=south]{U2}
     ++ (0.75, -0.5) -- ++ (1,0) node[anchor=south, name=5v1]{}
     -- ++ (2,0) node[anchor=south, name=5v2]{5 V}
     -- ++ (2,0) node[anchor=south, name=5v3]{}
     to[short, -o] ++ (1,0);
-
+    % Amplifiers
     \draw(15v.south)
     to[short, f = 150 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna1]{LNA};
@@ -183,14 +200,14 @@ As a visitor center attraction, the device must be engaging and appealing to vis
     \draw(5v3.south)
     to[short, f = 75 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name= lna4]{LNA};
-    \draw[dashed](lna1.out) -- (lna2.in);
+    \draw(lna1.out) to[open, o-o] (lna2.in);
     \draw(lna2.out) -- (lna3.in);
     \draw(lna3.out) -- (lna4.in);
     \draw(lna1.in) to[short, o-] ++ (0,0);
     \draw(lna4.out) to[short, o-] ++ (0,0);
 \end{circuitikz}
-\caption{}
-\label{fig:block2}
+\caption{DC power distribution block diagram}
+\label{fig:dcblock}
 \end{center}
 \end{figure}
 
@@ -198,24 +215,6 @@ As a visitor center attraction, the device must be engaging and appealing to vis
 \section{Design Constraints and Calculations}
 The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements are to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
 
-\begin{figure}
-\begin{center}
-\begin{circuitikz}
-    \draw(0, 0)
-    node[rxantenna, xscale=-1, label = {[xshift=-1.4cm, yshift=-0.5cm]X-band feed}]{}
-    to[amp = LNA] ++ (2, 0)
-    to[bandpass = Filter, n=bpf] ++ (2,0)
-    to[empty Schottky diode = Rectifier] ++ (2,0)
-    to[short] ++ (0.5,0)
-    to[capacitor] ++ (0, -2)
-    (6.5,-2) node[tlground]{};
-    \draw(6.5,0)
-    to[short = DC Out, -o] ++ (1.5,0);
-\end{circuitikz}
-\caption{Solar RF energy to DC voltage block diagram}
-\label{fig:block1}
-\end{center}
-\end{figure}
 
 \subsection{Calculating Antenna Input Power}
 In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a certain dynamic range but antenna input power may vary daily and annualy depending on solar cycle\cite[Fig.~2]{solartemp}.
@@ -234,7 +233,7 @@ where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effec
 \end{equation}
 where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\cite[pg.~(15-27)]{aeh}\cite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximated value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\cite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
 
-Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:block1}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
+Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:rfblock}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
 
 Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\cite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\cite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\cite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
 \begin{table}[!ht]
