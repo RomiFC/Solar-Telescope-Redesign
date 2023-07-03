@@ -23,6 +23,23 @@
 \usepackage{colortbl}   % For coloring table cells
 \usepackage{enumitem}   % For formatting enumerated lists
 \setenumerate[1]{label={(\arabic*)}}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+% The following lines define a new command \nraocite that cites references in NRAO format RD0X by redefining \cite command to remove brackets. \nraoprecite includes a prenote.
+\DeclareCiteCommand{\cite}[\mkbibemph{\emph{}}]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+\DeclareCiteCommand*{\cite}[\mkbibemph\emph{}]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}
+   \printtext[bibhyperref]{\usebibmacro{citeyear}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+\newcommand{\nraocite}[1]{[RD0\cite{#1}]}
+\newcommand{\nraoprecite}[2][]{[RD0\cite{#2}{, #1}]}
 
 
 % ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
@@ -40,6 +57,7 @@
 
  % DOCUMENT STARTS HERE
 \begin{document}
+%\nobibliography{references.bib}
 \definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
 \setlength{\leftmargin}{1in}
 \setlength{\rightmargin}{1in}
@@ -51,7 +69,7 @@
      \textbf{\Huge\thetitle} \\
      \vspace*{0.5cm}
      \large\docnum\\
-     \huge Status: \status \\
+     \huge Status: \status\\
      \vspace*{1cm} \large
      % FIRST TABLE HERE
      \begin{tabular}{|m{6.5cm}|m{5cm}|m{2cm}|} \hline
@@ -96,7 +114,7 @@
 \listoffigures
 \thispagestyle{fancy}
 \newpage
-        
+
 \section{Introduction}
 
 \subsection{Purpose}
@@ -123,21 +141,23 @@ The following documents may not be directly referenced herein, but may provide n
 \subsection{Reference Documents}
 The following documents are referenced within this text:
 \begin{center}
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
-    RD01 & Title 1 & 0001 \\
-    RD02 & Title 2 & 0002 \\
-    \hline
+    RD01 & \citefield{solartemp}{title} & 0001 \\ \hline
+    RD02 & \citefield{aeh}{title} & 0002 \\\hline
+    RD03 & \citefield{tora}{title} & 0003 \\\hline
+    RD04 & \citefield{xbandvla}{title} & 0004 \\\hline
+    RD05 & \citefield{sfd1986}{title} & 0005 \\\hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}
 \end{center}
 
 \section{System Overview}
 The heart of the telescope is an conical corrugated X-band feed horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a linear DC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
-
 As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 5 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease noticeably.
-
 
 \subsection{Requirements}
 As a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
@@ -148,14 +168,13 @@ As a visitor center attraction, the device must be engaging and appealing to vis
     \item Electronics must be powered by a fixed DC linear power supply and be easily serviceable.
 \end{enumerate}
 
-
-\section{System Architecture}
+\subsection{Architecture}
 Most of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} utilizes 4 low noise amplifiers (LNAs) and an attenuator to provide better impedance matching. The first 3 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz.
 
-The bandpass filter does not have an attached datasheet but measured a 3 dB passband of about 7.8--8.9 GHz and seems resemble an equiripple filter.
+The bandpass filter does not have an attached datasheet but it resembles an equiripple filter and measured a 3 dB passband of about 7.8--8.9 GHz.
 
 The rectifier and DC gain block are integrated into a PCB with SMA connectors. The former utilizes an Analog Devices ADL5902, providing a linear-in-decibel output that can be scaled by the choice of resistors on the board or the following gain element. The DC gain block utilizes an LM358 op amp with an adjustable gain via potentiometer.
-\begin{figure}
+\begin{figure}[!ht]
 \begin{center}
     \begin{circuitikz}
             \draw(0, 0)
@@ -173,8 +192,8 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
     
 
 \subsection{Power Distribution}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a double layer PCB that contains the voltage regulators to produce 15 and 5 volts, the RF power detector IC, and the dual noninverting op amps. 15 volts is used to power the ALS-04-0149 LNA and bias the op amps, whereas 5 volts is used to power the ADL5902, the ZX60-83LN-S+ LNAs, and the fans.
-\begin{figure}
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a double layer PCB which contains the voltage regulators, the RF power detector IC, and the dual noninverting op amps. 15 volts is used to power the ALS-04-0149 LNA and bias the op amps, whereas 5 volts is used to power the ADL5902, the ZX60-83LN-S+ LNAs, and the fans.
+\begin{figure}[!ht]
 \begin{center}
 \ctikzloadstyle{legacy}
 \begin{circuitikz}
@@ -229,29 +248,29 @@ As part of the effort to make the telescope more modern and visually appealing, 
 
 
 \section{Design Calculations}
-The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements is to shift the signal power into this linear region of operation. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
+The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements is to shift the signal power into this linear region of operation. At the frequency and temperature of operation, the linear region was chosen to be -30 dBm to 0 dBm based on information available in the datasheet. The next section will show the calculations performed in order to determine how much gain is necessary to reach the linear region of the rectifier.
 
 
 \subsection{Calculating Antenna Input Power}
-In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a certain dynamic range but antenna input power may vary daily and annually depending on solar cycle\cite[Fig.~2]{solartemp}.
+In order to determine how much gain to implement, the antenna input power and range of the linear region must be known. The linear region is fixed with a 30 dB dynamic range but antenna input power may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}.
 
 The first step will be to determine the range of antenna input power when pointed at the sun. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
 \begin{equation}
     P_R = S A_e \Delta f
 \label{eq:power}
 \end{equation}
-where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\cite[eq.~(41-2)]{aeh}. Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
+where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\nraoprecite[eq.~(41-2)]{aeh}. Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
 \begin{equation} \label{eq:ae}
 \begin{split}
     A_e &= \frac{\lambda^2}{4\pi}G \\
     &= \frac{\pi d^2}{4} \eta_a
 \end{split}
 \end{equation}
-where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\cite[pg.~(15-27)]{aeh}\cite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\cite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
+where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\nraocite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
 
 Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:rfblock}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
 
-Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\cite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\cite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\cite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
+Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\nraocite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\nraoprecite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\nraoprecite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
 \begin{table}[!ht]
 \centering
 \begin{tabular}{c|c|c|c}
@@ -260,10 +279,10 @@ Lastly, values for solar flux density $S$ must be found within the operating fre
     8.8 GHz & 152 SFU & 326 SFU & 608 SFU
 \end{tabular}
 \label{tab:sfd}
-\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\cite{solartemp} at 2.8 GHz by a factor of 2.17.}
+\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.}
 \end{table}
 
-With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{\min}$ and $S_{\max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\cite{sfd1986}.
+With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{\min}$ and $S_{\max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\nraocite{sfd1986}.
 
 
 \subsubsection{Antenna Power Measurements}
@@ -283,12 +302,12 @@ The Anritsu is not capable of performing channel power measurements, so, assumin
 \end{align*}
 This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency.
 
+The 4 LNAs and single 6dB attenuator chosen provide a combined 66 dB of gain; thus, the ADL5902 incident power would measure approximately -16 dBm when pointed at the sun, well within its linear operating region.
+
 
 \appendix
 \section{Appendix Title}
 
-\bibliographystyle{IEEEtran}
-\bibliography{references}
 
 \end{document}
 
