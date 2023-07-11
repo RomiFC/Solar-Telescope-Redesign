@@ -25,6 +25,7 @@
 \setenumerate[1]{label={(\arabic*)}}
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{references.bib}
+
 % The following lines define a new command \nraocite that cites references in NRAO format RD0X by redefining \cite command to remove brackets. \nraoprecite includes a prenote.
 \DeclareCiteCommand{\cite}[\mkbibemph{\emph{}}]
   {\usebibmacro{prenote}}
@@ -41,6 +42,13 @@
 \newcommand{\nraocite}[1]{[RD0\cite{#1}]}
 \newcommand{\nraoprecite}[2][]{[RD0\cite{#2}{, #1}]}
 
+% Suppresses chktex warnings 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 24
+% chktex-file 44
+% chktex-file 46
 
 % ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
 \title{Redesign of the Visitor Center Solar Telescope}
@@ -68,8 +76,8 @@
      \vspace*{0.5cm}
      \textbf{\Huge\thetitle} \\
      \vspace*{0.5cm}
-     \large\docnum\\
-     \huge Status: \status\\
+     \large\docnum \\
+     \huge Status: \status \\
      \vspace*{1cm} \large
      % FIRST TABLE HERE
      \begin{tabular}{|m{6.5cm}|m{5cm}|m{2cm}|} \hline

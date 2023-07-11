@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'NRAO Solar Telescope Report.blg'
-[159] biber-MSWIN64:340> INFO - === 
-[221] Biber.pm:419> INFO - Reading 'NRAO Solar Telescope Report.bcf'
-[386] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
-[408] Biber.pm:4419> INFO - Processing section 0
-[425] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[497] bibtex.pm:1713> INFO - LaTeX decoding ...
-[509] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[581] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[582] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[583] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[584] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[589] bbl.pm:660> INFO - Writing 'NRAO Solar Telescope Report.bbl' with encoding 'UTF-8'
-[598] bbl.pm:763> INFO - Output to NRAO Solar Telescope Report.bbl
+[0] Config.pm:310> INFO - Logfile is 'NRAO Solar Telescope Report.blg'
+[192] biber-MSWIN64:340> INFO - === 
+[256] Biber.pm:419> INFO - Reading 'NRAO Solar Telescope Report.bcf'
+[407] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[431] Biber.pm:4419> INFO - Processing section 0
+[447] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[521] bibtex.pm:1713> INFO - LaTeX decoding ...
+[538] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[615] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[616] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[617] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[618] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[624] bbl.pm:660> INFO - Writing 'NRAO Solar Telescope Report.bbl' with encoding 'UTF-8'
+[635] bbl.pm:763> INFO - Output to NRAO Solar Telescope Report.bbl
