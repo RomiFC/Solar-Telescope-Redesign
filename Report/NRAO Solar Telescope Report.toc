@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {3.1}Requirements}{3}{}%
 \contentsline {subsection}{\numberline {3.2}Architecture}{3}{}%
 \contentsline {subsection}{\numberline {3.3}Power Distribution}{4}{}%
-\contentsline {section}{\numberline {4}Design Calculations}{5}{}%
-\contentsline {subsection}{\numberline {4.1}Calculating Antenna Input Power}{5}{}%
+\contentsline {section}{\numberline {4}Design Calculations}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Calculating Antenna Input Power}{4}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}Antenna Power Measurements}{6}{}%
 \contentsline {section}{\numberline {A}Appendix Title}{7}{}%
