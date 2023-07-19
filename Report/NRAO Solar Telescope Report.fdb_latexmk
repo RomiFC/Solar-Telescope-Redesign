@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber NRAO Solar Telescope Report"] 1689627059 "NRAO Solar Telescope Report.bcf" "NRAO Solar Telescope Report.bbl" "NRAO Solar Telescope Report" 1689630053 0
+["biber NRAO Solar Telescope Report"] 0 "NRAO Solar Telescope Report.bcf" "NRAO Solar Telescope Report.bbl" "NRAO Solar Telescope Report" 1689785345 -1
   "./references.bib" 1688396645 1142 cbd8508a745e2cad21cf12e13a6342b4 ""
-  "NRAO Solar Telescope Report.bcf" 1689630052 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
+  "NRAO Solar Telescope Report.bcf" 1689785344 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
   (generated)
   "NRAO Solar Telescope Report.bbl"
   "NRAO Solar Telescope Report.blg"
   (rewritten before read)
-["pdflatex"] 1689630048 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex" "NRAO Solar Telescope Report.pdf" "NRAO Solar Telescope Report" 1689630053 0
-  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex" 1689630048 19126 d5a0ac0408a81348dd5c65f4e1b399c6 ""
+["pdflatex"] 1689785341 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex" "NRAO Solar Telescope Report.pdf" "NRAO Solar Telescope Report" 1689785345 0
+  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex" 1689785340 20395 ee1257dce844cfa5b46d9c8ab75c659c ""
   "C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689108391 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/rnguyen/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1688414245 23219540 c45627611e84a1570321c6a56f7a5430 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -85,6 +85,7 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex" 1673778790 5628 dc0ee4ba7f3e40acae5600067ce833de ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex" 1673778790 321 cdd11262840e01e25374a2d458f15e99 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex" 1673778790 1319 0b2de5126c6cbc295f0eb77f7344b34d ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex" 1673778790 3626 2d87dc681257fa32d07a8b3934b10f88 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex" 1673778790 283 0802c14f542ec5204d2d1cc89f08a4d2 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex" 1673778790 325 36322b0789619b270aec5993d5a9ed08 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1673778790 11518 738408f795261b70ce8dd47459171309 ""
@@ -223,12 +224,12 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1686255640 12691 ddae4e0162a664f166015d992388b742 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "NRAO Solar Telescope Report.aux" 1689630052 3626 9db16381c82a813eed444501d17cec4c "pdflatex"
-  "NRAO Solar Telescope Report.bbl" 1689627063 6865 2847943089b71f4b3aae92f6935ab34d "biber NRAO Solar Telescope Report"
-  "NRAO Solar Telescope Report.lof" 1689630052 411 371f23d4716c66cc9288628b2c6551aa "pdflatex"
-  "NRAO Solar Telescope Report.run.xml" 1689630052 2480 cbf3a76f0b4ecd5d3c67a30f27eb998f "pdflatex"
-  "NRAO Solar Telescope Report.tex" 1689630048 19126 d5a0ac0408a81348dd5c65f4e1b399c6 ""
-  "NRAO Solar Telescope Report.toc" 1689630052 948 81786ff7251e7c426773d58975d66b5c "pdflatex"
+  "NRAO Solar Telescope Report.aux" 1689785344 3519 d4df9188d721bbc356d587468c4f76c9 "pdflatex"
+  "NRAO Solar Telescope Report.bbl" 1689784448 6865 2847943089b71f4b3aae92f6935ab34d "biber NRAO Solar Telescope Report"
+  "NRAO Solar Telescope Report.lof" 1689785345 435 b521184ae05f0591ee9803a5abf85115 "pdflatex"
+  "NRAO Solar Telescope Report.run.xml" 1689785344 2480 cbf3a76f0b4ecd5d3c67a30f27eb998f "pdflatex"
+  "NRAO Solar Telescope Report.tex" 1689785340 20395 ee1257dce844cfa5b46d9c8ab75c659c ""
+  "NRAO Solar Telescope Report.toc" 1689785344 860 f3fdfda942bf7ddeaddfab9ae5b1dfd4 "pdflatex"
   "images/NRAO Logo Badge.png" 1688396645 93775 e8ea7cdefa76fbe477f9128ac4a216f2 ""
   "images/specan1.png" 1688396645 51224 4c694438127ec519859fa0e119173577 ""
   (generated)

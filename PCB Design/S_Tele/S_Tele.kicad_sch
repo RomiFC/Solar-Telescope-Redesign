@@ -1568,6 +1568,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c6478efe-ac44-4e8f-88d6-f17050a2957f)
   )
+  (text "On the final design, L7815 --> L7812 because 15VDC cooling fans were not available"
+    (at 177.8 168.91 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid dbc0f82f-7d38-404b-9174-d0a031b34291)
+  )
   (text "15V/5V Regulator, RF Power Detector, and Non-Inverting Amplifier\n"
     (at 187.96 190.5 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
