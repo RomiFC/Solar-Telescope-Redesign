@@ -27,7 +27,6 @@
 \addbibresource{references.bib}
 
 % Global CircuiTikZ parameters
-\usetikzlibrary{fit}
 \ctikzset{sources/fill=red!20}
 \ctikzset{chips/fill=cyan!20}
 \ctikzset{electromechanicals/fill=blue!20}
@@ -189,42 +188,18 @@ Being a visitor center attraction, the device must be engaging and appealing to 
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
-            % Top block
             \draw(0, 0)
             node[
                 rxantenna, 
                 xscale=-1,
                 label = {[xshift=-1.4cm, yshift=-0.5cm]X-band feed}
                 ]{}
-            to[amp = RF Gain Block, boxed] ++ (2.25, 0)
-            to[bandpass = Filter] ++ (2.25,0)
-            to[detector = Rectifier] ++ (2.25,0)
-            to[amp = DC Gain Block, boxed] ++ (2.25,0)
-            -- ++ (1, 0)
-            % Bottom block
-            |- ++ (-1, -3)
-            to[R, name=r1, l_=R1] ++ (-3, 0)
-            coordinate (branch1)
-            |- ++ (-1, 1)
-            to[qvprobe = Voltmeter, mirror, name=vm] ++ (-1 ,0)
-            -| ++ (-1, -1)
-            (branch1)
-            |- ++ (0, -1)
-            to[R, name=r2, l_=R2] ++ (-3 ,0)
-            -| ++ (0, 1)
-            coordinate (branch2)
-            -| ++ (-2, -0.5)
-            node[sground]{};
-            % Rectangle
-            \draw (branch2) ++ (-0.5, 0)
-            coordinate (boxedgeleft);
-            \draw (r1.center) ++ (1, 0)
-            coordinate (boxedgeright);
-            \node[rectangle, draw, dashed, fit=(boxedgeleft) (r2) (vm) (boxedgeright),]{};
-            % Rectangle Caption
-            \draw (boxedgeleft) ++ (-0.25, 0.5)
-            [<-, dashed] -- ++ (165:2)
-            node[anchor=south]{Output scaling circuit};
+            to[amp = RF Gain Block, boxed] ++ (2, 0)
+            to[bandpass = Filter] ++ (2,0)
+            to[detector = Rectifier] ++ (2,0)
+            to[amp = DC Gain Block, boxed] ++ (3,0)
+            to[qvprobe = Voltmeter] ++ (2,0)
+            -| ++ (0.5,-1) node[ground]{};
         \end{circuitikz}
     \caption{RF signal block diagram}\label{fig:rfblock}
     \end{center}
@@ -254,7 +229,6 @@ The bandpass filter does not have an attached datasheet but it resembles an equi
 
 The rectifier and DC gain block are integrated into a PCB with SMA connectors. The former utilizes an Analog Devices ADL5902, providing a linear-in-decibel output that can be scaled by the choice of resistors on the board or the following gain element. The DC gain block utilizes an LM358 op amp with an adjustable gain via potentiometer.
 
-The output scaling circuit is a simple voltage divider that ensures the maximum and minimum voltages read by the voltmeter are within its range. Even with no RF input, the quiescent output voltage of the ADL5902 is around 400 mV; with any significant amplification this can easily reach the 3 volt maximum of the meter. In essence, the DC gain block adjust the slope of the $P_{in}$ vs. $V_{out}$ curve, whereas the output scaling circuit shifts the linear region curve down.
     
 
 \subsection{Power Distribution}

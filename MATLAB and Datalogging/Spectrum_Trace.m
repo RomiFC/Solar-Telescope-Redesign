@@ -1,6 +1,9 @@
 % Recreating spectrum analyzer plot of telescope pointed near the sun with
 % 30dB of gain from two ZX60-83LN-S+ low noise amplifiers.
 
+% Mean noise power is -107.2 dBm, mean signal power is -92.6 dBm
+% SNR is 14.6 dB
+
 % Importing data
 specplot = readmatrix('Spectrum Trace Towards Sun, 30dB Gain.txt', "VariableNamingRule", "Preserve");
 freq = specplot(:, 1);
