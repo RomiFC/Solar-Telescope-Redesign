@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  20 JUL 2023 14:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  26 JUL 2023 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex"
-(//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/NRAO Solar Telescope Report.tex
+**//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex
+(//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
 (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -712,8 +712,8 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 Package biblatex Info: Redefining '\cite' on input line 39.
 \@quotelevel=\count441
 \@quotereset=\count442
- (NRAO Solar Telescope Report.aux)
-\openout1 = `"NRAO Solar Telescope Report.aux"'.
+ (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
+\openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
@@ -793,11 +793,11 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `"NRAO Solar Telescope Report.bcf"'.
+\openout4 = `002.35.25.05.20-002-REP-SolarTeleRedesign.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file '"NRAO Solar Telescope Report".bbl' found.
- (NRAO Solar Telescope Report.bbl)
+Package biblatex Info: ... file '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' found.
+ (002.35.25.05.20-002-REP-SolarTeleRedesign.bbl)
 Package biblatex Info: Reference section=0 on input line 76.
 Package biblatex Info: Reference segment=0 on input line 76.
 <images/NRAO Logo Badge.png, id=4, 391.4625pt x 391.4625pt>
@@ -827,13 +827,13 @@ Underfull \hbox (badness 1005) in paragraph at lines 121--121
 
 [1
 
-{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/NRAO Logo Badge.png>] (NRAO Solar Telescope Report.toc)
+{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/NRAO Logo Badge.png>] (002.35.25.05.20-002-REP-SolarTeleRedesign.toc)
 \tf@toc=\write5
-\openout5 = `"NRAO Solar Telescope Report.toc"'.
+\openout5 = `002.35.25.05.20-002-REP-SolarTeleRedesign.toc'.
 
- (NRAO Solar Telescope Report.lof)
+ (002.35.25.05.20-002-REP-SolarTeleRedesign.lof)
 \tf@lof=\write6
-\openout6 = `"NRAO Solar Telescope Report.lof"'.
+\openout6 = `002.35.25.05.20-002-REP-SolarTeleRedesign.lof'.
 
  [1]
 Underfull \hbox (badness 2409) in paragraph at lines 150--150
@@ -868,25 +868,25 @@ Overfull \hbox (0.82947pt too wide) in paragraph at lines 325--332
 \OT1/cmr/m/n/10 In or-der to con-firm these cal-cu-la-tions, the an-tenna was con-nected to an An-ritsu Model MS2720T/720
  []
 
-[6 <./images/specan1.png (PNG copy)>] [7] (NRAO Solar Telescope Report.aux)
+[6 <./images/specan1.png (PNG copy)>] [7] (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
  ***********
-Package logreq Info: Writing requests to '"NRAO Solar Telescope Report".run.xml'.
-\openout1 = `"NRAO Solar Telescope Report.run.xml"'.
+Package logreq Info: Writing requests to '002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
+\openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49537 strings out of 476036
- 1311858 string characters out of 5778881
- 2394415 words of memory out of 5000000
- 69740 multiletter control sequences out of 15000+600000
+ 49533 strings out of 476036
+ 1312090 string characters out of 5778881
+ 2393459 words of memory out of 5000000
+ 69736 multiletter control sequences out of 15000+600000
  519775 words of font info for 56 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 102i,15n,107p,1027b,1346s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,1039b,1346s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "NRAO Solar Telescope Report.pdf" (8 pages, 309480 bytes).
+Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (8 pages, 309488 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

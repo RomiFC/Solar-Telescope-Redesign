@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>"NRAO Solar Telescope Report".bcf</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>"NRAO Solar Telescope Report".bbl</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -64,19 +64,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>"NRAO Solar Telescope Report"</infile>
+      <infile>002.35.25.05.20-002-REP-SolarTeleRedesign</infile>
     </cmdline>
     <input>
-      <file>"NRAO Solar Telescope Report".bcf</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bcf</file>
     </input>
     <output>
-      <file>"NRAO Solar Telescope Report".bbl</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>"NRAO Solar Telescope Report".bbl</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>"NRAO Solar Telescope Report".bcf</file>
+      <file>002.35.25.05.20-002-REP-SolarTeleRedesign.bcf</file>
     </requires>
     <requires type="editable">
       <file>references.bib</file>

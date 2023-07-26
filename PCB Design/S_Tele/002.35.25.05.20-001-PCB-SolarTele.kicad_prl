@@ -42,6 +42,7 @@
       13,
       15,
       16,
+      17,
       18,
       19,
       20,
@@ -67,7 +68,7 @@
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "S_Tele.kicad_prl",
+    "filename": "002.35.25.05.20-001-PCB-SolarTele.kicad_prl",
     "version": 3
   },
   "project": {

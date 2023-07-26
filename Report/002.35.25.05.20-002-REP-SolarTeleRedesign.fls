@@ -1,7 +1,7 @@
 PWD \\filehost\evla\techdocs\RFI\coopshare\remynguyen\SolarTelescope-ASWA\Solar-Telescope-Redesign\Report
 INPUT C:\Users\rnguyen\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT \\filehost\evla\techdocs\RFI\coopshare\remynguyen\SolarTelescope-ASWA\Solar-Telescope-Redesign\Report\NRAO Solar Telescope Report.tex
-OUTPUT NRAO Solar Telescope Report.log
+INPUT \\filehost\evla\techdocs\RFI\coopshare\remynguyen\SolarTelescope-ASWA\Solar-Telescope-Redesign\Report\002.35.25.05.20-002-REP-SolarTeleRedesign.tex
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.log
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
@@ -297,10 +297,10 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT .\NRAO Solar Telescope Report.aux
-INPUT .\NRAO Solar Telescope Report.aux
-INPUT NRAO Solar Telescope Report.aux
-OUTPUT NRAO Solar Telescope Report.aux
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -312,17 +312,17 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-OUTPUT NRAO Solar Telescope Report.bcf
-INPUT NRAO Solar Telescope Report.bbl
-INPUT .\NRAO Solar Telescope Report.bbl
-INPUT .\NRAO Solar Telescope Report.bbl
-INPUT .\NRAO Solar Telescope Report.bbl
-INPUT NRAO Solar Telescope Report.bbl
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.bcf
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
-OUTPUT NRAO Solar Telescope Report.pdf
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
@@ -345,16 +345,16 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.
 INPUT C:\Users\rnguyen\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\NRAO Solar Telescope Report.toc
-INPUT .\NRAO Solar Telescope Report.toc
-INPUT NRAO Solar Telescope Report.toc
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.toc
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.toc
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.toc
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-OUTPUT NRAO Solar Telescope Report.toc
-INPUT .\NRAO Solar Telescope Report.lof
-INPUT .\NRAO Solar Telescope Report.lof
-INPUT NRAO Solar Telescope Report.lof
-OUTPUT NRAO Solar Telescope Report.lof
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.toc
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.lof
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.lof
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.lof
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.lof
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
@@ -366,9 +366,9 @@ INPUT .\images\specan1.png
 INPUT .\images\specan1.png
 INPUT .\images\specan1.png
 INPUT .\images\specan1.png
-INPUT NRAO Solar Telescope Report.aux
-INPUT NRAO Solar Telescope Report.run.xml
-OUTPUT NRAO Solar Telescope Report.run.xml
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
