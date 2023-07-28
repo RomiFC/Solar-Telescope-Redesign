@@ -1,0 +1,96 @@
+\documentclass{report}
+\pagestyle{empty}
+\usepackage{upgreek}
+\usepackage[american]{circuitikz}
+\usepackage{pgfplots}
+\usepackage[letterpaper]{geometry}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{fit}
+% chktex-file 1
+% chktex-file 8
+% chktex-file 36
+
+
+\begin{document}
+\begin{center}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        title=Example Oscilloscope Output,
+        xlabel={Periods},
+        ylabel={$V_{out}$ (mV)},
+        grid=major,
+        xmin=-0.5, xmax=0.5,
+        ymin=-500, ymax=1500,
+        xtick={-0.5, -0.25, ..., 0.5},
+        ytick={0, 500, ..., 1500},
+    ]
+    \addplot[sharp plot, color=blue] table {Data/exampleTS.txt};
+    
+    \end{axis}
+\end{tikzpicture}
+
+\vspace{1cm}
+    
+\begin{tikzpicture}
+    \begin{axis}[
+        title=Receiver Tangential Sensitivity,
+        xlabel={Frequency (GHz)},
+        ylabel={$P_{in}$ (dBm)},
+        grid=major,
+        xmin=2, xmax=10,
+        ymin=-60, ymax=0,
+        xtick={2,...,10},
+        ytick={-50,-40,...,-10},
+        legend style = {
+            align = left,
+            cells = {anchor=east},
+            legend pos=outer north east,
+        }
+    ]
+    \addplot[smooth, red] table [x=a,y=b] {Data/TanSensADL5902.txt};
+    \addlegendentry{ADL5902 Only};
+    \addplot[smooth, blue] table [x=a,y=c] {Data/TanSensADL5902.txt};
+    \addlegendentry{ZX60-83LN-S+\\Preamp};
+    
+    \end{axis}
+\end{tikzpicture}
+
+\vspace{1cm}
+
+\begin{circuitikz}
+    \draw (0,0)
+    node[vsourcesinshape, anchor=south, rotate=90](source){}
+    -- ++ (1,0)
+    to[amp, l=Preamp, name=lna] ++ (2, 0)
+    -- ++ (1,0)
+    node[qfpchip,
+    num pins=6,
+    anchor=west,
+    hide numbers,
+    external pins width=0,
+    ](adl){}
+    (adl.north)
+    node[anchor=south]{ADL5902}
+    (adl.east)
+    -- ++ (1,0)
+    to[amp, l=Video Amp, name=opamp] ++ (2, 0)
+    -- ++ (1,0)
+    node[oscopeshape, anchor=left](scope){};
+    \draw (source.east)
+    node[anchor=south]{Signal Gen.};
+    \draw (scope.north)
+    node[anchor=south]{Oscilloscope};
+
+    \node[
+        rectangle,
+        draw,
+        dashed, fit= (lna) (opamp) (lnalabel) (opamplabel),
+        inner sep=5,
+        color=blue](box){};
+    \draw[color=blue] (box.north)
+    node[anchor=south]{Receiver};
+\end{circuitikz}
+
+\end{center}
+\end{document}
