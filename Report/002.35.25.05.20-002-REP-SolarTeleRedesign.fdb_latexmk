@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 1690408872 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690409000 0
+["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 1690845165 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690845736 0
   "./references.bib" 1688396645 1142 cbd8508a745e2cad21cf12e13a6342b4 ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1690408999 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1690845735 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
   (generated)
   "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl"
   "002.35.25.05.20-002-REP-SolarTeleRedesign.blg"
   (rewritten before read)
-["pdflatex"] 1690408996 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690409000 0
-  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690408995 19001 7812f2417c583abf812202d5038d19c8 ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1690408999 3519 7a906013333a8677fc117c5f5d65cf22 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1690408913 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1690408999 435 82a5a2acfed0f1e3c9c3373b3d49d930 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1690408999 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690408995 19001 7812f2417c583abf812202d5038d19c8 ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1690408999 860 f3fdfda942bf7ddeaddfab9ae5b1dfd4 "pdflatex"
+["pdflatex"] 1690845731 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690845736 0
+  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690845730 22472 88f55c3b8b42972c7312306461083adb ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1690845735 4002 747800619ae0194ef443e7e75ddf6d77 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1690845168 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1690845735 649 9e36737cc45ab6ec89aa8a8bd92011a4 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1690845735 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690845730 22472 88f55c3b8b42972c7312306461083adb ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1690845735 925 395a5b4a1ea3b6f967a70e8df7032297 "pdflatex"
   "C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689888922 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/rnguyen/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1688414245 23219540 c45627611e84a1570321c6a56f7a5430 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -92,6 +92,7 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex" 1673778790 321 cdd11262840e01e25374a2d458f15e99 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex" 1673778790 1319 0b2de5126c6cbc295f0eb77f7344b34d ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex" 1673778790 283 0802c14f542ec5204d2d1cc89f08a4d2 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex" 1673778790 5286 9a47f1a4030b41b12ff25b93bef99d01 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex" 1673778790 325 36322b0789619b270aec5993d5a9ed08 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1673778790 11518 738408f795261b70ce8dd47459171309 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1673778790 186782 af500404a9edec4d362912fe762ded92 ""
@@ -100,6 +101,7 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex" 1673778790 58801 1e750fb0692eb99aaac45698bbec96b1 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex" 1673778790 14117 ce877c5ca2b43f31c2cd81e74cc26bd9 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryfpu.code.tex" 1673778790 85938 8e4ba97c5906e1c0d158aea81fe29af7 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryintersections.code.tex" 1673778790 44571 38ac24c171fb8fa1a13adc8ce7eb94c5 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1673778790 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex" 1673778790 14526 4bc184b12436aa7f6490b2d2036870ef ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.tex" 1673778790 3063 8c415c68a0f3394e45cfeca0b65f6ee6 ""
@@ -140,6 +142,8 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex" 1621075461 22701 5fab7b8ebb90b053dc067d1bd37e43c2 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex" 1621075461 3047 aa82404aec57311271f4991c44bd71dc ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex" 1621075461 2931 5d52092da9e839accd7c9026062fe5c3 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex" 1621075461 1280 1521249d4f63a803d4675a58b2f8d27b ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetween.code.tex" 1621075461 8022 09fafe59353dda68e49cb7a9afc12de7 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex" 1621075461 23537 54be8160344d894595f6d145b1311658 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex" 1621075461 4288 b8d6247899b21e3bb66bb11b24d30f2c ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex" 1621075461 13828 11d1b09335a4a8baa693dd1e6cac3edf ""
@@ -148,6 +152,9 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex" 1621075461 83469 f77a7d8a23834d4c2472f8dba8e67bff ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex" 1621075461 12347 43d867ea29e34d528123d9ef750aa146 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex" 1621075461 8008 3bb2d07671e6afab7dcb90dfaec572a4 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex" 1621075461 46361 d56f2553e3ba5af154dcce84bcf45ce7 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex" 1621075461 16091 31a3a312521a247e48ab76d201a57228 ""
+  "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.code.tex" 1621075461 18491 b85533b4f2fac6ecfb5f55a453adefd5 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.code.tex" 1621075461 485274 aafeb7052fbed4c8aba6fcc36c94ea72 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.errorbars.code.tex" 1621075461 22428 72578a4c9324bc5dfafe23fe64f64024 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.markers.code.tex" 1621075461 12489 859c23df41fb9067128ef5a64b01c0a4 ""
@@ -229,6 +236,7 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1686255640 12691 ddae4e0162a664f166015d992388b742 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
+  "data/Vout vs Pin.txt" 1690826837 675 759fa2394f8d4bedf1a03ca7d9e19517 ""
   "images/NRAO Logo Badge.png" 1688396645 93775 e8ea7cdefa76fbe477f9128ac4a216f2 ""
   "images/specan1.png" 1688396645 51224 4c694438127ec519859fa0e119173577 ""
   (generated)

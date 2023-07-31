@@ -6,6 +6,7 @@
 \usepackage{geometry}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.18}
 \pgfplotsset{hide xscale/.style={/pgfplots/xtick scale label code/.code={}}}
 \pgfplotsset{hide yscale/.style={/pgfplots/ytick scale label code/.code={}}}
@@ -56,6 +57,7 @@
 % chktex-file 3
 % chktex-file 8
 % chktex-file 24
+% chktex-file 36
 % chktex-file 44
 % chktex-file 46
 
@@ -341,8 +343,81 @@ This measurement is about 5 dB greater than calculated but is within the degree 
 The 4 LNAs and single 6dB attenuator chosen provide a combined 66 dB of gain; thus, the ADL5902 incident power would measure approximately -16 dBm when pointed at the sun, well within its operating region.
 
 
+\section{Tuning System Gain}
+Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the telescope's operating frequency. Pointing the telescope at the sun will produce an input power higher than pointing it at the ground; this dynamic range is represented by the dotted lines and filled section of the curve. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
+\begin{figure}[!h]
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            title=$V_{out}$ vs. $P_{in}$ at 8.4 GHz,
+            xlabel={$P_{in}$ (dBm)},
+            ylabel={$V_{out}$ (V)},
+            grid=major,
+            xmin=-60, xmax=0,
+            ymin=0, ymax=3,
+            xtick={-60,-50,...,0},
+            ytick={0,0.5,...,3},
+            legend style = {
+                align = left,
+                cells = {anchor=east},
+                legend pos=outer north east,
+                }
+                ]
+                \path[name path=xaxis] (axis cs:-60,0) -- (axis cs:0,0);
+                \addplot[smooth, blue, name path=f] table [x=Pin,y=Vout] {data/Vout vs Pin.txt};
+
+                \addplot[opacity=0.2, green] fill between [of=f and xaxis, soft clip={domain=-47.5:-32.5}];
+                \draw[dashed] (axis cs:-47.5,0) -- (-47.5, 1.25);
+                \draw[dashed] (axis cs:-32.5,0) -- (-32.5, 1.25);
+                \draw (axis cs:-40,1.25)
+                node[anchor=south]{Ideal Range};
+
+                \addplot[opacity=0.2, red] fill between [of=f and xaxis, soft clip={domain=-25:-10}];
+                \draw[dashed] (axis cs:-25,0) -- (-25, 2.25);
+                \draw[dashed] (axis cs:-10,0) -- (-10, 2.25);
+                \draw (axis cs:-17.5,2.25)
+                node[anchor=south]{Incorrect Range};
+            \end{axis}
+\end{tikzpicture}
+\caption{Output voltage of the ADL5902 as a function of input power}
+\label{fig:vpcurve}
+\end{center}
+\end{figure}
+Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, additional attenuation is not possible or DC gain causes the low range to increase substantially above 0 volts, a simple solution is presented in Fig.~\ref{fig:scalingcircuit}.
+\begin{figure}[!h]
+    \begin{center}
+        \begin{circuitikz}
+            \draw(0, 0)
+            node[ampshape, anchor=east, boxed, fill=yellow!30](amp){}
+            -- ++ (1, 0)
+            to[qvprobe = Voltmeter] ++ (2.5,0)
+            -- ++ (1,0) 
+            coordinate (p1)
+            to[R, l=R2] ++ (3,0)
+            -| ++ (0, -0.5)
+            node[cground]{};
+
+            \draw(p1)
+            to[R, l_=R1] ++ (0, 2)
+            node[vcc]{5V};
+            \draw[
+                line width = 3pt,
+                line cap = round,
+                dash pattern = on 0pt off 3.5\pgflinewidth,
+                ] (amp.west)
+               ++ (-8pt, 0)
+            -- ++ (-1, 0);
+            \draw(amp.north)
+            node[anchor=south]{DC Gain Block};
+        \end{circuitikz}
+    \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
+    \end{center}
+\end{figure}
+
+
 \appendix
 \section{Appendix Title}
+
 
 
 \end{document}
