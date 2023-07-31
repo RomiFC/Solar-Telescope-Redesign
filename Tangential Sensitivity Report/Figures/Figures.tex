@@ -21,9 +21,9 @@
         ylabel={$V_{out}$ (mV)},
         grid=major,
         xmin=-0.5, xmax=0.5,
-        ymin=-500, ymax=1500,
+        ymin=-0.5, ymax=1.5,
         xtick={-0.5, -0.25, ..., 0.5},
-        ytick={0, 500, ..., 1500},
+        ytick={0, 0.5, ..., 1.5},
     ]
     \addplot[sharp plot, color=blue] table {Data/exampleTS.txt};
     
@@ -48,9 +48,9 @@
             legend pos=outer north east,
         }
     ]
-    \addplot[smooth, red] table [x=a,y=b] {Data/TanSensADL5902.txt};
+    \addplot[smooth, blue] table [x=a,y=b] {Data/TanSensADL5902.txt};
     \addlegendentry{ADL5902 Only};
-    \addplot[smooth, blue] table [x=a,y=c] {Data/TanSensADL5902.txt};
+    \addplot[smooth, red] table [x=a,y=c] {Data/TanSensADL5902.txt};
     \addlegendentry{ZX60-83LN-S+\\Preamp};
     
     \end{axis}
@@ -77,11 +77,13 @@
     to[amp, l=Video Amp, name=opamp] ++ (2, 0)
     -- ++ (1,0)
     node[oscopeshape, anchor=left](scope){};
+    % Labels
     \draw (source.east)
     node[anchor=south]{Signal Gen.};
     \draw (scope.north)
     node[anchor=south]{Oscilloscope};
 
+    % Box
     \node[
         rectangle,
         draw,
@@ -91,6 +93,30 @@
     \draw[color=blue] (box.north)
     node[anchor=south]{Receiver};
 \end{circuitikz}
+
+\vspace{1cm}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        title=$V_{out}$ vs. $P_{in}$ at 8.4 GHz,
+        xlabel={$P_{in}$ (dBm)},
+        ylabel={$V_{out}$ (V)},
+        grid=major,
+        xmin=-60, xmax=0,
+        ymin=0, ymax=3,
+        xtick={-60,-50,...,0},
+        ytick={0,0.5,...,3},
+        legend style = {
+            align = left,
+            cells = {anchor=east},
+            legend pos=outer north east,
+        }
+    ]
+    \addplot[smooth, blue] table [x=Pin,y=Vout] {Data/Vout vs Pin.txt};
+    
+    \end{axis}
+\end{tikzpicture}
+
 
 \end{center}
 \end{document}

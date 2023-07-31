@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  28 JUL 2023 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  31 JUL 2023 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -439,26 +439,27 @@ PGFPlots: reading {Data/TanSensADL5902.txt}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {Data/TanSensADL5902.txt}
 Missing character: There is no ; in font nullfont!
+PGFPlots: reading {"Data/Vout vs Pin.txt"}
 [1
 
-{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Figures.aux)
+{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] (Figures.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 39383 strings out of 476036
- 1113399 string characters out of 5778881
- 2070159 words of memory out of 5000000
- 59724 multiletter control sequences out of 15000+600000
+ 39396 strings out of 476036
+ 1113692 string characters out of 5778881
+ 2082460 words of memory out of 5000000
+ 59735 multiletter control sequences out of 15000+600000
  514236 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,17n,121p,872b,2112s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Figures.pdf (1 page, 63120 bytes).
+Output written on Figures.pdf (2 pages, 66251 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
