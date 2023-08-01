@@ -1861,7 +1861,7 @@
     (pin "1" (uuid ccdce807-4df9-4260-b35f-2c8310b0180b))
     (pin "2" (uuid 312db99a-0b15-4a86-b7b4-843e48b130a5))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J6") (unit 1)
         )
@@ -1886,7 +1886,7 @@
     )
     (pin "1" (uuid 98aae126-de5c-4355-b8c0-eda6ba1137d4))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#FLG01") (unit 1)
         )
@@ -1903,7 +1903,7 @@
     (property "Value" "0" (at 243.84 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 243.84 87.63 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 243.84 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 243.84 87.63 0)
@@ -1912,7 +1912,7 @@
     (pin "1" (uuid 4e2f2f15-8e51-467f-be68-987ebcf68669))
     (pin "2" (uuid 31b0a125-616d-4614-ad47-2b5161b32194))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R1") (unit 1)
         )
@@ -1937,7 +1937,7 @@
     )
     (pin "1" (uuid e7506a9f-c3a6-468f-9a5e-7f271bf47040))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR04") (unit 1)
         )
@@ -1963,7 +1963,7 @@
     (pin "1" (uuid 04d5a266-e143-4ac1-8ead-57726b5e969e))
     (pin "2" (uuid 33adae74-044f-4d13-ba16-91eff9bf2bcc))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C9") (unit 1)
         )
@@ -1995,7 +1995,7 @@
     (pin "4" (uuid 3c54978c-de68-429c-835d-35b33fc54657))
     (pin "8" (uuid 13807296-d770-49d3-84b7-d76d585c1be5))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 3)
         )
@@ -2022,7 +2022,7 @@
     (pin "2" (uuid 09709b48-4d5e-4ad9-8ecf-2d8687dda88b))
     (pin "3" (uuid bd0422ee-f3ad-464f-b957-ffef19c646c0))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U1") (unit 1)
         )
@@ -2048,7 +2048,7 @@
     (pin "1" (uuid bfaa9c14-17c8-4fea-bc6e-0432a85df13c))
     (pin "2" (uuid e0f2a534-63b1-486c-8c18-4aa124fa6bf7))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "D1") (unit 1)
         )
@@ -2065,7 +2065,7 @@
     (property "Value" "1430" (at 203.2 127 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 200.66 125.73 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 200.66 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 200.66 125.73 0)
@@ -2074,7 +2074,7 @@
     (pin "1" (uuid e1dd77b9-96a2-4584-a085-46757acaaf92))
     (pin "2" (uuid a5c225f2-ff32-4cec-aa41-810545bc3ec7))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R9") (unit 1)
         )
@@ -2099,7 +2099,7 @@
     )
     (pin "1" (uuid ce9c6d70-8c91-43f7-818e-b66bfff31d21))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#FLG02") (unit 1)
         )
@@ -2125,7 +2125,7 @@
     (pin "1" (uuid 3de3982d-9faf-4605-bbac-46892d5d6ae6))
     (pin "2" (uuid 60921073-9766-4b5e-8905-39edf50f2627))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J4") (unit 1)
         )
@@ -2151,7 +2151,7 @@
     (pin "1" (uuid 5f5179e3-293f-4243-912d-058586d9595a))
     (pin "2" (uuid bb05e2a3-6a8d-4591-8216-72308ffd7bcf))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "Rf1") (unit 1)
         )
@@ -2177,7 +2177,7 @@
     (pin "1" (uuid fd72d296-7e36-42df-a246-62165069eba8))
     (pin "2" (uuid a70c3d79-50bc-4d84-a428-7377c60a3ce9))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R3") (unit 1)
         )
@@ -2202,7 +2202,7 @@
     )
     (pin "1" (uuid 74ac34cd-23cc-4d55-815c-79edf874a79c))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR01") (unit 1)
         )
@@ -2227,7 +2227,7 @@
     )
     (pin "1" (uuid ba6358b9-2756-4900-ba6a-e49437f98f98))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR016") (unit 1)
         )
@@ -2252,7 +2252,7 @@
     )
     (pin "1" (uuid 4832dfb6-2db3-4ea9-934f-c492778b7755))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR09") (unit 1)
         )
@@ -2269,7 +2269,7 @@
     (property "Value" "0" (at 234.95 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 232.41 83.82 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 232.41 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 83.82 0)
@@ -2278,7 +2278,7 @@
     (pin "1" (uuid 852a4d5f-10fb-4511-b67a-14aa0edc2bf8))
     (pin "2" (uuid 0392f1b5-9f22-4af0-ae1e-7721486cbaf2))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R6") (unit 1)
         )
@@ -2303,7 +2303,7 @@
     )
     (pin "1" (uuid 0c8cf8b2-286e-486e-8268-3822cc37a81e))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR03") (unit 1)
         )
@@ -2328,7 +2328,7 @@
     )
     (pin "1" (uuid d1b3a257-9a0e-4e05-a089-343c1f614fae))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR08") (unit 1)
         )
@@ -2353,7 +2353,7 @@
     )
     (pin "1" (uuid dc884796-cc10-4282-bb0a-69472a6d3936))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR017") (unit 1)
         )
@@ -2379,7 +2379,7 @@
     (pin "1" (uuid d0c462a9-6d34-4a91-94e9-7bd2242a59d0))
     (pin "2" (uuid 6233af10-e554-4a6c-a23c-256bddcc806d))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C4") (unit 1)
         )
@@ -2404,7 +2404,7 @@
     )
     (pin "1" (uuid 3107807c-c673-40ab-9cfe-4a44a6caa3fb))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR012") (unit 1)
         )
@@ -2431,7 +2431,7 @@
     (pin "2" (uuid 7917a0c1-ec43-42fb-83e2-2a499a8a37ce))
     (pin "3" (uuid 53130151-aa6b-4ebb-a4b8-d1f3d7db2447))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R_pot2") (unit 1)
         )
@@ -2456,7 +2456,7 @@
     )
     (pin "1" (uuid f2a65c61-f4a2-4b5e-8ecb-46eb340336e0))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR05") (unit 1)
         )
@@ -2481,7 +2481,7 @@
     )
     (pin "1" (uuid e672d519-1608-4506-9bb1-5f6e405d98bf))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J2") (unit 1)
         )
@@ -2507,7 +2507,7 @@
     (pin "1" (uuid 2c3521b7-2048-40da-a4ec-ff7ab76b4f03))
     (pin "2" (uuid ef73c988-6047-4fbb-b140-b975095b687f))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C10") (unit 1)
         )
@@ -2524,7 +2524,7 @@
     (property "Value" "Inf" (at 234.95 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 232.41 76.2 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 232.41 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 76.2 0)
@@ -2533,7 +2533,7 @@
     (pin "1" (uuid 04bd8993-b735-4c2b-b487-201a45b9e67c))
     (pin "2" (uuid ad026def-522a-4950-9411-6d783578711e))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R2") (unit 1)
         )
@@ -2560,7 +2560,7 @@
     (pin "2" (uuid 19c8f59e-8ce7-4c98-b243-51b08b62d85d))
     (pin "3" (uuid 3de8a8e9-66e1-4ede-bc85-22cf6bfa8d98))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R_pot1") (unit 1)
         )
@@ -2585,7 +2585,7 @@
     )
     (pin "1" (uuid e06e3dc7-9eee-4d23-9669-70f03f2c7a81))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR07") (unit 1)
         )
@@ -2611,7 +2611,7 @@
     (pin "1" (uuid 615066ab-bf84-441d-909e-eb682cf0f3ae))
     (pin "2" (uuid 618dfb10-d002-4725-92ce-cf57db8abedb))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R11") (unit 1)
         )
@@ -2636,7 +2636,7 @@
     )
     (pin "1" (uuid f8c3d0bc-21e4-4dc8-b157-c444cca9a9d0))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR06") (unit 1)
         )
@@ -2662,7 +2662,7 @@
     (pin "1" (uuid b4ec4566-e414-4f82-88e6-f621b537e9df))
     (pin "2" (uuid 8230f08a-9035-40af-be58-f52fb43d535f))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J8") (unit 1)
         )
@@ -2688,7 +2688,7 @@
     (pin "1" (uuid fcfce932-ccdf-4d4c-bd6c-000d4eda6330))
     (pin "2" (uuid 5db81d02-447e-4ae0-945e-3edbc079e9f0))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J3") (unit 1)
         )
@@ -2713,7 +2713,7 @@
     )
     (pin "1" (uuid f20439bc-1c19-4ceb-a0c2-bae854ab9bc8))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR02") (unit 1)
         )
@@ -2739,7 +2739,7 @@
     (pin "1" (uuid 9b4f8565-322d-4bd6-94a0-cff85bd7e0f3))
     (pin "2" (uuid c50a3c7c-ed1a-439f-9df2-7925c7383614))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J5") (unit 1)
         )
@@ -2771,7 +2771,7 @@
     (pin "4" (uuid c2a472b2-d551-463f-8ff1-412489f9ac78))
     (pin "8" (uuid 2c5ee734-7a7f-4226-929a-2cdbf65564d2))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 1)
         )
@@ -2796,7 +2796,7 @@
     )
     (pin "1" (uuid c3781589-282e-470d-982d-ab525cb6a48d))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR013") (unit 1)
         )
@@ -2813,7 +2813,7 @@
     (property "Value" "Inf" (at 252.73 95.25 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 250.19 93.98 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 250.19 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 250.19 93.98 0)
@@ -2822,7 +2822,7 @@
     (pin "1" (uuid 83c69a6f-28b0-4c1d-8528-31a3771024e1))
     (pin "2" (uuid 617a92ac-5164-4f1a-b880-07da3b6eec9f))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R15") (unit 1)
         )
@@ -2848,7 +2848,7 @@
     (pin "1" (uuid b7e319bf-93d6-4d48-8f60-5643ee0f7a3c))
     (pin "2" (uuid 4f53282e-da51-4ecd-ac99-9af3f57dca70))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C1") (unit 1)
         )
@@ -2873,7 +2873,7 @@
     )
     (pin "1" (uuid 4e7723d8-b51a-4808-9441-ea461e26bfbd))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR015") (unit 1)
         )
@@ -2900,7 +2900,7 @@
     (pin "2" (uuid a04e57e0-5921-4173-b86d-4e49d382ffe7))
     (pin "3" (uuid f6d37372-e685-4148-9041-ea3b4a78831a))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U2") (unit 1)
         )
@@ -2925,7 +2925,7 @@
     )
     (pin "1" (uuid 7f9df5e7-eb4e-454c-8b35-2aae880e4f50))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR011") (unit 1)
         )
@@ -2951,7 +2951,7 @@
     (pin "1" (uuid 4d492a1e-56af-41be-94d6-2c5d800f43d0))
     (pin "2" (uuid f966f332-9ff8-46a3-9960-29b40e8b09f0))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "Rf2") (unit 1)
         )
@@ -2977,7 +2977,7 @@
     (pin "1" (uuid b4e3d89f-90cd-4068-8fd1-f19c52de4cda))
     (pin "2" (uuid a188ffa6-7f5e-4c64-8415-df462c12ecb8))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J7") (unit 1)
         )
@@ -2994,7 +2994,7 @@
     (property "Value" "1007" (at 209.55 119.38 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 209.55 121.92 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 209.55 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 209.55 121.92 0)
@@ -3003,7 +3003,7 @@
     (pin "1" (uuid 8a1abde6-0427-4b34-805d-b108b0654f1e))
     (pin "2" (uuid 3e3af245-d8db-4705-81b3-41366c284d66))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R12") (unit 1)
         )
@@ -3028,7 +3028,7 @@
     )
     (pin "1" (uuid 5c1c52ba-4707-4098-9381-2da62b850ac6))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR014") (unit 1)
         )
@@ -3054,7 +3054,7 @@
     (pin "1" (uuid f0ea1c8c-cefa-4cff-9ef0-39d173d2b142))
     (pin "2" (uuid fd446f0c-96c1-4730-9ee9-33db9ae56d3b))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C2") (unit 1)
         )
@@ -3080,7 +3080,7 @@
     (pin "1" (uuid 51853d78-c401-4833-95d4-b9337a9a3a55))
     (pin "2" (uuid 4f3ebe80-f174-41c2-8cd0-0f6c9cc10afa))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "R10") (unit 1)
         )
@@ -3112,7 +3112,7 @@
     (pin "7" (uuid b3b26f86-87dc-49ac-a6d2-5d7a84d4bc7c))
     (pin "8" (uuid 009a66cd-813e-4620-bbc4-6db582def193))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "J1") (unit 1)
         )
@@ -3153,7 +3153,7 @@
     (pin "8" (uuid 47f05dac-d684-48f8-9fba-9a93553b0038))
     (pin "9" (uuid 79e8ecc1-f36f-4539-85d2-61c9fbc77b67))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U3") (unit 1)
         )
@@ -3185,7 +3185,7 @@
     (pin "4" (uuid 965c222e-13b3-4107-a3ed-33f8d5ba73cc))
     (pin "8" (uuid ba1c1b7f-7594-4711-9a78-7904f9802f8e))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "U4") (unit 2)
         )
@@ -3211,7 +3211,7 @@
     (pin "1" (uuid 7f2b2b44-1c55-447d-a10b-ce901eb7df4c))
     (pin "2" (uuid 84447936-cae7-4cab-b181-4a6c3395f8f7))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C3") (unit 1)
         )
@@ -3237,7 +3237,7 @@
     (pin "1" (uuid 5cf115a4-7bb5-4dcc-8bb1-ee2fbe22dbca))
     (pin "2" (uuid 974ff41c-18f3-40eb-b08c-fe5f8f02cf20))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "C12") (unit 1)
         )
@@ -3262,7 +3262,7 @@
     )
     (pin "1" (uuid b0f58c4d-b438-4a64-a14f-c92a62c6145e))
     (instances
-      (project "S_Tele"
+      (project "002.35.25.05.20-001-PCB-SolarTele"
         (path "/0e389307-4ee7-48a5-9908-22ab90894211"
           (reference "#PWR010") (unit 1)
         )
