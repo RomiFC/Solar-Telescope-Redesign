@@ -26,6 +26,13 @@
 \setenumerate[1]{label={(\arabic*)}}
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{references.bib}
+\usepackage{hyperref}   % Allows hyperlinks
+\hypersetup{
+  colorlinks   = true,  % Colors links instead of ugly boxes
+  filecolor    = blue,  % Color for local hyperlinks
+  linkcolor    = black, % Color for internal hyperlinks
+  citecolor    = black  % Color for citations
+}
 
 % Global CircuiTikZ parameters
 \ctikzset{sources/fill=red!20}
@@ -36,14 +43,25 @@
 \tikzset{amp/.append style={fill=yellow!30}}
 \tikzset{twoport/.append style={fill=cyan!20}}
 
+% Suppresses chktex warnings 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 10
+% chktex-file 17
+% chktex-file 24
+% chktex-file 36
+% chktex-file 44
+% chktex-file 46
+
 % The following lines define a new command \nraocite that cites references in NRAO format RD0X by redefining \cite command to remove brackets. \nraoprecite includes a prenote.
-\DeclareCiteCommand{\cite}[\mkbibemph{\emph{}}]
+\DeclareCiteCommand{\cite} [\mkbibemph{\emph{}}]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
    \printtext[bibhyperref]{\usebibmacro{cite}}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
-\DeclareCiteCommand*{\cite}[\mkbibemph\emph{}]
+\DeclareCiteCommand*{\cite} [\mkbibemph\emph{}]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}
    \printtext[bibhyperref]{\usebibmacro{citeyear}}}
@@ -52,14 +70,8 @@
 \newcommand{\nraocite}[1]{[RD0\cite{#1}]}
 \newcommand{\nraoprecite}[2][]{[RD0\cite{#2}{, #1}]}
 
-% Suppresses chktex warnings 
-% chktex-file 1
-% chktex-file 3
-% chktex-file 8
-% chktex-file 24
-% chktex-file 36
-% chktex-file 44
-% chktex-file 46
+% This command creates a link to the research directory in filehost
+\newcommand{\filehost}{\href{//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Research}{Filehost}}
 
 % ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
 \title{Redesign of the Visitor Center Solar Telescope}
@@ -146,7 +158,7 @@ This document will describe the design choices made in development of the new so
 \subsection{Applicable Documents}
 The following documents may not be directly referenced herein, but may provide necessary context or supporting material.
 \begin{center}
-\begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
+\begin{tabular}{|m{2cm}|m{7.5cm}|m{3.5cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
     AD01 & Desiderata for Solar Observing with the EVLA & EVLAM\_70 \\ 
@@ -160,14 +172,14 @@ The following documents may not be directly referenced herein, but may provide n
 The following documents are referenced within this text:
 \begin{center}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|m{2cm}|m{7cm}|m{2.5cm}|} \hline
+\begin{tabular}{|m{2cm}|m{7.5cm}|m{3.5cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
-    RD01 & \citefield{solartemp}{title} & 0001 \\ \hline
-    RD02 & \citefield{aeh}{title} & 0002 \\\hline
-    RD03 & \citefield{tora}{title} & 0003 \\\hline
-    RD04 & \citefield{xbandvla}{title} & 0004 \\\hline
-    RD05 & \citefield{sfd1986}{title} & 0005 \\\hline
+    RD01 & \citefield{solartemp}{title} & \filehost \\ \hline
+    RD02 & \citefield{aeh}{title} & DSOC Bookcase \\\hline
+    RD03 & \citefield{tora}{title} & Privately Owned \\\hline
+    RD04 & \citefield{xbandvla}{title} & \filehost \\\hline
+    RD05 & \citefield{sfd1986}{title} & \filehost \\\hline
 \end{tabular}
 \renewcommand{\arraystretch}{1}
 \end{center}
@@ -175,7 +187,7 @@ The following documents are referenced within this text:
 \section{System Overview}
 The heart of the telescope is an conical corrugated X-band horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a 15 volt linear DC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
-As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 5 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease noticeably.
+As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 3 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease to zero.
 
 \subsection{Requirements}
 Being a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
@@ -229,18 +241,17 @@ Many of the RF components were either reused from the previous design or gathere
             ++ (0, 0.6)
             node[anchor=south]{ALS-04-0149};
         \end{circuitikz}
-    \caption{66 dB RF gain block}\label{fig:rfgain}
+    \caption{51 dB RF gain block}\label{fig:rfgain}
     \end{center}
 \end{figure}
 
 The bandpass filter does not have an attached datasheet but it resembles an equiripple filter and measured a 3 dB passband of about 7.8--8.9 GHz.
 
-The rectifier and DC gain block are integrated into a PCB with SMA connectors. The former utilizes an Analog Devices ADL5902, providing a linear-in-decibel output that can be scaled by the choice of resistors on the board or the following gain element. The DC gain block utilizes an LM358 op amp with an adjustable gain via potentiometer.
+The rectifier and DC gain block are integrated into a PCB with SMA connectors. The former utilizes an Analog Devices ADL5902, providing a linear-in-decibel output that can be scaled by the choice of resistors on the board or the following gain element. The DC gain block utilizes an LM358 op amp with adjustable gain via potentiometer.
 
     
 
 \subsection{Power Distribution}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and the dual noninverting op amps. The 15 volt supply is used to bias the ALS-04-0149, 12 volts is used to power the fans, whereas 5 volts is used to bias the ADL5902 and the ZX60-83LN-S+ LNAs.
 \begin{figure}[!ht]
 \begin{center}
 \begin{circuitikz}
@@ -300,13 +311,84 @@ As part of the effort to make the telescope more modern and visually appealing, 
 \caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
 \end{center}
 \end{figure}
-Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is used to bias the ALS-04-0149, 12 volts is used to power the fans, whereas 5 volts is used to bias the ADL5902 and the ZX60-83LN-S+ LNAs. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
+
+
+\section{Tuning System Gain}
+Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the telescope's operating frequency. Pointing the telescope at the sun will produce an input power higher than pointing it at the ground; this dynamic range is represented by the dotted lines and filled section of the curve. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
+\begin{figure}[!ht]
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            title=$V_{out}$ vs. $P_{in}$ at 8.4 GHz,
+            xlabel={$P_{in}$ (dBm)},
+            ylabel={$V_{out}$ (V)},
+            grid=major,
+            xmin=-60, xmax=0,
+            ymin=0, ymax=3,
+            xtick={-60,-50,...,0},
+            ytick={0,0.5,...,3},
+            legend style = {
+                align = left,
+                cells = {anchor=east},
+                legend pos=outer north east,
+                }
+                ]
+                \path[name path=xaxis] (axis cs:-60,0) -- (axis cs:0,0);
+                \addplot[smooth, blue, name path=f] table [x=Pin,y=Vout] {data/Vout vs Pin.txt};
+
+                \addplot[opacity=0.2, green] fill between [of=f and xaxis, soft clip={domain=-47.5:-32.5}];
+                \draw[dashed] (axis cs:-47.5,0) -- (-47.5, 1.25);
+                \draw[dashed] (axis cs:-32.5,0) -- (-32.5, 1.25);
+                \draw (axis cs:-40,1.25)
+                node[anchor=south]{Ideal Range};
+
+                \addplot[opacity=0.2, red] fill between [of=f and xaxis, soft clip={domain=-25:-10}];
+                \draw[dashed] (axis cs:-25,0) -- (-25, 2.25);
+                \draw[dashed] (axis cs:-10,0) -- (-10, 2.25);
+                \draw (axis cs:-17.5,2.25)
+                node[anchor=south]{Incorrect Range};
+            \end{axis}
+\end{tikzpicture}
+\caption{Output voltage of the ADL5902 as a function of input power}
+\label{fig:vpcurve}
+\end{center}
+\end{figure}
+Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, additional attenuation is not possible or DC gain causes the low range to increase substantially above 0 volts, a simple solution is presented in Fig.~\ref{fig:scalingcircuit}.
+\begin{figure}[!ht]
+    \begin{center}
+        \begin{circuitikz}
+            \draw(0, 0)
+            node[ampshape, anchor=east, boxed, fill=yellow!30](amp){}
+            -- ++ (1, 0)
+            to[qvprobe = Voltmeter] ++ (2.5,0)
+            -- ++ (1,0) 
+            coordinate (p1)
+            to[R, l=R2] ++ (3,0)
+            -| ++ (0, -0.5)
+            node[cground]{};
+
+            \draw(p1)
+            to[R, l_=R1] ++ (0, 2)
+            node[vcc]{15V};
+            \draw[
+                line width = 3pt,
+                line cap = round,
+                dash pattern = on 0pt off 3.5\pgflinewidth,
+                ] (amp.west)
+               ++ (-8pt, 0)
+            -- ++ (-1, 0);
+            \draw(amp.north)
+            node[anchor=south]{DC Gain Block};
+        \end{circuitikz}
+    \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
+    \end{center}
+\end{figure}
+DC gain should provide an output dynamic range of at least 3 volts, then the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve. Note that this is limited to a maximum of 15 volts.
 
 
 \section{Calculating Receiver Input Power}
-The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements is to shift the signal power into this linear region of operation. At the frequency and temperature of operation, the linear region was chosen to be -30 dBm to 0 dBm based on information available in the datasheet. This is fixed with a 30 dB dynamic range but antenna input power may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}.
-
-The first step to determine RF gain will be to find the range of antenna input power when pointed at the sun. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
+The first step to determine RF gain will be to find the range of antenna input power when pointed at the sun; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
 \begin{equation}
     P_R = S A_e \Delta f
 \label{eq:power}
@@ -363,10 +445,10 @@ In order to confirm these calculations, the antenna was connected to an Anritsu 
         \addlegendentry{Noise Power}
     \end{axis}
 \end{tikzpicture}
-\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs. Resolution bandwidth is 100 kHz.}\label{fig:specan1}
+\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs.}\label{fig:specan1}
 \end {center}
 \end{figure}
-The Anritsu is not capable of performing channel power measurements, so, assuming the mean signal power in Fig.~\ref{fig:specan1} can be extrapolated to the entire receiver bandwidth, channel power is calculated as follows:
+The Anritsu is not capable of performing channel power measurements, so, assuming the mean signal power $P_{\mu}$ in Fig.~\ref{fig:specan1} can be extrapolated to the entire receiver bandwidth, channel power is calculated as follows:
 \begin{align*}
     P_R &= P_{\mu} - G_{dB} - \left(RBW\right)_{dB} + \left(BW\right)_{dB}\\
         &= -92.6\ \text{dBm} - 30 - 50 + 90.4\\
@@ -374,81 +456,7 @@ The Anritsu is not capable of performing channel power measurements, so, assumin
 \end{align*}
 This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency.
 
-The 4 LNAs and single 6dB attenuator chosen provide a combined 66 dB of gain; thus, the ADL5902 incident power would measure approximately -16 dBm when pointed at the sun, well within its operating region.
-
-
-\appendix
-\section{Tuning System Gain}
-Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the telescope's operating frequency. Pointing the telescope at the sun will produce an input power higher than pointing it at the ground; this dynamic range is represented by the dotted lines and filled section of the curve. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
-\begin{figure}[!h]
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-            title=$V_{out}$ vs. $P_{in}$ at 8.4 GHz,
-            xlabel={$P_{in}$ (dBm)},
-            ylabel={$V_{out}$ (V)},
-            grid=major,
-            xmin=-60, xmax=0,
-            ymin=0, ymax=3,
-            xtick={-60,-50,...,0},
-            ytick={0,0.5,...,3},
-            legend style = {
-                align = left,
-                cells = {anchor=east},
-                legend pos=outer north east,
-                }
-                ]
-                \path[name path=xaxis] (axis cs:-60,0) -- (axis cs:0,0);
-                \addplot[smooth, blue, name path=f] table [x=Pin,y=Vout] {data/Vout vs Pin.txt};
-
-                \addplot[opacity=0.2, green] fill between [of=f and xaxis, soft clip={domain=-47.5:-32.5}];
-                \draw[dashed] (axis cs:-47.5,0) -- (-47.5, 1.25);
-                \draw[dashed] (axis cs:-32.5,0) -- (-32.5, 1.25);
-                \draw (axis cs:-40,1.25)
-                node[anchor=south]{Ideal Range};
-
-                \addplot[opacity=0.2, red] fill between [of=f and xaxis, soft clip={domain=-25:-10}];
-                \draw[dashed] (axis cs:-25,0) -- (-25, 2.25);
-                \draw[dashed] (axis cs:-10,0) -- (-10, 2.25);
-                \draw (axis cs:-17.5,2.25)
-                node[anchor=south]{Incorrect Range};
-            \end{axis}
-\end{tikzpicture}
-\caption{Output voltage of the ADL5902 as a function of input power}
-\label{fig:vpcurve}
-\end{center}
-\end{figure}
-Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, additional attenuation is not possible or DC gain causes the low range to increase substantially above 0 volts, a simple solution is presented in Fig.~\ref{fig:scalingcircuit}.
-\begin{figure}[!h]
-    \begin{center}
-        \begin{circuitikz}
-            \draw(0, 0)
-            node[ampshape, anchor=east, boxed, fill=yellow!30](amp){}
-            -- ++ (1, 0)
-            to[qvprobe = Voltmeter] ++ (2.5,0)
-            -- ++ (1,0) 
-            coordinate (p1)
-            to[R, l=R2] ++ (3,0)
-            -| ++ (0, -0.5)
-            node[cground]{};
-
-            \draw(p1)
-            to[R, l_=R1] ++ (0, 2)
-            node[vcc]{15V};
-            \draw[
-                line width = 3pt,
-                line cap = round,
-                dash pattern = on 0pt off 3.5\pgflinewidth,
-                ] (amp.west)
-               ++ (-8pt, 0)
-            -- ++ (-1, 0);
-            \draw(amp.north)
-            node[anchor=south]{DC Gain Block};
-        \end{circuitikz}
-    \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
-    \end{center}
-\end{figure}
-DC gain should provide an output dynamic range of at least 3 volts, then the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve. Note that this is limited to a maximum of 15 volts.
+The 3 LNAs and single 6dB attenuator chosen provide a combined 51 dB of gain; thus, the ADL5902 incident power would measure approximately -31 dBm when pointed at the sun.
 
 
 

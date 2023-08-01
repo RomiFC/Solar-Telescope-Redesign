@@ -312,6 +312,49 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\atbegshi\atbegshi.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\atbegshi-ltx.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\atbegshi-ltx.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\atveryend\atveryend.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
@@ -333,11 +376,18 @@ INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.out
 OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
+OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
@@ -373,11 +423,13 @@ OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.lof
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
+INPUT data\Vout vs Pin.txt
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
 INPUT data\spectrumTrace.txt
 INPUT data\spectrumTrace.txt
-INPUT data\Vout vs Pin.txt
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
+INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml
 OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
