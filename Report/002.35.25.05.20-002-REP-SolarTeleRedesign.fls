@@ -223,6 +223,12 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpagemodern.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpagemodern.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\titling\titling.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\titling\titling.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
@@ -407,26 +413,63 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\rnguyen\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.toc
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.toc
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.toc
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.toc
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.lof
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.lof
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.lof
 OUTPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.lof
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT data\Vout vs Pin.txt
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT data\spectrumTrace.txt
 INPUT data\spectrumTrace.txt
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.out
@@ -436,6 +479,8 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
