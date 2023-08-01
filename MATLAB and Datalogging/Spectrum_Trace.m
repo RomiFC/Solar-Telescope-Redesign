@@ -22,3 +22,6 @@ axis([freq(1, 1) freq(end, 1) -110 -85])
 legend('Incident Power', 'Averaged Power', 'Noise Power')
 xlabel('Frequency (MHz)')
 ylabel('Power at 100kHz RBW (dBm)')
+
+% Output csv
+writematrix([freq, pwr, noisepwr], 'spectrumTrace.txt', 'Delimiter', 'tab');

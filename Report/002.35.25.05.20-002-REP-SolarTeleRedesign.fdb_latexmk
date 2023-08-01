@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 1690845165 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690845736 0
+["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 0 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690907254 -1
   "./references.bib" 1688396645 1142 cbd8508a745e2cad21cf12e13a6342b4 ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1690845735 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1690907253 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
   (generated)
   "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl"
   "002.35.25.05.20-002-REP-SolarTeleRedesign.blg"
   (rewritten before read)
-["pdflatex"] 1690845731 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690845736 0
-  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690845730 22472 88f55c3b8b42972c7312306461083adb ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1690845735 4002 747800619ae0194ef443e7e75ddf6d77 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1690845168 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1690845735 649 9e36737cc45ab6ec89aa8a8bd92011a4 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1690845735 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690845730 22472 88f55c3b8b42972c7312306461083adb ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1690845735 925 395a5b4a1ea3b6f967a70e8df7032297 "pdflatex"
+["pdflatex"] 1690907248 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1690907254 0
+  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690907248 23718 9902ea08dd90f777976f072322b95728 ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1690907253 3913 6f0a573ae42169349e6a35a386bea176 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1690904123 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1690907253 649 9e36737cc45ab6ec89aa8a8bd92011a4 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1690907253 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1690907248 23718 9902ea08dd90f777976f072322b95728 ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1690907253 877 0cfc4911ca5eab959daeb76b674e9ef7 "pdflatex"
   "C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689888922 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/rnguyen/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1688414245 23219540 c45627611e84a1570321c6a56f7a5430 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -237,8 +237,8 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "data/Vout vs Pin.txt" 1690826837 675 759fa2394f8d4bedf1a03ca7d9e19517 ""
+  "data/spectrumTrace.txt" 1690902306 16197 8d7c1667aec5ac4e04e9d00d6dc31f4c ""
   "images/NRAO Logo Badge.png" 1688396645 93775 e8ea7cdefa76fbe477f9128ac4a216f2 ""
-  "images/specan1.png" 1688396645 51224 4c694438127ec519859fa0e119173577 ""
   (generated)
   "002.35.25.05.20-002-REP-SolarTeleRedesign.aux"
   "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf"

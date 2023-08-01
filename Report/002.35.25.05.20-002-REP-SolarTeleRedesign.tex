@@ -90,20 +90,20 @@
      \huge Status: \status \\
      \vspace*{1cm} \large
      % FIRST TABLE HERE
-     \begin{tabular}{|m{6.5cm}|m{5cm}|m{2cm}|} \hline
+     \begin{tabular}{|m{6.93cm}|m{4.5cm}|m{2cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Prepared By} & \textbf{Organization} & \textbf{Date} \\ \hline
         R. Nguyen & NRAO Electronics Div. & 6/21/2023 \\ 
         \hline
     \end{tabular} \\
     \vspace*{1cm}
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|} \hline
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Approvals} & \textbf{Organization} & \textbf{Signatures} \\ \hline
     \end{tabular}
     \renewcommand{\arraystretch}{1.5}
     % CONTENT OF SECOND TABLE HERE
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|}
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
         T. Mobraten & NRAO Electronics Division &  \\ 
         \hline
         S. Wimbrow & NRAO Electronics Division &  \\ 
@@ -113,13 +113,13 @@
     \end{tabular} \\
     \renewcommand{\arraystretch}{1}
     \vspace*{1cm}
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|} \hline
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Released By} & \textbf{Organization} & \textbf{Signature} \\ \hline
     \end{tabular}
     \renewcommand{\arraystretch}{2}
     % CONTENT OF THIRD TABLE HERE
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{7cm}|}
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
         D. Schafer & NRAO Electronics Division &  \\ 
         \hline
     \end{tabular}
@@ -182,7 +182,6 @@ Being a visitor center attraction, the device must be engaging and appealing to 
 \begin{enumerate}
     \item Utilizes a transparent enclosure or panel to view electronics, ideally one which will not yellow or fade easily.
     \item Must be dustproof and resilient to accumulation of debris inside the enclosure while still venting heat from electronics.
-    \item Use readily available parts when possible to keep costs low.
     \item Electronics must be powered by a fixed DC linear power supply and be easily serviceable.
 \end{enumerate}
 
@@ -206,22 +205,29 @@ Being a visitor center attraction, the device must be engaging and appealing to 
     \caption{RF signal block diagram}\label{fig:rfblock}
     \end{center}
 \end{figure}
-Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 4 low noise amplifiers (LNAs) and an attenuator to provide better impedance matching. The first 3 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6 dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz.
+Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6 dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz.
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
             \draw(0, 0)
             to[short, o-] ++ (0.5,0)
             to[amp] ++ (2, 0)
-            to[amp, l=ZX60-83LN-S+ (x3)] ++ (2, 0)
+            coordinate (p1)
             to[amp] ++ (2, 0)
             to[twoport, name=tp, fill=green!20] ++ (2, 0)
-            to[amp = ALS-04-0149] ++ (2, 0)
+            to[amp, name=p2] ++ (2, 0)
             to[short, -o] ++ (0.5,0);
             \draw (tp.center)
             node[resistorshape, anchor = center, rotate = 90, scale = 0.8]{};
-            \draw (tp.north)
+            \draw (tp.center)
+            ++ (0, 0.6)
             node[anchor = south]{-6 dB};
+            \draw (p1.center)
+            ++ (0, 0.5)
+            node[anchor=south]{ZX60-83LN-S+ (x2)};
+            \draw (p2.center)
+            ++ (0, 0.6)
+            node[anchor=south]{ALS-04-0149};
         \end{circuitikz}
     \caption{66 dB RF gain block}\label{fig:rfgain}
     \end{center}
@@ -234,54 +240,62 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
     
 
 \subsection{Power Distribution}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and the dual noninverting op amps. The 15 volt supply is used to bias the ALS-04-0149, 12 volts is used to power the fan and op amps, whereas 5 volts is used to bias the ADL5902 and the ZX60-83LN-S+ LNAs.
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and the dual noninverting op amps. The 15 volt supply is used to bias the ALS-04-0149, 12 volts is used to power the fans, whereas 5 volts is used to bias the ADL5902 and the ZX60-83LN-S+ LNAs.
 \begin{figure}[!ht]
 \begin{center}
+\begin{circuitikz}
 \ctikzloadstyle{legacy}
 \ctikzset{bipoles/twoport/width=1}
-\begin{circuitikz}
+\tikzset{twoport/.append style={fill=red!20}}
     \draw(0,0)[color=black]
     to[vsource, l_ = $V_{in}$, a^ = 15V] ++ (0,-3)
     node[tlground]{}
     (0, 0) -- ++ (1,0)
     % U1
     to[twoport, t=L7812, name=u1, l=U1] ++ (1.5,0)
-    -- ++ (1,0) node[anchor=south, name=12v]{12 V}
-    -- ++ (1,0)
+    -- ++ (1,0) coordinate (12v)
+    -- ++ (2,0)
     % U2
     to[twoport, t=L7805, name=u2, l=U2] ++ (1.5,0)
-    -- ++ (1,0) node[anchor=south, name=5v1]{}
-    -- ++ (2,0) node[anchor=south, name=5v2]{5 V}
-    -- ++ (2,0) node[anchor=south, name=5v3]{}
+    -- ++ (1,0) coordinate (5v1)
+    -- ++ (1.5,0) coordinate (5v2)
+    -- ++ (1.5,0) coordinate (5v3)
     to[short, -o] ++ (1,0);
     % Amplifiers
     \draw(0,0)
-    to[short, f = 150 mA] ++ (0,2)
+    -- ++ (0, 0.3)
+    to[short, f = 150 mA] ++ (0,1.75)
     node[plain mono amp, anchor=down, scale = 0.75, name = lna1]{LNA};
     \draw(5v1.south)
     to[short, f = 94 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna2]{LNA};
-    \draw(5v2.south)
-    to[short, f = 94 mA] ++ (0,-2)
-    node[plain mono amp, anchor=up, scale = 0.75, name = lna3]{LNA};
     \draw(5v3.south)
     to[short, f = 94 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna4]{LNA};
-    \draw(lna1.out) to[open, o-o] (lna2.in);
-    \draw(lna2.out) -- (lna3.in);
-    \draw(lna3.out) -- (lna4.in);
-    \draw(lna1.in) to[short, o-] ++ (0,0);
-    \draw(lna4.out) to[short, o-] ++ (0,0);
+    \draw(lna1.in) to[open, o-o] (lna1.out);
+    \draw(lna2.in) to[open, o-o] (lna4.out);
+    \draw[dashed] (lna2.out) -- (lna4.in);
     % ADL5902
-    \draw(5v1.south)
-    to[short, f_ = 90 mA] ++ (0,2)
+    \draw(5v1.north)
+    -- ++ (0, 0.2)
+    to[short, f_ = 90 mA] ++ (0,1.75)
     node[qfpchip, anchor = pin 3, hide numbers, external pins width = 0, label = {[scale = 0.8]ADL5902}, name = U3]{}
     (U3.north) node[anchor = south]{U3};
     % Fan
     \draw(12v.south)
     to[short, f = 182 mA] ++ (0,-1.75)
-    node[elmech, anchor = top, name = fan]{M}
-    (fan.bottom) node[anchor=north]{Fan};
+    node[elmech, anchor = top, name = fan1]{M}
+    (fan1.bottom) node[anchor=north]{Fan};
+    \draw(12v.north)
+    -- ++ (0, 0.3)
+    to[short, f_ = 182 mA] ++ (0,1.75)
+    node[elmech, anchor = bottom, name = fan2]{M}
+    (fan2.top) node[anchor=south]{Fan};
+    % Voltage Labels
+    \draw (12v.north east)
+    node[anchor = south west]{\color{red}12 V};
+    \draw (5v2.north)
+    node[anchor = south]{\color{red}5 V};
 \end{circuitikz}
 \caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
 \end{center}
@@ -289,7 +303,7 @@ As part of the effort to make the telescope more modern and visually appealing, 
 Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
 
 
-\section{Calculating RF Gain}
+\section{Calculating Receiver Input Power}
 The rectifier block has a linear region of RF input power to output voltage; the purpose of the gain elements is to shift the signal power into this linear region of operation. At the frequency and temperature of operation, the linear region was chosen to be -30 dBm to 0 dBm based on information available in the datasheet. This is fixed with a 30 dB dynamic range but antenna input power may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}.
 
 The first step to determine RF gain will be to find the range of antenna input power when pointed at the sun. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
@@ -325,11 +339,31 @@ With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the anten
 
 \subsection{Antenna Power Measurements}
 In order to confirm these calculations, the antenna was connected to an Anritsu Model MS2720T/720 Spectrum Analyzer centered at 8.4 GHz spanning 100 MHz and pointed towards the sun.
-\begin{figure}[H]%[!ht]
+\begin{figure}[H]
 \begin {center}
-\includegraphics[width=0.65\textwidth]{images/specan1.png}
-\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs. Resolution bandwidth is 100 kHz.}
-\label{fig:specan1}
+\begin{tikzpicture}
+    \begin{axis}[
+        title={Spectrum Analyzer Plot, $P_{\mu}$= -92.6 dBm},
+        xlabel=Frequency (MHz),
+        ylabel={Power at 100 kHz RBW(dBm)},
+        grid=major,
+        xmin=8350, xmax=8450,
+        ymin=-110, ymax=-85,
+        xtick={8375, 8400, ..., 8450},
+        ytick={-110, -105, ..., -85},
+        legend style = {
+            align = left,
+            cells = {anchor=east},
+            legend pos=outer north east,
+            }
+            ]
+        \addplot[smooth, blue!70] table [x index=0,y index=1] {data/spectrumTrace.txt};
+        \addlegendentry{Signal Power}
+        \addplot[smooth, red!80] table [x index=0,y index=2] {data/spectrumTrace.txt};
+        \addlegendentry{Noise Power}
+    \end{axis}
+\end{tikzpicture}
+\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs. Resolution bandwidth is 100 kHz.}\label{fig:specan1}
 \end {center}
 \end{figure}
 The Anritsu is not capable of performing channel power measurements, so, assuming the mean signal power in Fig.~\ref{fig:specan1} can be extrapolated to the entire receiver bandwidth, channel power is calculated as follows:
@@ -343,6 +377,7 @@ This measurement is about 5 dB greater than calculated but is within the degree 
 The 4 LNAs and single 6dB attenuator chosen provide a combined 66 dB of gain; thus, the ADL5902 incident power would measure approximately -16 dBm when pointed at the sun, well within its operating region.
 
 
+\appendix
 \section{Tuning System Gain}
 Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the telescope's operating frequency. Pointing the telescope at the sun will produce an input power higher than pointing it at the ground; this dynamic range is represented by the dotted lines and filled section of the curve. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
 \begin{figure}[!h]
@@ -399,7 +434,7 @@ Ideally, the RF gain should be adjusted such that the low range is roughly 0 vol
 
             \draw(p1)
             to[R, l_=R1] ++ (0, 2)
-            node[vcc]{5V};
+            node[vcc]{15V};
             \draw[
                 line width = 3pt,
                 line cap = round,
@@ -413,10 +448,9 @@ Ideally, the RF gain should be adjusted such that the low range is roughly 0 vol
     \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
     \end{center}
 \end{figure}
+DC gain should provide an output dynamic range of at least 3 volts, then the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve. Note that this is limited to a maximum of 15 volts.
 
 
-\appendix
-\section{Appendix Title}
 
 
 

@@ -374,13 +374,8 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\circuitikz\ctikzstyle-legacy.tex
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
-INPUT .\images\specan1.png
+INPUT data\spectrumTrace.txt
+INPUT data\spectrumTrace.txt
 INPUT data\Vout vs Pin.txt
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml

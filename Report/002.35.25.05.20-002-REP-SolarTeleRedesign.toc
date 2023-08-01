@@ -8,7 +8,6 @@
 \contentsline {subsection}{\numberline {3.1}Requirements}{3}{}%
 \contentsline {subsection}{\numberline {3.2}Architecture}{3}{}%
 \contentsline {subsection}{\numberline {3.3}Power Distribution}{4}{}%
-\contentsline {section}{\numberline {4}Calculating RF Gain}{4}{}%
+\contentsline {section}{\numberline {4}Calculating Receiver Input Power}{4}{}%
 \contentsline {subsection}{\numberline {4.1}Antenna Power Measurements}{6}{}%
-\contentsline {section}{\numberline {5}Tuning System Gain}{7}{}%
-\contentsline {section}{\numberline {A}Appendix Title}{8}{}%
+\contentsline {section}{\numberline {A}Tuning System Gain}{7}{}%
