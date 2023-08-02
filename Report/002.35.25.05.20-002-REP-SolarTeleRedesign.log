@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  1 AUG 2023 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  2 AUG 2023 16:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -812,24 +812,24 @@ Package biblatex Info: Redefining '\cite' on input line 56.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
 \openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -899,9 +899,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' found.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.bbl)
-Package biblatex Info: Reference section=0 on input line 103.
-Package biblatex Info: Reference segment=0 on input line 103.
-Package hyperref Info: Link coloring ON on input line 103.
+Package biblatex Info: Reference section=0 on input line 105.
+Package biblatex Info: Reference segment=0 on input line 105.
+Package hyperref Info: Link coloring ON on input line 105.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.out) (002.35.25.05.20-002-REP-SolarTeleRedesign.out)
 \@outlinefile=\write5
 \openout5 = `002.35.25.05.20-002-REP-SolarTeleRedesign.out'.
@@ -909,31 +909,31 @@ Package hyperref Info: Link coloring ON on input line 103.
 <images/NRAO Logo Badge.png, id=58, 391.4625pt x 391.4625pt>
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 114.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 117.
 (pdftex.def)             Requested size: 142.26378pt x 142.26439pt.
 
-Underfull \hbox (badness 1005) in paragraph at lines 136--136
+Underfull \hbox (badness 1005) in paragraph at lines 139--139
 []|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 138--138
+Underfull \hbox (badness 1005) in paragraph at lines 141--141
 []|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 140--140
+Underfull \hbox (badness 1005) in paragraph at lines 143--143
 []|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 152--152
+Underfull \hbox (badness 1005) in paragraph at lines 155--155
 []|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
  []
 
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 157.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 160.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
 [1{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
@@ -947,22 +947,22 @@ Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 157.
 
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 163.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 166.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.163 \newpage
+l.166 \newpage
                [1]
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 206.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 211.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [2]
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 264.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 274.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [3] (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\ctikzstyle-legacy.tex)
 \absfshift=\dimen312
@@ -971,13 +971,8 @@ Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 264.
 \absfshift=\dimen315
 \absfshift=\dimen316
 \absfshift=\dimen317
-File: images/NRAO Logo Badge.png Graphic file (type png)
-<use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 332.
-(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [4]
 PGFPlots: reading {"data/Vout vs Pin.txt"}
-Package pgfplots info on input line 368: fill between: activating layered graphics
+Package pgfplots info on input line 371: fill between: activating layered graphics
 \pgf@layerbox@axis background=\box73
 \pgf@layerboxsaved@axis background=\box74
 \pgf@layerbox@axis grid=\box75
@@ -994,34 +989,34 @@ Package pgfplots info on input line 368: fill between: activating layered graphi
 \pgf@layerboxsaved@axis descriptions=\box86
 \pgf@layerbox@axis foreground=\box87
 \pgf@layerboxsaved@axis foreground=\box88
-Package pgfplots info on input line 368: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+Package pgfplots info on input line 371: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 409.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 408.
+(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
+ [4]
+File: images/NRAO Logo Badge.png Graphic file (type png)
+<use images/NRAO Logo Badge.png>
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 412.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [5]
-File: images/NRAO Logo Badge.png Graphic file (type png)
-<use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 437.
-(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [6]
 PGFPlots: reading {data/spectrumTrace.txt}
 PGFPlots: reading {data/spectrumTrace.txt}
 
-Overfull \hbox (0.82947pt too wide) in paragraph at lines 440--467
+Overfull \hbox (0.82947pt too wide) in paragraph at lines 443--470
 \OT1/cmr/m/n/10 In or-der to con-firm these cal-cu-la-tions, the an-tenna was con-nected to an An-ritsu Model MS2720T/720
  []
 
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 473.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 470.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
-[7]
+[6]
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 482.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 485.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [8] 
+ [7] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
  ***********
@@ -1035,18 +1030,18 @@ Package logreq Info: Writing requests to '002.35.25.05.20-002-REP-SolarTeleRedes
 
  ) 
 Here is how much of TeX's memory you used:
- 56716 strings out of 476036
- 1439544 string characters out of 5778881
- 2645038 words of memory out of 5000000
+ 56715 strings out of 476036
+ 1439538 string characters out of 5778881
+ 2658644 words of memory out of 5000000
  76763 multiletter control sequences out of 15000+600000
  520134 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  102i,21n,376p,1039b,2577s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{cite.0@sfd1986} has been referenced but does not exist, replaced by a fixed one
-
-
 pdfTeX warning (dest): name{cite.0@xbandvla} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@sfd1986} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{cite.0@tora} has been referenced but does not exist, replaced by a fixed one
@@ -1058,9 +1053,9 @@ pdfTeX warning (dest): name{cite.0@aeh} has been referenced but does not exist, 
 pdfTeX warning (dest): name{cite.0@solartemp} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (9 pages, 324582 bytes).
+Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (8 pages, 325270 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

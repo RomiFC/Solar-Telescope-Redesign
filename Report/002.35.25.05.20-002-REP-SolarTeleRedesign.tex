@@ -82,31 +82,34 @@
 % HEADERS AND FOOTERS
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset[L,R]{2cm}
-\fancyhead[L]{\vspace{-0.5cm}\includegraphics[width=2cm]{images/NRAO Logo Badge.png}}
+\fancyhead[L]{\vspace{-0.8cm}\includegraphics[width=2cm]{images/NRAO Logo Badge.png}}
 \fancyhead[R]{
-    \begin{tabular}{|m{6.7cm}|m{4.9cm}|m{3.4cm}|}
-        \hline
-        \textit{\textbf{Title:}}  &
-        \textit{\textbf{Owner:}}  &
-        \textit{\textbf{Date:}}  \\
-        \hline
+\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arrayrulewidth}{0.25pt}
+\begin{tabular}{|m{6.7cm}|m{4.9cm}|m{3.4cm}|}
+    \hline
+        \textit{\textbf{Title:}} \thetitle &
+        \textit{\textbf{Owner:}} \theauthor &
+        \textit{\textbf{Date:}}  \thedate \\
+    \hline
         \multicolumn{2}{|l|}{
-        \textit{\textbf{NRAO Doc \#:}}  
+            \textit{\textbf{NRAO Doc \#:} \docnum}  
         } &
-        \textit{\textbf{Version:}}  \\
-        \hline
-    \end{tabular}
+        \textit{\textbf{Version:}} 1 \\
+    \hline
+\end{tabular}
 }
 \fancyfoot[C]{Page \textbf{\thepage} of \textbf{\pageref{LastPage}}}
 
  % DOCUMENT STARTS HERE
 \begin{document}
 \definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
-\setlength{\leftmargin}{1in}
-\setlength{\rightmargin}{1in}
-\setlength{\voffset}{-1.2in}
-\setlength{\headheight}{3.5cm}
-\setlength{\footskip}{90pt}
+\setlength{\leftmargin}{1in}        % Sets margin
+\setlength{\rightmargin}{1in}       % Sets margin
+\setlength{\voffset}{-1.2in}        % Moves header up
+\setlength{\headheight}{3.5cm}      % Defines header height
+\setlength{\textheight}{591pt}      % Extends text/body size down
+\setlength{\footskip}{60pt}         % Defines gap between body and footer
 
 \begin{titlepage}
 \thispagestyle{fancy}
