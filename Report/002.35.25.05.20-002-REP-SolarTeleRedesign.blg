@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is '002.35.25.05.20-002-REP-SolarTeleRedesign.blg'
-[191] biber-MSWIN64:340> INFO - === 
-[272] Biber.pm:419> INFO - Reading '002.35.25.05.20-002-REP-SolarTeleRedesign.bcf'
-[423] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
-[447] Biber.pm:4419> INFO - Processing section 0
-[464] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[531] bibtex.pm:1713> INFO - LaTeX decoding ...
-[549] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[622] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[622] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[623] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[624] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[630] bbl.pm:660> INFO - Writing '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' with encoding 'UTF-8'
-[639] bbl.pm:763> INFO - Output to 002.35.25.05.20-002-REP-SolarTeleRedesign.bbl
+[2] Config.pm:310> INFO - Logfile is '002.35.25.05.20-002-REP-SolarTeleRedesign.blg'
+[168] biber-MSWIN64:340> INFO - === 
+[221] Biber.pm:419> INFO - Reading '002.35.25.05.20-002-REP-SolarTeleRedesign.bcf'
+[373] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[396] Biber.pm:4419> INFO - Processing section 0
+[414] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[481] bibtex.pm:1713> INFO - LaTeX decoding ...
+[494] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[569] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[570] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[571] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[571] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[577] bbl.pm:660> INFO - Writing '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' with encoding 'UTF-8'
+[586] bbl.pm:763> INFO - Output to 002.35.25.05.20-002-REP-SolarTeleRedesign.bbl

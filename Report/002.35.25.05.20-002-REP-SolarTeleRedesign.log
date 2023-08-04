@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  2 AUG 2023 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  4 AUG 2023 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,7 +906,7 @@ Package hyperref Info: Link coloring ON on input line 105.
 \@outlinefile=\write5
 \openout5 = `002.35.25.05.20-002-REP-SolarTeleRedesign.out'.
 
-<images/NRAO Logo Badge.png, id=58, 391.4625pt x 391.4625pt>
+<images/NRAO Logo Badge.png, id=62, 391.4625pt x 391.4625pt>
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
 Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 117.
@@ -960,11 +960,15 @@ File: images/NRAO Logo Badge.png Graphic file (type png)
 Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 211.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 220.
+
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
 Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 274.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [3] (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\ctikzstyle-legacy.tex)
+[3] (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\ctikzstyle-legacy.tex)
 \absfshift=\dimen312
 \absfshift=\dimen313
 \absfshift=\dimen314
@@ -1012,11 +1016,30 @@ File: images/NRAO Logo Badge.png Graphic file (type png)
 Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 470.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
 [6]
+PGFPlots: reading {data/SpectrumRHS.txt}
+PGFPlots: reading {data/SpectrumRHS.txt}
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 485.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 507.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [7] 
+ [7]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 512.
+
+PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
+PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
+PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
+File: images/NRAO Logo Badge.png Graphic file (type png)
+<use images/NRAO Logo Badge.png>
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 560.
+(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
+[8]
+File: images/NRAO Logo Badge.png Graphic file (type png)
+<use images/NRAO Logo Badge.png>
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 562.
+(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
+ [9] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
  ***********
@@ -1024,16 +1047,16 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
  ***********
 Package rerunfilecheck Info: File `002.35.25.05.20-002-REP-SolarTeleRedesign.out' has not changed.
-(rerunfilecheck)             Checksum: B2C7ED908F6348B42282D52BCDF30490;1847.
+(rerunfilecheck)             Checksum: 55B61A4FE24C61CDC461AECD4209C188;2109.
 Package logreq Info: Writing requests to '002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
 \openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56715 strings out of 476036
- 1439538 string characters out of 5778881
- 2658644 words of memory out of 5000000
- 76763 multiletter control sequences out of 15000+600000
+ 56774 strings out of 476036
+ 1440698 string characters out of 5778881
+ 2726278 words of memory out of 5000000
+ 76812 multiletter control sequences out of 15000+600000
  520134 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  102i,21n,376p,1039b,2577s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1053,9 +1076,9 @@ pdfTeX warning (dest): name{cite.0@aeh} has been referenced but does not exist, 
 pdfTeX warning (dest): name{cite.0@solartemp} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (8 pages, 325270 bytes).
+Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (10 pages, 382360 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

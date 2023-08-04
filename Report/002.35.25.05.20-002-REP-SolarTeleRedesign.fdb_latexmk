@@ -1,20 +1,20 @@
 # Fdb version 4
-["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 1691002457 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1691014889 0
+["biber 002.35.25.05.20-002-REP-SolarTeleRedesign"] 1691188052 "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1691188208 0
   "./references.bib" 1688396645 1142 cbd8508a745e2cad21cf12e13a6342b4 ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1691014888 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bcf" 1691188207 107542 c646de836e1aefd79292476d7e045dd2 "pdflatex"
   (generated)
   "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl"
   "002.35.25.05.20-002-REP-SolarTeleRedesign.blg"
   (rewritten before read)
-["pdflatex"] 1691014883 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1691014889 0
-  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1691014883 24668 7b80add278f474fc6df6738cd7249f6b ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1691014888 5237 3fd7a2b62d7dd48fc6a369b30d6fbf8d "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1691002500 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1691014888 664 1411cb73da32d7e5b0b7c67e647d9b9d "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.out" 1691014888 1847 b2c7ed908f6348b42282d52bcdf30490 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1691014888 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1691014883 24668 7b80add278f474fc6df6738cd7249f6b ""
-  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1691014888 1034 110de7d22f101483595ef7e2af6a9057 "pdflatex"
+["pdflatex"] 1691188202 "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" "002.35.25.05.20-002-REP-SolarTeleRedesign.pdf" "002.35.25.05.20-002-REP-SolarTeleRedesign" 1691188208 0
+  "//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Report/002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1691188197 28697 351ef59d85aa6749dc7c333db2101430 ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.aux" 1691188207 6244 84ff8ee8f482d917e375be63a1824cee "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.bbl" 1691188055 6865 2847943089b71f4b3aae92f6935ab34d "biber 002.35.25.05.20-002-REP-SolarTeleRedesign"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.lof" 1691188207 1057 47bbb066b54a475824ab29402e2eaa52 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.out" 1691188207 2109 55b61a4fe24c61cdc461aecd4209c188 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml" 1691188207 2564 e44adc71a2753b4b7880051ac78a3b41 "pdflatex"
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.tex" 1691188197 28697 351ef59d85aa6749dc7c333db2101430 ""
+  "002.35.25.05.20-002-REP-SolarTeleRedesign.toc" 1691188207 1150 db58c9692e3d9b220fde8688bacd7b77 "pdflatex"
   "C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1690917116 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/rnguyen/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1688414245 23219540 c45627611e84a1570321c6a56f7a5430 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -263,6 +263,8 @@
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1686255640 12691 ddae4e0162a664f166015d992388b742 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
+  "data/Amplifiers and Filter Sparam.txt" 1691187076 7619 8a91ca79a2b4c6161909a72dd531c446 ""
+  "data/SpectrumRHS.txt" 1691164228 22415 426fca03e5f468590294a45f99ce4053 ""
   "data/Vout vs Pin.txt" 1690826837 675 759fa2394f8d4bedf1a03ca7d9e19517 ""
   "data/spectrumTrace.txt" 1690902306 16197 8d7c1667aec5ac4e04e9d00d6dc31f4c ""
   "images/NRAO Logo Badge.png" 1688396645 93775 e8ea7cdefa76fbe477f9128ac4a216f2 ""

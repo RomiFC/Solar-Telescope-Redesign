@@ -217,7 +217,7 @@ Being a visitor center attraction, the device must be engaging and appealing to 
     \item Electronics must be powered by a fixed DC linear power supply and be easily serviceable.
 \end{enumerate}
 
-\subsection{Architecture}
+\subsection{Architecture \color{red}(INCOMPLETE)}
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -474,13 +474,90 @@ The Anritsu is not capable of performing channel power measurements, so, assumin
         &= -92.6\ \text{dBm} - 30 - 50 + 90.4\\
         &= -82.2\ \text{dBm}
 \end{align*}
-This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency.
+This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency. Note that the noise power in Fig.~\ref{fig:specan1} was measured with a 50$\Omega$ load at the spectrum analyzer input and no amplifiers.
 
-The 3 LNAs and single 6dB attenuator chosen provide a combined 51 dB of gain; thus, the ADL5902 incident power would measure approximately -31 dBm when pointed at the sun.
+In another experiment on a different day, traces were taken with the telescope pointed at both the sun and ground in a cloudy and sunny condition. This time with 42 dB of gain from a ZX60-83LN-S+ and an ALS-04-0149 in that order, along with the 7.8 -- 8.9 GHz bandpass filter between them.
+\begin{figure}[H]
+    \begin {center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={Spectrum Analyzer Plot},
+                xlabel=Frequency (MHz),
+                ylabel={Power at 100 kHz RBW(dBm)},
+                grid=major,
+                xmin=7650, xmax=9150,
+                ymin=-90, ymax=-70,
+                xtick={7800, 8100, ..., 9000},
+                ytick={-90, -85, ..., -70},
+                legend style = {
+                    align = left,
+                    cells = {anchor=west},
+                    legend pos=outer north east,
+                    }
+                ]
+                \addplot[smooth, blue!70] table [x = FREQ-B, y = TRACE-B] {data/SpectrumRHS.txt};
+                \addlegendentry{Telescope at Ground}
+                \addplot[smooth, red!80] table [x = FREQ-A, y = TRACE-A] {data/SpectrumRHS.txt};
+                \addlegendentry{Telescope at Sky}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Signal trace with 42 dB of gain and a 7.8 -- 8.9 GHz filter.}\label{fig:specan2}
+    \end {center}
+\end{figure}
+Figure~\ref{fig:specan2} shows a roughly 2 dB drop in power when the telescope moved from the ground towards the horizon/sky; this power reading also did not change when pointing directly at the sun versus anywhere else in the sky. Additionally, the right and left-hand side ports on the antenna feed did not make a difference to the readings. The ripples in the trace are caused by the filter response and the downward slope is due to reaching the end of each LNA's operating frequency.
 
+Power calculations conducted in the same manner as the trace in Fig.~\ref{fig:specan1} show a channel power of about -80 dB in the passband.
 
-
-
+\appendix
+\section{S-Parameters \color{red}TEMPORARY}
+\begin{figure}[H]
+    \begin {center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={LNA S-Parameters},
+                xlabel=Frequency (MHz),
+                ylabel={$S_{21}$ (dB)},
+                grid=major,
+                scaled x ticks = base 10:-3,
+                xmin=10, xmax=12000,
+                xtick={2000, 4000, ..., 10000},
+                ymin=-10, ymax=30,
+                ytick={-10, 0, ..., 30},
+                legend style = {
+                    align = left,
+                    cells = {anchor=west},
+                    legend pos=outer north east,
+                    }
+                ]
+                \addplot[smooth, red!80] table [x index=0, y index=1] {data/Amplifiers and Filter Sparam.txt};
+                \addlegendentry{ZX60-83LN-S+}
+                \addplot[smooth, blue!70] table [x index= 0, y index=2] {data/Amplifiers and Filter Sparam.txt};
+                \addlegendentry{ALS-04-0149}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{LNA S-parameters. At 8.4 GHz, gain is about 15 dB for the ZX60 and 27 dB for the ALS.}\label{fig:sparam1}
+    \end {center}
+\end{figure}
+\begin{figure}[H]
+    \begin {center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={Filter S-Parameters},
+                xlabel=Frequency (MHz),
+                ylabel={$S_{21}$ (dB)},
+                grid=major,
+                scaled x ticks = base 10:-3,
+                xmin=7000, xmax=10000,
+                xtick={7800, 8900},
+                ymin=-40, ymax=0,
+                ytick={-40, -30, ..., 0},
+                ]
+                \addplot[smooth, red!80] table [x index=0, y index=3] {data/Amplifiers and Filter Sparam.txt};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Unmarked bandpass filter S-parameters.}\label{fig:sparam2}
+    \end {center}
+\end{figure}
 
 \end{document}
 
