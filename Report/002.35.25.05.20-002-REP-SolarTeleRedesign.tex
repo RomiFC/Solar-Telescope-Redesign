@@ -113,7 +113,6 @@
 \setlength{\textheight}{591pt}      % Extends text/body size down
 \setlength{\footskip}{60pt}         % Defines gap between body and footer
 
-\begin{titlepage}
 \thispagestyle{fancy}
 \begin{center}
      \includegraphics[width=5cm]{images/NRAO Logo Badge.png} \\
@@ -151,7 +150,7 @@
         \rowcolor{nraoblue}
         \textbf{Released By} & \textbf{Organization} & \textbf{Signature} \\ \hline
     \end{tabular}
-    \renewcommand{\arraystretch}{2}
+    \renewcommand{\arraystretch}{1.5}
     % CONTENT OF THIRD TABLE HERE
     \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
         D. Schafer & NRAO Elec. Division &  \\ 
@@ -159,9 +158,30 @@
     \end{tabular}
     \renewcommand{\arraystretch}{1}
 \end{center}
-\end{titlepage}
 
+% CHANGE RECORD
+\newpage
+\section*{Change Record}
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|m{1.5cm}|m{2.2cm}|m{2.5cm}|m{1.7cm}|m{5cm}|} \hline
+        \rowcolor{nraoblue}
+        Version & Date & Author & Affected\newline Section(s) & Reason\\ \hline \hline
+    \end{tabular}
+\renewcommand{\arraystretch}{1.6}
+    \begin{tabular}{|m{1.5cm}|m{2.2cm}|m{2.5cm}|m{1.7cm}|m{5cm}|}
+        1 & \thedate & R. Nguyen & All & Initial Draft \\ \hline
+          &          &           &     &               \\ \hline
+          &          &           &     &               \\ \hline
+          &          &           &     &               \\ \hline
+          &          &           &     &               \\ \hline
+          &          &           &     &               \\ \hline
+          &          &           &     &               \\ \hline
+    \end{tabular}
+\renewcommand{\arraystretch}{1}
+\end{center}
 
+\newpage
 \tableofcontents
 \listoffigures
 \thispagestyle{fancy}
@@ -241,7 +261,7 @@ The first two requirements were fulfilled by Tristen James in designing the encl
     \caption{RF signal block diagram}\label{fig:rfblock}
     \end{center}
 \end{figure}
-Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-06203ALN+ which provide a combined gain of 41 dB;\ they are followed by a ZX60-83LN-S+ which provides a mean gain of 15 dB in the filter bandwidth. These amplifiers are followed by an attenuator whose purpose will be described in Section~\ref{sec:tuning}. It is important to note that the receiver noise figure is about 2 dB -- a higher noise figure may result in an undetectable sun/sky delta.
+Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-06203ALN+ which provide a combined gain of 41 dB;\ they are followed by a ZX60-83LN-S+ which provides a mean gain of 15 dB in the filter bandwidth. These amplifiers are followed by an attenuator whose purpose will be described in Section~\ref{sec:tuning}. It is important to note that the receiver noise figure is about 2 dB -- a higher noise figure could result in an undetectable sun/sky delta.
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -256,7 +276,7 @@ Many of the RF components were either reused from the previous design or gathere
             node[resistorshape, anchor = center, rotate = 90, scale = 0.8]{};
             \draw (tp.center)
             ++ (0, 0.6)
-            node[anchor = south]{-6 dB};
+            node[anchor = south]{-7 dB};
             \draw (a1.center) ++ (0, 0.6)
             node[anchor=south]{20.5 dB};
             \draw (a2.center) ++ (0, 0.6)
@@ -264,7 +284,7 @@ Many of the RF components were either reused from the previous design or gathere
             \draw (a3.center) ++ (0, 0.6)
             node[anchor=south]{15 dB};
         \end{circuitikz}
-    \caption{RF gain block}\label{fig:rfgain}
+    \caption{49 dB RF gain block}\label{fig:rfgain}
     \end{center}
 \end{figure}
 
@@ -338,7 +358,7 @@ As part of the effort to make the telescope more modern and visually appealing, 
 
 \section{Tuning System Gain}
 \label{sec:tuning}
-Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{Resistor values were changed to achieve 86.3 mV/dB slope: R6 = 1180$\Omega$ and R2 = 2000$\Omega$} at the telescope's operating frequency. Pointing the telescope at a high temperature object will produce an input power higher than pointing it at the cold sky; this dynamic range is represented by the dotted lines and filled section of the curve\footnote{The range has been enlarged for the purpose of demonstration. The true range is shown in Section~\ref{sec:pwrplots}}. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
+Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{Resistor values were changed to achieve 86.3 mV/dB slope: R6 = 1180$\Omega$ and R2 = 2000$\Omega$} at the telescope's operating frequency. Pointing the telescope at a high temperature object will produce an input power higher than pointing it at the cold sky; this dynamic range is represented by the dotted lines and filled section of the curve\footnote{The range has been enlarged for the purpose of demonstration. The true range is much smaller (Section~\ref{sec:pwrplots})}. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
 \begin{figure}[!ht]
 \begin{center}
     \begin{tikzpicture}
@@ -360,16 +380,16 @@ Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{R
                 \path[name path=xaxis] (axis cs:-60,0) -- (axis cs:0,0);
                 \addplot[smooth, blue, name path=f] table [x=Pin,y=Vout] {data/Vout vs Pin.txt};
 
-                \addplot[opacity=0.2, green] fill between [of=f and xaxis, soft clip={domain=-47.5:-32.5}];
+                \addplot[opacity=0.2, green] fill between [of=f and xaxis, soft clip={domain=-47.5:-37.5}];
                 \draw[dashed] (axis cs:-47.5,0) -- (-47.5, 1.25);
-                \draw[dashed] (axis cs:-32.5,0) -- (-32.5, 1.25);
-                \draw (axis cs:-40,1.25)
+                \draw[dashed] (axis cs:-37.5,0) -- (-37.5, 1.25);
+                \draw (axis cs:-42.5,1.25)
                 node[anchor=south]{Ideal Range};
 
-                \addplot[opacity=0.2, red] fill between [of=f and xaxis, soft clip={domain=-25:-10}];
+                \addplot[opacity=0.2, red] fill between [of=f and xaxis, soft clip={domain=-25:-15}];
                 \draw[dashed] (axis cs:-25,0) -- (-25, 2.25);
-                \draw[dashed] (axis cs:-10,0) -- (-10, 2.25);
-                \draw (axis cs:-17.5,2.25)
+                \draw[dashed] (axis cs:-15,0) -- (-15, 2.25);
+                \draw (axis cs:-20,2.25)
                 node[anchor=south]{Incorrect Range};
             \end{axis}
 \end{tikzpicture}
@@ -407,6 +427,7 @@ Ideally, the RF gain should be adjusted such that the low range is roughly 0 vol
     \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
     \end{center}
 \end{figure}
+In reality, the sensitivity of the receiver will prevent a perfect 0 to 3 volt scaling at all times. Thus, in order to ensure some amount of voltmeter deflection occurs despite environmental changes, a practical range 0.75--2.25 volts may be desired.
 
 
 \section{Calculating Receiver Input Power}
