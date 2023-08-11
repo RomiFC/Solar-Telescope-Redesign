@@ -1556,6 +1556,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3d72284b-7970-446b-b8d8-254424985c88)
   )
+  (text "Op-amp topology is wrong; if the board is to be reprinted, this must be corrected."
+    (at 177.8 171.45 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 3d8d807d-31ff-4fd5-a7c9-b67cb81e30b5)
+  )
   (text "Dual LM358 Non-Inverting Amplifiers" (at 67.31 184.15 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5490d266-f5ba-489a-810e-16df36205c41)
@@ -1568,7 +1573,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c6478efe-ac44-4e8f-88d6-f17050a2957f)
   )
-  (text "On the final design, L7815 --> L7812 because 15VDC cooling fans were not available"
+  (text "On the final design, L7815 --> L7812 because 15VDC cooling fans were not available."
     (at 177.8 168.91 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid dbc0f82f-7d38-404b-9174-d0a031b34291)
