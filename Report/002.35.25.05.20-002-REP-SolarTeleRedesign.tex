@@ -9,7 +9,7 @@
 \pgfplotsset{hide yscale/.style={/pgfplots/ytick scale label code/.code={}}}
 \usepackage{amsmath}
 \usepackage{url}
-\hyphenation{op-tical net-works semi-conduc-tor}	% Correct bad hyphenation
+\hyphenation{}	        % Correct bad hyphenation
 \usepackage{graphicx}   % For including figures and pictures
 \usepackage{float}      % Used to fix location of images i.e.\begin{figure}[H]
 \usepackage{fancyhdr}   % For headers and footers
@@ -21,6 +21,8 @@
 \usepackage{appendix}   
 \usepackage{colortbl}   % For coloring table cells
 \usepackage{enumitem}   % For formatting enumerated lists
+\usepackage[parfill]{parskip}               % Removes paragraph indentation, adds line break
+\usepackage[hang, flushmargin]{footmisc}    % Removes footnote indentation
 \setenumerate[1]{label={(\arabic*)}}
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{references.bib}
@@ -136,11 +138,11 @@
     \renewcommand{\arraystretch}{1.5}
     % CONTENT OF SECOND TABLE HERE
     \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
-        T. Mobraten & NRAO Electronics Division &  \\ 
+        T. Mobraten & NRAO Elec. Division &  \\ 
         \hline
-        S. Wimbrow & NRAO Electronics Division &  \\ 
+        S. Wimbrow & NRAO Elec. Division &  \\ 
         \hline
-        D. Schafer & NRAO Electronics Division &  \\ 
+        D. Schafer & NRAO Elec. Division &  \\ 
         \hline
     \end{tabular} \\
     \renewcommand{\arraystretch}{1}
@@ -152,7 +154,7 @@
     \renewcommand{\arraystretch}{2}
     % CONTENT OF THIRD TABLE HERE
     \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
-        D. Schafer & NRAO Electronics Division &  \\ 
+        D. Schafer & NRAO Elec. Division &  \\ 
         \hline
     \end{tabular}
     \renewcommand{\arraystretch}{1}
@@ -207,17 +209,19 @@ The following documents are referenced within this text:
 \section{System Overview}
 The heart of the telescope is an conical corrugated X-band horn antenna originally used to receive Voyager transmissions at 8.4 GHz; this is to be unchanged in the redesign. Power is supplied through a 15 volt linear DC power supply located inside the visitor center in order to eliminate radio frequency interference (RFI) caused by AC power and switching power supplies.
 
-As the telescope is pointed towards the sun, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed towards the sun with clear skies, the voltmeter should read a maximum 3 volts; as the telescope is pointed towards the ground or away from the sun, the voltmeter reading should decrease to zero.
+As the telescope is pointed towards the various objects, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed directly at the sun, the voltmeter should raise noticeably from its value when pointed at a cold sky\footnote{Cold sky is defined when there are no notable RF emitting objects in the beamwidth. Experimentally, these readings seem to be equivalent to the receiver noise floor.}. When pointed at the ground or an object, the reading will increase to a maximum due reflections and filling of the antenna sidelobes. This is further explained in Section~\ref{sec:pwrplots}.
 
 \subsection{Requirements}
-Being a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, the device must be at least partially transparent to show visible electronics and have a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
+Being a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, a transparent receiver to show electronics and a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
 \begin{enumerate}
     \item Utilizes a transparent enclosure or panel to view electronics, ideally one which will not yellow or fade easily.
     \item Must be dustproof and resilient to accumulation of debris inside the enclosure while still venting heat from electronics.
-    \item Electronics must be powered by a fixed DC linear power supply and be easily serviceable.
+    \item Electronics must be powered by a fixed DC linear power supply and easily serviceable.
+    \item There must be a measurable voltage delta when pointing the telescope at various RF sources.
 \end{enumerate}
+The first two requirements were fulfilled by Tristen James in designing the enclosure. The following requirements will be discussed in this report.
 
-\subsection{Architecture \color{red}(INCOMPLETE)}
+\subsection{Architecture}
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -237,31 +241,30 @@ Being a visitor center attraction, the device must be engaging and appealing to 
     \caption{RF signal block diagram}\label{fig:rfblock}
     \end{center}
 \end{figure}
-Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-83LN-S+ which provide a measured 15dB of gain at 8.4 GHz each; they are followed by a single 6 dB attenuator and an ALS-04-0149 LNA in that order. The ALS-04-0149 does not have a readily available datasheet but measured 27dB of gain at 8.4 GHz.
+Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-06203ALN+ which provide a combined gain of 41 dB;\ they are followed by a ZX60-83LN-S+ which provides a mean gain of 15 dB in the filter bandwidth. These amplifiers are followed by an attenuator whose purpose will be described in Section~\ref{sec:tuning}. It is important to note that the receiver noise figure is about 2 dB -- a higher noise figure may result in an undetectable sun/sky delta.
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
             \draw(0, 0)
             to[short, o-] ++ (0.5,0)
-            to[amp] ++ (2, 0)
-            coordinate (p1)
-            to[amp] ++ (2, 0)
+            to[amp, name=a1] ++ (2, 0)
+            to[amp, name=a2] ++ (2, 0)
+            to[amp, name=a3] ++ (2, 0)
             to[twoport, name=tp, fill=green!20] ++ (2, 0)
-            to[amp, name=p2] ++ (2, 0)
             to[short, -o] ++ (0.5,0);
             \draw (tp.center)
             node[resistorshape, anchor = center, rotate = 90, scale = 0.8]{};
             \draw (tp.center)
             ++ (0, 0.6)
             node[anchor = south]{-6 dB};
-            \draw (p1.center)
-            ++ (0, 0.5)
-            node[anchor=south]{ZX60-83LN-S+ (x2)};
-            \draw (p2.center)
-            ++ (0, 0.6)
-            node[anchor=south]{ALS-04-0149};
+            \draw (a1.center) ++ (0, 0.6)
+            node[anchor=south]{20.5 dB};
+            \draw (a2.center) ++ (0, 0.6)
+            node[anchor=south]{20.5 dB};
+            \draw (a3.center) ++ (0, 0.6)
+            node[anchor=south]{15 dB};
         \end{circuitikz}
-    \caption{51 dB RF gain block}\label{fig:rfgain}
+    \caption{RF gain block}\label{fig:rfgain}
     \end{center}
 \end{figure}
 
@@ -289,23 +292,22 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
     % U2
     to[twoport, t=L7805, name=u2, l=U2] ++ (1.5,0)
     -- ++ (1,0) coordinate (5v1)
-    -- ++ (1.5,0) coordinate (5v2)
-    -- ++ (1.5,0) coordinate (5v3)
+    -- ++ (2,0) coordinate (5v2)
+    -- ++ (2,0) coordinate (5v3)
     to[short, -o] ++ (1,0);
     % Amplifiers
-    \draw(0,0)
-    -- ++ (0, 0.3)
-    to[short, f = 150 mA] ++ (0,1.75)
-    node[plain mono amp, anchor=down, scale = 0.75, name = lna1]{LNA};
     \draw(5v1.south)
     to[short, f = 94 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna2]{LNA};
+    \draw(5v2.south)
+    to[short, f = 94 mA] ++ (0,-2)
+    node[plain mono amp, anchor=up, scale = 0.75, name = lna3]{LNA};
     \draw(5v3.south)
     to[short, f = 94 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna4]{LNA};
-    \draw(lna1.in) to[open, o-o] (lna1.out);
     \draw(lna2.in) to[open, o-o] (lna4.out);
-    \draw[dashed] (lna2.out) -- (lna4.in);
+    \draw (lna2.out) -- (lna3.in);
+    \draw (lna3.out) -- (lna4.in);
     % ADL5902
     \draw(5v1.north)
     -- ++ (0, 0.2)
@@ -331,11 +333,12 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
 \caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
 \end{center}
 \end{figure}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is used to bias the ALS-04-0149, 12 volts is used to power the fans, whereas 5 volts is used to bias the ADL5902 and the ZX60-83LN-S+ LNAs. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
 
 
 \section{Tuning System Gain}
-Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the telescope's operating frequency. Pointing the telescope at the sun will produce an input power higher than pointing it at the ground; this dynamic range is represented by the dotted lines and filled section of the curve. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
+\label{sec:tuning}
+Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{Resistor values were changed to achieve 86.3 mV/dB slope: R6 = 1180$\Omega$ and R2 = 2000$\Omega$} at the telescope's operating frequency. Pointing the telescope at a high temperature object will produce an input power higher than pointing it at the cold sky; this dynamic range is represented by the dotted lines and filled section of the curve\footnote{The range has been enlarged for the purpose of demonstration. The true range is shown in Section~\ref{sec:pwrplots}}. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
 \begin{figure}[!ht]
 \begin{center}
     \begin{tikzpicture}
@@ -370,11 +373,11 @@ Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902 at the tel
                 node[anchor=south]{Incorrect Range};
             \end{axis}
 \end{tikzpicture}
-\caption{Output voltage of the ADL5902 as a function of input power}
+\caption{Output voltage of the ADL5902-EVALZ as a function of input power.}
 \label{fig:vpcurve}
 \end{center}
 \end{figure}
-Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, additional attenuation is not possible or DC gain causes the low range to increase substantially above 0 volts, a simple solution is presented in Fig.~\ref{fig:scalingcircuit}.
+Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, granular attenuation is not possible, the DC gain will cause the nonzero low range to increase above 0 volts. A simple solution is presented in Fig.~\ref{fig:scalingcircuit} where the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve.
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -404,25 +407,27 @@ Ideally, the RF gain should be adjusted such that the low range is roughly 0 vol
     \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
     \end{center}
 \end{figure}
-DC gain should provide an output dynamic range of at least 3 volts, then the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve. Note that this is limited to a maximum of 15 volts.
 
 
 \section{Calculating Receiver Input Power}
-The first step to determine RF gain will be to find the range of antenna input power when pointed at the sun; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. Instantaneous power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
+The first step to determine RF gain will be to find the power delta as the antenna is pointed at the sun from a cold sky; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. This calculation also assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, it generally increases with frequency\nraocite{sfd1986}. Instantaneous channel power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
 \begin{equation}
     P_R = S A_e \Delta f
 \label{eq:power}
 \end{equation}
-where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\nraoprecite[eq.~(41-2)]{aeh}. Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
+where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\nraoprecite[eq.~(41-2)]{aeh}. To simplify calculations, we will focus on power spectral density (PSD) defined as $P(f)$ in dBm/Hz, ignoring the receiver bandwidth for now.
+\begin{equation}
+    P_{sun}(f) = S A_e
+\label{eq:psd}
+\end{equation}
+Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
 \begin{equation} \label{eq:ae}
 \begin{split}
     A_e &= \frac{\lambda^2}{4\pi}G \\
     &= \frac{\pi d^2}{4} \eta_a
 \end{split}
 \end{equation}
-where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\nraocite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measured to be 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
-
-Receiver bandwidth $\Delta f$ can be defined by the bandwidth of the bandpass filter in Fig.~\ref{fig:rfblock}, thus, the received power $P_R$ is more representative of channel power without any amplification, rather than antenna output power, as the antenna is a wideband feed with a higher bandwidth than the filter. In this case, receiver bandwidth is defined to be 1100 MHz or 90.4 dB Hz.
+where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\nraocite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measures 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
 
 Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\nraocite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\nraoprecite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\nraoprecite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
 \begin{table}[!ht]
@@ -436,128 +441,47 @@ Lastly, values for solar flux density $S$ must be found within the operating fre
 \caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.}
 \end{table}
 
-With values for $S$, $A_e$, and $\Delta f$ found, we can now calculate the antenna channel power $P_R$ with equation~\ref{eq:power} to be -87.9 dBm at $S_{\mu}$. Calculating $P_R$ at $S_{\min}$ and $S_{\max}$ show a roughly $\pm$3 dBm variation in $P_R$. Note that this calculation assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, $S$ generally increases with frequency\nraocite{sfd1986}.
+With values for $S$ and $A_e$ found, we can now calculate $P_{sun}(f)$ with equation~\ref{eq:psd} to be -181.6 dBm/Hz at $S_{\min}$. A problem arises when comparing this to the thermal noise PSD of -174 dBm/Hz at 300 K;\ because the power received by the sun is below the noise floor, it is insufficient to assume $P_R$ is independent of noise. The 7.6 dB delta between the noise floor and $P_{sun}(f)$ at $S_{\min}$ means that pointing the antenna at the sun will raise the antenna output power by a mere 0.7 dB at minimum. If a receiver noise figure of 2 dB is to be assumed, this output power delta decreases to 0.45 dB.
+\begin{align*}
+    \Delta P &= [P_{sun}(f)+P_{noise}(f)] - P_{noise}(f)\\
+             &= 10 \log_{10} (10^{-17.4+0.2} + 10^{-18.16}) - (-174+2)\\
+             &= 0.452 \text{ dB}
+\end{align*}
 
 
 \subsection{Antenna Power Measurements}
-In order to confirm these calculations, the antenna was connected to an Anritsu Model MS2720T/720 Spectrum Analyzer centered at 8.4 GHz spanning 100 MHz and pointed towards the sun.
+\label{sec:pwrplots}
+In order to confirm these calculations, the antenna was connected to an Anritsu MS2720T/720 spectrum analyzer and pointed at various targets.
 \begin{figure}[H]
 \begin {center}
 \begin{tikzpicture}
     \begin{axis}[
-        title={Spectrum Analyzer Plot, $P_{\mu}$= -92.6 dBm},
+        title={Spectrum Analyzer Plot},
         xlabel=Frequency (MHz),
-        ylabel={Power at 100 kHz RBW(dBm)},
+        ylabel={Power (dBm/300kHz)},
         grid=major,
-        xmin=8350, xmax=8450,
-        ymin=-110, ymax=-85,
-        xtick={8375, 8400, ..., 8450},
-        ytick={-110, -105, ..., -85},
+        xmin=7400, xmax=9400,
+        ymin=-87, ymax=-78,
+        xtick={7400, 7800, ..., 9400},
+        ytick={-86, -84, ..., -78},
         legend style = {
             align = left,
-            cells = {anchor=east},
+            cells = {anchor=west},
             legend pos=outer north east,
             }
             ]
-        \addplot[smooth, blue!70] table [x index=0,y index=1] {data/spectrumTrace.txt};
-        \addlegendentry{Signal Power}
-        \addplot[smooth, red!80] table [x index=0,y index=2] {data/spectrumTrace.txt};
-        \addlegendentry{Noise Power}
+        \addplot[orange!70] table [x index = 5, y index = 4] {data/FileName_1.txt};
+        \addplot[blue!70] table [x index = 1, y index = 0] {data/FileName_1.txt};
+        \addplot[red!80] table [x index = 3, y index = 2] {data/FileName_1.txt};
+        \legend{Ground\\(-134.2 dBm/Hz), Sun\\(-136.3 dBm/Hz), Cold Sky\\(-136.9 dBm/Hz)}
     \end{axis}
 \end{tikzpicture}
-\caption{Signal trace with 30 dB of gain from two ZX60-83LN-S+ LNAs.}\label{fig:specan1}
+\caption{Signal trace with 40 dB of gain from two ZX60-06203ALN+ LNAs.}\label{fig:specan1}
 \end {center}
 \end{figure}
-The Anritsu is not capable of performing channel power measurements, so, assuming the mean signal power $P_{\mu}$ in Fig.~\ref{fig:specan1} can be extrapolated to the entire receiver bandwidth, channel power is calculated as follows:
-\begin{align*}
-    P_R &= P_{\mu} - G_{dB} - \left(RBW\right)_{dB} + \left(BW\right)_{dB}\\
-        &= -92.6\ \text{dBm} - 30 - 50 + 90.4\\
-        &= -82.2\ \text{dBm}
-\end{align*}
-This measurement is about 5 dB greater than calculated but is within the degree of accuracy necessary for this design. It's possible this error was caused by assuming equal power throughout the entire passband, or due to the fact that this operating frequency is outside the bandwidth of the amplifiers used, thus resulting in nonlinear gain across frequency. Note that the noise power in Fig.~\ref{fig:specan1} was measured with a 50$\Omega$ load at the spectrum analyzer input and no amplifiers.
-
-In another experiment on a different day, traces were taken with the telescope pointed at both the sun and ground in a cloudy and sunny condition. This time with 42 dB of gain from a ZX60-83LN-S+ and an ALS-04-0149 in that order, along with the 7.8 -- 8.9 GHz bandpass filter between them.
-\begin{figure}[H]
-    \begin {center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                title={Spectrum Analyzer Plot},
-                xlabel=Frequency (MHz),
-                ylabel={Power at 100 kHz RBW(dBm)},
-                grid=major,
-                xmin=7650, xmax=9150,
-                ymin=-90, ymax=-70,
-                xtick={7800, 8100, ..., 9000},
-                ytick={-90, -85, ..., -70},
-                legend style = {
-                    align = left,
-                    cells = {anchor=west},
-                    legend pos=outer north east,
-                    }
-                ]
-                \addplot[smooth, blue!70] table [x = FREQ-B, y = TRACE-B] {data/SpectrumRHS.txt};
-                \addlegendentry{Telescope at Ground}
-                \addplot[smooth, red!80] table [x = FREQ-A, y = TRACE-A] {data/SpectrumRHS.txt};
-                \addlegendentry{Telescope at Sky}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Signal trace with 42 dB of gain and a 7.8 -- 8.9 GHz filter.}\label{fig:specan2}
-    \end {center}
-\end{figure}
-Figure~\ref{fig:specan2} shows a roughly 2 dB drop in power when the telescope moved from the ground towards the horizon/sky; this power reading also did not change when pointing directly at the sun versus anywhere else in the sky. Additionally, the right and left-hand side ports on the antenna feed did not make a difference to the readings. The ripples in the trace are caused by the filter response and the downward slope is due to reaching the end of each LNA's operating frequency.
-
-Power calculations conducted in the same manner as the trace in Fig.~\ref{fig:specan1} show a channel power of about -80 dB in the passband.
+Mean channel power measurements on the Anritsu from 7.95 to 8.85 GHz show a 2.7 dB ground/sky delta and a 0.6 dB sun/sky delta.
 
 \appendix
-\section{S-Parameters \color{red}TEMPORARY}
-\begin{figure}[H]
-    \begin {center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                title={LNA S-Parameters},
-                xlabel=Frequency (MHz),
-                ylabel={$S_{21}$ (dB)},
-                grid=major,
-                scaled x ticks = base 10:-3,
-                xmin=10, xmax=12000,
-                xtick={2000, 4000, ..., 10000},
-                ymin=-10, ymax=30,
-                ytick={-10, 0, ..., 30},
-                legend style = {
-                    align = left,
-                    cells = {anchor=west},
-                    legend pos=outer north east,
-                    }
-                ]
-                \addplot[smooth, red!80] table [x index=0, y index=1] {data/Amplifiers and Filter Sparam.txt};
-                \addlegendentry{ZX60-83LN-S+}
-                \addplot[smooth, blue!70] table [x index= 0, y index=2] {data/Amplifiers and Filter Sparam.txt};
-                \addlegendentry{ALS-04-0149}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{LNA S-parameters. At 8.4 GHz, gain is about 15 dB for the ZX60 and 27 dB for the ALS.}\label{fig:sparam1}
-    \end {center}
-\end{figure}
-\begin{figure}[H]
-    \begin {center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                title={Filter S-Parameters},
-                xlabel=Frequency (MHz),
-                ylabel={$S_{21}$ (dB)},
-                grid=major,
-                scaled x ticks = base 10:-3,
-                xmin=7000, xmax=10000,
-                xtick={7800, 8900},
-                ymin=-40, ymax=0,
-                ytick={-40, -30, ..., 0},
-                ]
-                \addplot[smooth, red!80] table [x index=0, y index=3] {data/Amplifiers and Filter Sparam.txt};
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Unmarked bandpass filter S-parameters.}\label{fig:sparam2}
-    \end {center}
-\end{figure}
 
 \end{document}
 
