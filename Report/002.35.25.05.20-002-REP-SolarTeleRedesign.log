@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  4 AUG 2023 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.3)  11 AUG 2023 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -470,26 +470,39 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box70
 \enit@count@id=\count312
 \enitdp@description=\count313
+) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count314
+)) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks48
+\footnotemargin=\dimen306
+\@outputbox@depth=\dimen307
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
 ) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count314
-) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count315
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
@@ -738,7 +751,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count442
 )
-\@linkdim=\dimen306
+\@linkdim=\dimen308
 \Hy@linkcounter=\count443
 \Hy@pagecounter=\count444
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
@@ -763,15 +776,15 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
 \c@Hy@tempcnt=\count446
 LaTeX Info: Redefining \url on input line 4772.
-\XeTeXLinkMargin=\dimen307
+\XeTeXLinkMargin=\dimen309
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count447
-\Field@Width=\dimen308
-\Fld@charsize=\dimen309
+\Field@Width=\dimen310
+\Fld@charsize=\dimen311
 Package hyperref Info: Hyper figures OFF on input line 6051.
 Package hyperref Info: Link nesting OFF on input line 6056.
 Package hyperref Info: Hyper index ON on input line 6059.
@@ -805,31 +818,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip91
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 33.
-Package biblatex Info: Redefining '\cite' on input line 56.
+Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+Package biblatex Info: Redefining '\cite' on input line 58.
 \@quotelevel=\count453
 \@quotereset=\count454
  (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
 \openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -868,16 +881,16 @@ LaTeX Font Info:    ... okay on input line 105.
 (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count455
-\scratchdimen=\dimen310
+\scratchdimen=\dimen312
 \scratchbox=\box72
 \nofMPsegments=\count456
 \nofMParguments=\count457
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count458
-\MPscratchDim=\dimen311
+\MPscratchDim=\dimen313
 \MPnumerator=\count459
 \makeMPintoPDFobject=\count460
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks50
 ) (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -899,43 +912,23 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' found.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.bbl)
-Package biblatex Info: Reference section=0 on input line 105.
-Package biblatex Info: Reference segment=0 on input line 105.
-Package hyperref Info: Link coloring ON on input line 105.
+Package biblatex Info: Reference section=0 on input line 107.
+Package biblatex Info: Reference segment=0 on input line 107.
+Package hyperref Info: Link coloring ON on input line 107.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.out) (002.35.25.05.20-002-REP-SolarTeleRedesign.out)
 \@outlinefile=\write5
 \openout5 = `002.35.25.05.20-002-REP-SolarTeleRedesign.out'.
 
-<images/NRAO Logo Badge.png, id=62, 391.4625pt x 391.4625pt>
+<images/NRAO Logo Badge.png, id=58, 391.4625pt x 391.4625pt>
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 117.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 119.
 (pdftex.def)             Requested size: 142.26378pt x 142.26439pt.
-
-Underfull \hbox (badness 1005) in paragraph at lines 139--139
-[]|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
- []
-
-
-Underfull \hbox (badness 1005) in paragraph at lines 141--141
-[]|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
- []
-
-
-Underfull \hbox (badness 1005) in paragraph at lines 143--143
-[]|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
- []
-
-
-Underfull \hbox (badness 1005) in paragraph at lines 155--155
-[]|\OT1/cmr/m/n/12 NRAO Elec-tron-ics
- []
-
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 160.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 162.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
-[1{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+ [1{C:/Users/rnguyen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
  <./images/NRAO Logo Badge.png>] (002.35.25.05.20-002-REP-SolarTeleRedesign.toc)
 \tf@toc=\write6
@@ -947,36 +940,32 @@ Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 160.
 
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 166.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 168.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 \newpage
+l.168 \newpage
                [1]
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 211.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 213.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [2]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 220.
-
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 274.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 270.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
-[3] (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\ctikzstyle-legacy.tex)
-\absfshift=\dimen312
-\absfshift=\dimen313
+ [3] (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\ctikzstyle-legacy.tex)
 \absfshift=\dimen314
 \absfshift=\dimen315
 \absfshift=\dimen316
 \absfshift=\dimen317
+\absfshift=\dimen318
+\absfshift=\dimen319
 PGFPlots: reading {"data/Vout vs Pin.txt"}
-Package pgfplots info on input line 371: fill between: activating layered graphics
+Package pgfplots info on input line 374: fill between: activating layered graphics
 \pgf@layerbox@axis background=\box73
 \pgf@layerboxsaved@axis background=\box74
 \pgf@layerbox@axis grid=\box75
@@ -993,53 +982,30 @@ Package pgfplots info on input line 371: fill between: activating layered graphi
 \pgf@layerboxsaved@axis descriptions=\box86
 \pgf@layerbox@axis foreground=\box87
 \pgf@layerboxsaved@axis foreground=\box88
-Package pgfplots info on input line 371: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+Package pgfplots info on input line 374: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 408.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 410.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [4]
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 412.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 419.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
  [5]
-PGFPlots: reading {data/spectrumTrace.txt}
-PGFPlots: reading {data/spectrumTrace.txt}
-
-Overfull \hbox (0.82947pt too wide) in paragraph at lines 443--470
-\OT1/cmr/m/n/10 In or-der to con-firm these cal-cu-la-tions, the an-tenna was con-nected to an An-ritsu Model MS2720T/720
- []
-
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 470.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 445.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
-[6]
-PGFPlots: reading {data/SpectrumRHS.txt}
-PGFPlots: reading {data/SpectrumRHS.txt}
+ [6]
+PGFPlots: reading {data/FileName_1.txt}
+PGFPlots: reading {data/FileName_1.txt}
+PGFPlots: reading {data/FileName_1.txt}
 File: images/NRAO Logo Badge.png Graphic file (type png)
 <use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 507.
+Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 486.
 (pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [7]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 512.
-
-PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
-PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
-PGFPlots: reading {"data/Amplifiers and Filter Sparam.txt"}
-File: images/NRAO Logo Badge.png Graphic file (type png)
-<use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 560.
-(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
-[8]
-File: images/NRAO Logo Badge.png Graphic file (type png)
-<use images/NRAO Logo Badge.png>
-Package pdftex.def Info: images/NRAO Logo Badge.png  used on input line 562.
-(pdftex.def)             Requested size: 56.9055pt x 56.90097pt.
- [9] 
+ [7] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
  ***********
@@ -1047,24 +1013,21 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
  ***********
 Package rerunfilecheck Info: File `002.35.25.05.20-002-REP-SolarTeleRedesign.out' has not changed.
-(rerunfilecheck)             Checksum: 55B61A4FE24C61CDC461AECD4209C188;2109.
+(rerunfilecheck)             Checksum: B2C7ED908F6348B42282D52BCDF30490;1847.
 Package logreq Info: Writing requests to '002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
 \openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56774 strings out of 476036
- 1440698 string characters out of 5778881
- 2726278 words of memory out of 5000000
- 76812 multiletter control sequences out of 15000+600000
+ 56896 strings out of 476036
+ 1442589 string characters out of 5778881
+ 2576855 words of memory out of 5000000
+ 76935 multiletter control sequences out of 15000+600000
  520134 words of font info for 57 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 102i,21n,376p,1039b,2577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1141 hyphenation exceptions out of 8191
+ 102i,21n,376p,1039b,2571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{cite.0@xbandvla} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@sfd1986} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{cite.0@tora} has been referenced but does not exist, replaced by a fixed one
@@ -1073,12 +1036,15 @@ pdfTeX warning (dest): name{cite.0@tora} has been referenced but does not exist,
 pdfTeX warning (dest): name{cite.0@aeh} has been referenced but does not exist, replaced by a fixed one
 
 
+pdfTeX warning (dest): name{cite.0@sfd1986} has been referenced but does not exist, replaced by a fixed one
+
+
 pdfTeX warning (dest): name{cite.0@solartemp} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rnguyen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (10 pages, 382360 bytes).
+Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.pdf (8 pages, 317177 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

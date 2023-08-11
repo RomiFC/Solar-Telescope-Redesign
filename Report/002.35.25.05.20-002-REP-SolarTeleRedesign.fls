@@ -268,20 +268,24 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\colortbl\colortbl
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\parskip\parskip.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\parskip\parskip.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\footmisc\footmisc.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\footmisc\footmisc.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
@@ -456,25 +460,13 @@ INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
-INPUT data\spectrumTrace.txt
-INPUT data\spectrumTrace.txt
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
-INPUT data\SpectrumRHS.txt
-INPUT data\SpectrumRHS.txt
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT data\Amplifiers and Filter Sparam.txt
-INPUT data\Amplifiers and Filter Sparam.txt
-INPUT data\Amplifiers and Filter Sparam.txt
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
+INPUT data\FileName_1.txt
+INPUT data\FileName_1.txt
+INPUT data\FileName_1.txt
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png

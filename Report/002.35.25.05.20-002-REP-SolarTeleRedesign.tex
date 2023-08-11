@@ -297,10 +297,10 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
     to[short, -o] ++ (1,0);
     % Amplifiers
     \draw(5v1.south)
-    to[short, f = 94 mA] ++ (0,-2)
+    to[short, f = 150 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna2]{LNA};
     \draw(5v2.south)
-    to[short, f = 94 mA] ++ (0,-2)
+    to[short, f = 150 mA] ++ (0,-2)
     node[plain mono amp, anchor=up, scale = 0.75, name = lna3]{LNA};
     \draw(5v3.south)
     to[short, f = 94 mA] ++ (0,-2)
@@ -333,7 +333,7 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
 \caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
 \end{center}
 \end{figure}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 A rating of the L78XX chips.
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 amp rating of the L78XX chips.
 
 
 \section{Tuning System Gain}

@@ -2367,16 +2367,16 @@
     <bcf:citekey order="4" intorder="1">xbandvla</bcf:citekey>
     <bcf:citekey order="5" intorder="1">sfd1986</bcf:citekey>
     <bcf:citekey order="6" intorder="1">solartemp</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">aeh</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">sfd1986</bcf:citekey>
     <bcf:citekey order="8" intorder="1">aeh</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">tora</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">xbandvla</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">solartemp</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">aeh</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">tora</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">xbandvla</bcf:citekey>
     <bcf:citekey order="12" intorder="1">solartemp</bcf:citekey>
     <bcf:citekey order="13" intorder="1">solartemp</bcf:citekey>
     <bcf:citekey order="14" intorder="1">solartemp</bcf:citekey>
     <bcf:citekey order="15" intorder="1">solartemp</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">sfd1986</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">solartemp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
