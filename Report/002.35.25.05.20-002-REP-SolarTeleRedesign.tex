@@ -20,6 +20,7 @@
 \usepackage[american]{circuitikz} % Used to draw circuit and block diagrams
 \usepackage{appendix}   
 \usepackage{colortbl}   % For coloring table cells
+\definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
 \usepackage{enumitem}   % For formatting enumerated lists
 \usepackage[parfill]{parskip}               % Removes paragraph indentation, adds line break
 \usepackage[hang, flushmargin]{footmisc}    % Removes footnote indentation
@@ -33,6 +34,9 @@
   linkcolor    = black, % Color for internal hyperlinks
   citecolor    = black  % Color for citations
 }
+\usepackage{caption}    % Changes figure/table caption color and size
+\definecolor{captioncolor}{RGB}{79,129,189}
+\captionsetup{font={small}}
 
 % Global CircuiTikZ parameters
 \ctikzset{sources/fill=red!20}
@@ -105,7 +109,6 @@
 
  % DOCUMENT STARTS HERE
 \begin{document}
-\definecolor{nraoblue}{rgb}{0.776,0.851,0.945}  % Color of table headers
 \setlength{\leftmargin}{1in}        % Sets margin
 \setlength{\rightmargin}{1in}       % Sets margin
 \setlength{\voffset}{-1.2in}        % Moves header up
@@ -431,26 +434,36 @@ In reality, the sensitivity of the receiver will prevent a perfect 0 to 3 volt s
 
 
 \section{Calculating Receiver Input Power}
-The first step to determine RF gain will be to find the power delta as the antenna is pointed at the sun from a cold sky; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. This calculation also assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, it generally increases with frequency\nraocite{sfd1986}. Instantaneous channel power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}
-\begin{equation}
-    P_R = S A_e \Delta f
-\label{eq:power}
-\end{equation}
-where $S$ is the source flux density in W m$^{-2}$ Hz$^{-1}$, $A_e$ is the effective aperture area in m$^2$, and $\Delta f$ is the receiver bandwidth in Hz\nraoprecite[eq.~(41-2)]{aeh}. To simplify calculations, we will focus on power spectral density (PSD) defined as $P(f)$ in dBm/Hz, ignoring the receiver bandwidth for now.
-\begin{equation}
-    P_{sun}(f) = S A_e
-\label{eq:psd}
-\end{equation}
-Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}
-\begin{equation} \label{eq:ae}
-\begin{split}
+The first step to determine RF gain will be to find the power delta as the antenna is pointed at the sun from a cold sky; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. This calculation also assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, it generally increases with frequency\nraocite{sfd1986}.Instantaneous channel power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}\nraoprecite[eq.~(41-2)]{aeh}
+\begin{align} \label{eq:power}
+    P_{R} &= P_{sun} + P_{noise} \\
+    P_{R} &= S A_e \Delta f + k_B T \Delta f \nonumber
+\end{align}
+\begin{align*}
+    \text{where:}~S ~&\text{is the source flux density in W m$^{-2}$ Hz$^{-1}$,}\\
+    A_e             ~&\text{is the effective aperture area in m$^2$}\\
+    \Delta f        ~&\text{is the receiver bandwidth in Hz,}\\
+    k_B             ~&\text{is the Boltzmann constant in J K$^{-1}$, and}\\
+    T               ~&\text{is the system noise temperature in K.}
+\end{align*}
+To simplify calculations, we will focus on power spectral density (PSD) defined as $P(f)$ in dBm/Hz, ignoring the receiver bandwidth for now. Additionally, it is safe to assume that $P_R = P_{noise}$ when the antenna is pointed at a cold sky.
+\begin{align} \label{eq:psd}
+    P_{R}(f) &= P_{sun}(f) + P_{noise}(f) \\
+             &= S A_e + k_B T \nonumber
+\end{align}
+Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}
+\begin{align} \label{eq:ae}
     A_e &= \frac{\lambda^2}{4\pi}G \\
-    &= \frac{\pi d^2}{4} \eta_a
-\end{split}
-\end{equation}
-where $G$ is linear antenna gain, $d$ is the diameter of the circular horn at the aperture, and $\eta_a$ is the unitless aperture efficiency\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}. An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\nraocite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measures 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
+    &= \frac{\pi d^2}{4} \eta_a \nonumber
+\end{align}
+\begin{align*} 
+    \text{where:}~G ~&\text{is linear antenna gain,}\\
+           d        ~&\text{is the diameter of the circular horn at the aperture, and}\\
+           \eta_a   ~&\text{is the unitless aperture efficiency.}
+\end{align*}
+An ideal horn antenna has an $\eta_a$ of 0.522. The calculations for this design will use an approximate value of 0.5\footnote{The x-band horn measured an estimated aperture efficiency of 0.62$\pm$0.03 but only when mounted to the VLA dish\nraocite{xbandvla}. This design will assume the antenna to be a standard horn antenna.}. The antenna diameter at the opening measures 34 cm, resulting in an effective area of 0.0454 m$^2$ or -13.4 dB m$^2$.
 
-Lastly, values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\nraocite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\nraoprecite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\nraoprecite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
+Values for solar flux density $S$ must be found within the operating frequency. Ho \textit{et al.}\nraocite{solartemp} measured mean, minimum, and maximum values for solar flux density at 2800 MHz and 8800 MHz but only numbers for the former are shown in the text. However, they claim that solar flux density at 8800 MHz are higher by a factor of 2.17 on average, thus, the mean, minimum, and maximum values at 2800 MHz can be multiplied by 2.17 to achieve approximate values for $S$. Additionally, solar brightness temperature shown in~\nraoprecite[Fig.~5]{solartemp} can be used to calculate solar flux density via~\nraoprecite[eq.~(2)]{solartemp}. The former method shows higher dynamic range and is shown in Table~\ref{tab:sfd} in solar flux units\footnote{One solar flux unit (SFU) is equal to $10^{-22}$ W m$^{-2}$ Hz$^{-1}$.}.
 \begin{table}[!ht]
 \centering
 \begin{tabular}{c|c|c|c}
@@ -458,14 +471,16 @@ Lastly, values for solar flux density $S$ must be found within the operating fre
     2.8 GHz & 70 SFU & 150 SFU & 280 SFU \\
     8.8 GHz & 152 SFU & 326 SFU & 608 SFU
 \end{tabular}
-\label{tab:sfd}
-\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.}
+\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.} \label{tab:sfd}
 \end{table}
 
-With values for $S$ and $A_e$ found, we can now calculate $P_{sun}(f)$ with equation~\ref{eq:psd} to be -181.6 dBm/Hz at $S_{\min}$. A problem arises when comparing this to the thermal noise PSD of -174 dBm/Hz at 300 K;\ because the power received by the sun is below the noise floor, it is insufficient to assume $P_R$ is independent of noise. The 7.6 dB delta between the noise floor and $P_{sun}(f)$ at $S_{\min}$ means that pointing the antenna at the sun will raise the antenna output power by a mere 0.7 dB at minimum. If a receiver noise figure of 2 dB is to be assumed, this output power delta decreases to 0.45 dB.
+With values for $S$ and $A_e$ found, we can now calculate $P_{sun}(f)$ with equation~\ref{eq:psd} to be -181.6 dBm/Hz at $S_{\min}$. A problem arises when comparing this to the thermal noise PSD of -174 dBm/Hz at 300 K;\ because the power received by the sun is below the noise floor, the increase in $P_R$ due to $P_{sun}$ will be very small compared to $P_{noise}$.
+
+The nominal 7.6 dB difference between the $P_{noise}(f)$ and $P_{sun}(f)$ means that pointing the antenna at the sun will raise the antenna output power by a mere 0.7 dB at minimum. If a receiver noise figure of 2 dB is to be assumed, this output power delta $\Delta P$ decreases to 0.45 dB\footnote{$\Delta$ is typically used to denote a difference of linear terms. Here it is being used to denote a difference in logarithmic terms which translates to a linear ratio.}.
 \begin{align*}
-    \Delta P &= [P_{sun}(f)+P_{noise}(f)] - P_{noise}(f)\\
-             &= 10 \log_{10} (10^{-17.4+0.2} + 10^{-18.16}) - (-174+2)\\
+    \Delta P &= \left[ \frac{P_{R}(f)}{P_{noise}(f)} \right] _{dB}\\
+             &= \left[ \frac{P_{sun}(f)+P_{noise}(f)}{P_{noise}(f)} \right] _{dB}\\
+             &= 10 \log_{10} \left( 1 + 10^{-0.76 - 0.2} \right)\\
              &= 0.452 \text{ dB}
 \end{align*}
 

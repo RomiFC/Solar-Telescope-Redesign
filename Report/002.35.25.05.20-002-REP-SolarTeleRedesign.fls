@@ -365,6 +365,10 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\re
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT .\002.35.25.05.20-002-REP-SolarTeleRedesign.aux
 INPUT 002.35.25.05.20-002-REP-SolarTeleRedesign.aux
@@ -448,6 +452,7 @@ INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
@@ -464,6 +469,10 @@ INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti9.tfm
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
@@ -471,6 +480,10 @@ INPUT .\images\NRAO Logo Badge.png
 INPUT data\FileName_1.txt
 INPUT data\FileName_1.txt
 INPUT data\FileName_1.txt
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
@@ -486,10 +499,14 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
@@ -502,6 +519,8 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
