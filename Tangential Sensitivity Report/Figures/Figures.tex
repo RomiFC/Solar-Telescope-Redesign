@@ -5,6 +5,9 @@
 \usepackage{pgfplots}
 \usepackage[letterpaper]{geometry}
 \pgfplotsset{compat=1.18}
+\pgfplotsset{hide xscale/.style={/pgfplots/xtick scale label code/.code={}}}
+\pgfplotsset{hide yscale/.style={/pgfplots/ytick scale label code/.code={}}}
+\usetikzlibrary{shapes.geometric}
 \usetikzlibrary{fit}
 % chktex-file 1
 % chktex-file 8
@@ -39,19 +42,21 @@
         ylabel={$P_{in}$ (dBm)},
         grid=major,
         xmin=2, xmax=10,
-        ymin=-60, ymax=0,
+        ymin=-65, ymax=0,
         xtick={2,...,10},
-        ytick={-50,-40,...,-10},
+        ytick={-60,-50,...,-10},
         legend style = {
             align = left,
             cells = {anchor=east},
             legend pos=outer north east,
         }
     ]
-    \addplot[smooth, blue] table [x=a,y=b] {Data/TanSensADL5902.txt};
+    \addplot[smooth, blue!70] table [x index=0,y index=1] {Data/TanSensADL5902.txt};
     \addlegendentry{ADL5902 Only};
-    \addplot[smooth, red] table [x=a,y=c] {Data/TanSensADL5902.txt};
-    \addlegendentry{ZX60-83LN-S+\\Preamp};
+    \addplot[smooth, green!50!teal!100] table [x index=0,y index=3] {Data/TanSensADL5902.txt};
+    \addlegendentry{RF-DFS Board};
+    \addplot[smooth, red!80] table [x index=0,y index=2] {Data/TanSensADL5902.txt};
+    \addlegendentry{ZX60-83LN-S+};
     
     \end{axis}
 \end{tikzpicture}
@@ -61,7 +66,8 @@
 \begin{circuitikz}
     \draw (0,0)
     node[vsourcesinshape, anchor=south, rotate=90](source){}
-    -- ++ (1,0)
+    -- ++ (0.4,0)
+    to[twoport, name=tp] ++ (2.5, 0)
     to[amp, l=Preamp, name=lna] ++ (2, 0)
     -- ++ (1,0)
     node[qfpchip,
@@ -71,12 +77,13 @@
     external pins width=0,
     ](adl){}
     (adl.north)
-    node[anchor=south]{ADL5902}
+    node[anchor=south, name=adllabel]{ADL5902}
     (adl.east)
-    -- ++ (1,0)
-    to[amp, l=Video Amp, name=opamp] ++ (2, 0)
-    -- ++ (1,0)
+    -- ++ (1.5,0)
     node[oscopeshape, anchor=left](scope){};
+    % Attenuator
+    \draw (tp.center)
+    node[vresistorshape, anchor = center, rotate = -90, xscale = -1, scale = 0.8]{};
     % Labels
     \draw (source.east)
     node[anchor=south]{Signal Gen.};
@@ -87,7 +94,7 @@
     \node[
         rectangle,
         draw,
-        dashed, fit= (lna) (opamp) (lnalabel) (opamplabel),
+        dashed, fit= (lna) (lnalabel) (adl) (adllabel),
         inner sep=5,
         color=blue](box){};
     \draw[color=blue] (box.north)
@@ -117,6 +124,67 @@
     \end{axis}
 \end{tikzpicture}
 
+\vspace{1cm}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        scale only axis,
+        title=Amplifier Gain and Noise Figure,
+        xlabel={Frequency (GHz)},
+        ylabel={$S_{21}$ (dB)},
+        grid=major,
+        axis y line*=left,
+        scaled x ticks=base 10:-3,
+        hide xscale,
+        xmin=0, xmax=10000,
+        ymin=0, ymax=50,
+        xtick={0,2000,...,10000},
+        ytick={10,20,...,50},
+    ]
+    \addplot[smooth, red!80] table [x index=0,y index=1] {Data/rfdfs-6g-sparam.txt};
+    \addlegendentry{ZX60-83LN-S+};
+    \addplot[smooth, green!50!teal!100] table [x index=0,y index=1] {Data/Amplifiers and Filter Sparam.txt};
+    \addlegendentry{RF-DFS Board};
+
+    \draw (axis cs: 4800,22.5)
+    ellipse (200 and 4);
+    \draw (axis cs: 4800,26.5)
+    [->] -- (4300, 26.5);
+
+    \end{axis}
+
+    \begin{axis}[
+        scale only axis,
+        ylabel={$NF$ (dB)},
+        grid=major,
+        axis y line*=right,
+        axis x line=none,
+        scaled x ticks=base 10:-3,
+        hide xscale,
+        xmin=0, xmax=10000,
+        ymin=0, ymax=5,
+        xtick={0,2000,...,10000},
+        ytick={1,...,5},
+        legend style = {
+            align = left,
+            cells = {anchor=east},
+            legend pos=outer north east,
+        }
+    ]
+    \addplot[smooth, red!80] table [x index=0,y index=1] {Data/nf-zx60-83.txt};
+    \addplot[smooth, green!50!teal!100] table [x index=0,y index=1] {Data/nf-pma2-6g.txt};
+    \addplot[smooth, blue, loosely dashed] table [x index=0,y index=1] {Data/nf-zx60-83.txt};
+    \addplot[smooth, blue, loosely dashed] table [x index=0,y index=1] {Data/nf-pma2-6g.txt};
+    
+    \draw (axis cs: 2000,1)
+    ellipse (200 and 0.6);
+    \draw (axis cs: 2000,0.4)
+    [->] -- ++ (500, 0);
+    
+    \end{axis}
+\end{tikzpicture}
+
+\vspace{1cm}
 
 \end{center}
 \end{document}
