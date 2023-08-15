@@ -81,7 +81,7 @@
 \title{Redesign of the Visitor Center Solar Telescope}
 \author{Remy Nguyen
     }% <-this % stops a space
-\date{June 21, 2023}
+\date{Aug 15, 2023}
 \def\docnum{[002.35.25.05.20-002]}
 \def\status{\textcolor{red}{Draft}}
 
@@ -99,7 +99,7 @@
         \textit{\textbf{Date:}}  \thedate \\
     \hline
         \multicolumn{2}{|l|}{
-            \textit{\textbf{NRAO Doc \#:} \docnum}  
+            \textit{\textbf{NRAO Doc \#:}} \docnum  
         } &
         \textit{\textbf{Version:}} 1 \\
     \hline
@@ -129,7 +129,7 @@
      \begin{tabular}{|m{6.93cm}|m{4.5cm}|m{2cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Prepared By} & \textbf{Organization} & \textbf{Date} \\ \hline
-        R. Nguyen & NRAO Electronics Div. & 6/21/2023 \\ 
+        R. Nguyen & NRAO Electronics Div. & 8/15/2023 \\ 
         \hline
     \end{tabular} \\
     \vspace*{1cm}
@@ -235,7 +235,7 @@ The heart of the telescope is an conical corrugated X-band horn antenna original
 As the telescope is pointed towards the various objects, RF energy is received by the antenna and amplified. A rectifying circuit converts the RF power into a DC voltage and further amplifies it before outputting to a voltmeter. The DC gain should be adjusted so that as the telescope is pointed directly at the sun, the voltmeter should raise noticeably from its value when pointed at a cold sky\footnote{Cold sky is defined when there are no notable RF emitting objects in the beamwidth. Experimentally, these readings seem to be equivalent to the receiver noise floor.}. When pointed at the ground or an object, the reading will increase to a maximum due reflections and filling of the antenna sidelobes. This is further explained in Section~\ref{sec:pwrplots}.
 
 \subsection{Requirements}
-Being a visitor center attraction, the device must be engaging and appealing to visitors. In order to achieve this, a transparent receiver to show electronics and a voltmeter that is driven by solar energy. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
+Being a visitor center attraction, the device should be engaging and appealing to visitors. In order to achieve this, a transparent enclosure will show the electronics and the voltmeter driven by solar energy will provide user feedback. The enclosure of the previous design was made of some sort of polycarbonate material which suffered from yellowing in the sun. Additionally, small computer fans with a mesh screen mounted directly to the enclosure were used to decrease operating temperature but allowed dust to accumulate over the years. In essence, the new design goals are as follows:
 \begin{enumerate}
     \item Utilizes a transparent enclosure or panel to view electronics, ideally one which will not yellow or fade easily.
     \item Must be dustproof and resilient to accumulation of debris inside the enclosure while still venting heat from electronics.
@@ -245,6 +245,7 @@ Being a visitor center attraction, the device must be engaging and appealing to 
 The first two requirements were fulfilled by Tristen James in designing the enclosure. The following requirements will be discussed in this report.
 
 \subsection{Architecture}
+\label{sec:arch}
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -356,12 +357,12 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
 \caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
 \end{center}
 \end{figure}
-As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a dual layer PCB which contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 amp rating of the L78XX chips.
+As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a PCB that contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 amp rating of the L78XX chips.
 
 
 \section{Tuning System Gain}
 \label{sec:tuning}
-Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{Resistor values were changed to achieve 86.3 mV/dB slope: R6 = 1180$\Omega$ and R2 = 2000$\Omega$} at the telescope's operating frequency. Pointing the telescope at a high temperature object will produce an input power higher than pointing it at the cold sky; this dynamic range is represented by the dotted lines and filled section of the curve\footnote{The range has been enlarged for the purpose of demonstration. The true range is much smaller (Section~\ref{sec:pwrplots})}. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
+Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902-EVALZ\footnote{Resistor values were changed on the evaluation board to achieve 86.3 mV/dB slope: R6 = 1180$\Omega$ and R2 = 2000$\Omega$} at the telescope's operating frequency. Pointing the telescope at a high temperature object will produce an input power higher than pointing it at the cold sky; this dynamic range is represented by the dotted lines and filled section of the curve\footnote{The range has been enlarged for the purpose of demonstration. The true range is much smaller (Section~\ref{sec:pwrplots})}. Adding attenuation or RF gain will shift this area to the left or right respectively. Adding DC gain will increase the slope of this curve and vice versa.
 \begin{figure}[!ht]
 \begin{center}
     \begin{tikzpicture}
@@ -400,7 +401,7 @@ Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902\footnote{R
 \label{fig:vpcurve}
 \end{center}
 \end{figure}
-Ideally, the RF gain should be adjusted such that the low range is roughly 0 volts whereas the the high range is scaled to 3 volts by the DC gain block. In this case, the amplification from the DC gain block will have negligible effect on the low range. If, for some reason, granular attenuation is not possible, the DC gain will cause the nonzero low range to increase above 0 volts. A simple solution is presented in Fig.~\ref{fig:scalingcircuit} where the negative terminal of the voltmeter can be set to reference a nonzero voltage i.e\ the low range of the adjusted V-P curve.
+Ideally, the RF gain should be adjusted such that the low end is roughly 0 volts whereas the the high end is scaled to 3 volts by the DC gain block. In this case, amplification from the DC gain block will have negligible effect on the low end. If, for some reason, granular attenuation is not possible, the DC gain will cause the nonzero low end to increase above 0 volts. A simple solution is presented in Fig.~\ref{fig:scalingcircuit} where the negative terminal of the voltmeter can be set to reference a nonzero voltage.
 \begin{figure}[!ht]
     \begin{center}
         \begin{circuitikz}
@@ -430,11 +431,15 @@ Ideally, the RF gain should be adjusted such that the low range is roughly 0 vol
     \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
     \end{center}
 \end{figure}
-In reality, the sensitivity of the receiver will prevent a perfect 0 to 3 volt scaling at all times. Thus, in order to ensure some amount of voltmeter deflection occurs despite environmental changes, a practical range 0.75--2.25 volts may be desired.
+In reality, the sensitivity of the receiver will prevent a perfect 0 to 3 volt scaling at all times. Thus, in order to ensure some amount of voltmeter deflection occurs despite environmental changes, a practical range around 0.5--2.5 volts may be desired.
+
+
+\subsection{Installation Notes}
+Figure~\ref{fig:rfgain} shows 49 dB of RF gain; this was determined to be functional with the antenna and log-detector via testing, however, $\pm$1 dB of attenuation may work if the DC gain block is scaled correctly. Exact numbers are not shown for DC gain because slight variations in cable loss and component accuracy make it difficult to calculate. The easiest way to determine DC gain is simply to measure the voltage readings at the receiver output and adjust accordingly.
 
 
 \section{Calculating Receiver Input Power}
-The first step to determine RF gain will be to find the power delta as the antenna is pointed at the sun from a cold sky; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. This calculation also assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, it generally increases with frequency\nraocite{sfd1986}.Instantaneous channel power received by the antenna from a celestial source in watts, $P_R$, is defined by Eq.~\ref{eq:power}\nraoprecite[eq.~(41-2)]{aeh}
+The first step to determine RF gain will be to find the power delta as the antenna is pointed at the sun from a cold sky; note that this may vary daily and annually depending on solar cycle\nraoprecite[Fig.~2]{solartemp}. This calculation also assumes that solar flux density is constant across the entire frequency range of the receiver. This is a limitation of available information on solar flux density; in practice, it generally increases with frequency\nraocite{sfd1986}. Instantaneous channel power received by the antenna from a celestial source in watts, in an additive white Gaussian noise (AWGN) channel, $P_R$, is defined by Eq.~\ref{eq:power}\nraoprecite[eq.~(41-2)]{aeh}
 \begin{align} \label{eq:power}
     P_{R} &= P_{sun} + P_{noise} \\
     P_{R} &= S A_e \Delta f + k_B T \Delta f \nonumber
@@ -446,12 +451,12 @@ The first step to determine RF gain will be to find the power delta as the anten
     k_B             ~&\text{is the Boltzmann constant in J K$^{-1}$, and}\\
     T               ~&\text{is the system noise temperature in K.}
 \end{align*}
-To simplify calculations, we will focus on power spectral density (PSD) defined as $P(f)$ in dBm/Hz, ignoring the receiver bandwidth for now. Additionally, it is safe to assume that $P_R = P_{noise}$ when the antenna is pointed at a cold sky.
+To simplify calculations, we will focus on power spectral density (PSD) defined as $P(f)$ in W/Hz, ignoring the receiver bandwidth for now. Additionally, it is safe to assume that $P_R = P_{noise}$ when the antenna is pointed at a cold sky.
 \begin{align} \label{eq:psd}
     P_{R}(f) &= P_{sun}(f) + P_{noise}(f) \\
              &= S A_e + k_B T \nonumber
 \end{align}
-Effective aperture can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}
+Effective aperture at a fixed wavelength $\lambda$ can be calculated using measurements of the antenna as shown in Eq.~\ref{eq:ae}\nraoprecite[pg.~(15-27)]{aeh}\nraoprecite[eq.~(5.58)]{tora}
 \begin{align} \label{eq:ae}
     A_e &= \frac{\lambda^2}{4\pi}G \\
     &= \frac{\pi d^2}{4} \eta_a \nonumber
@@ -512,12 +517,14 @@ In order to confirm these calculations, the antenna was connected to an Anritsu 
         \legend{Ground\\(-134.2 dBm/Hz), Sun\\(-136.3 dBm/Hz), Cold Sky\\(-136.9 dBm/Hz)}
     \end{axis}
 \end{tikzpicture}
-\caption{Signal trace with 40 dB of gain from two ZX60-06203ALN+ LNAs.}\label{fig:specan1}
+\caption{Signal trace with 41 dB of gain from two ZX60-06203ALN+ LNAs.}\label{fig:specan1}
 \end {center}
 \end{figure}
-Mean channel power measurements on the Anritsu from 7.95 to 8.85 GHz show a 2.7 dB ground/sky delta and a 0.6 dB sun/sky delta.
+Mean channel power measurements on the Anritsu from 7.95 to 8.85 GHz show a 2.7 dB ground/sky delta and a 0.6 dB sun/sky delta. It is difficult to calculate the RF power received from the ground prior to measurement, however, the sun/sky delta is well within range of expected values.
 
-\appendix
+\subsection{Final Thoughts}
+These measurements and the preceding calculations were the basis for design decisions in Section~\ref{sec:arch}. It's possible other architectures would operate more favorably but further testing is required. Some ideas to increase sun/sky dynamic range would be to sum the two polarized feeds from the antenna via combiner or to create dual-channel rectifier and combine the outputs via summing op-amp, however, these remain as hypotheses at the time.
+
 
 \end{document}
 
