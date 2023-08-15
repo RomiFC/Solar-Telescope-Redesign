@@ -32,7 +32,8 @@
   colorlinks   = true,  % Colors links instead of ugly boxes
   filecolor    = blue,  % Color for local hyperlinks
   linkcolor    = black, % Color for internal hyperlinks
-  citecolor    = black  % Color for citations
+  citecolor    = black, % Color for citations
+  urlcolor     = blue,  % Color for linked urls
 }
 \usepackage{caption}    % Changes figure/table caption color and size
 \definecolor{captioncolor}{RGB}{79,129,189}
@@ -75,6 +76,7 @@
 \newcommand{\nraoprecite}[2][]{[RD0\cite{#2}{, #1}]}
 
 % This command creates a link to the research directory in filehost
+% Nevermind this command is broken and idk why
 \newcommand{\filehost}{\href{//filehost/evla/techdocs/RFI/coopshare/remynguyen/SolarTelescope-ASWA/Solar-Telescope-Redesign/Research}{Filehost}}
 
 % ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
@@ -220,11 +222,11 @@ The following documents are referenced within this text:
 \begin{tabular}{|m{2cm}|m{7.5cm}|m{3.5cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
-    RD01 & \citefield{solartemp}{title} & \filehost \\ \hline
+    RD01 & \citefield{solartemp}{title} & \href{https://ipnpr.jpl.nasa.gov/progress_report/42-175/175E.pdf}{Online} \\ \hline
     RD02 & \citefield{aeh}{title} & DSOC Bookcase \\\hline
     RD03 & \citefield{tora}{title} & Privately Owned \\\hline
-    RD04 & \citefield{xbandvla}{title} & \filehost \\\hline
-    RD05 & \citefield{sfd1986}{title} & \filehost \\\hline
+    RD04 & \citefield{xbandvla}{title} & \href{https://tmo.jpl.nasa.gov/progress_report/42-92/92O.PDF}{Online} \\\hline
+    RD05 & \citefield{sfd1986}{title} & \href{https://www.govinfo.gov/content/pkg/GOVPUB-C13-53a55ea34f3ca8aaacf289a9caa0bee6/pdf/GOVPUB-C13-53a55ea34f3ca8aaacf289a9caa0bee6.pdf}{Online} \\\hline
 \end{tabular}
 \renewcommand{\arraystretch}{1}
 \end{center}
