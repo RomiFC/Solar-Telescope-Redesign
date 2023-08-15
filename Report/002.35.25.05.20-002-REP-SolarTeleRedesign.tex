@@ -1,5 +1,16 @@
 \documentclass[titlepage]{article}
 
+% Suppresses chktex warnings 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 10
+% chktex-file 17
+% chktex-file 24
+% chktex-file 36
+% chktex-file 44
+% chktex-file 46
+
 \usepackage{geometry}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -37,9 +48,24 @@
 }
 \usepackage{caption}    % Changes figure/table caption color and size
 \definecolor{captioncolor}{RGB}{79,129,189}
-\captionsetup{font={small}}
+\captionsetup{font={
+    small, 
+    color=captioncolor,
+    bf,
+}}
 
-% Global CircuiTikZ parameters
+% Changes font from Computer Modern to Gill Sans MT
+% This requires XeLaTeX or LuaTeX to function
+% Add "latex-workshop.latex.recipe.default": "latexmk (xelatex)" to workspace.json
+\usepackage{fontspec}
+\setmainfont{gil.ttf}[
+    BoldFont        = gil-b.ttf,
+    ItalicFont      = gil-i.ttf,
+    BoldItalicFont  = gil-bi.ttf,
+]
+
+% Global TikZ parameters
+\tikzset{every picture/.style={/utils/exec={\fontfamily{lmr}}}}
 \ctikzset{sources/fill=red!20}
 \ctikzset{chips/fill=cyan!20}
 \ctikzset{electromechanicals/fill=blue!20}
@@ -47,17 +73,6 @@
 \ctikzset{amplifiers/fill=yellow!30}
 \tikzset{amp/.append style={fill=yellow!30}}
 \tikzset{twoport/.append style={fill=cyan!20}}
-
-% Suppresses chktex warnings 
-% chktex-file 1
-% chktex-file 3
-% chktex-file 8
-% chktex-file 10
-% chktex-file 17
-% chktex-file 24
-% chktex-file 36
-% chktex-file 44
-% chktex-file 46
 
 % The following lines define a new command \nraocite that cites references in NRAO format RD0X by redefining \cite command to remove brackets. \nraoprecite includes a prenote.
 \DeclareCiteCommand{\cite} [\mkbibemph{\emph{}}]
@@ -122,10 +137,10 @@
 \begin{center}
      \includegraphics[width=5cm]{images/NRAO Logo Badge.png} \\
      \vspace*{0.5cm}
-     \textbf{\Huge\thetitle} \\
+     \textbf{\huge\thetitle} \\
      \vspace*{0.5cm}
      \large\docnum \\
-     \huge Status: \status \\
+     \Large Status: \status \\
      \vspace*{1cm} \large
      % FIRST TABLE HERE
      \begin{tabular}{|m{6.93cm}|m{4.5cm}|m{2cm}|} \hline
@@ -205,7 +220,7 @@ This document will describe the design choices made in development of the new so
 \subsection{Applicable Documents}
 The following documents may not be directly referenced herein, but may provide necessary context or supporting material.
 \begin{center}
-\begin{tabular}{|m{2cm}|m{7.5cm}|m{3.5cm}|} \hline
+\begin{tabular}{|m{2cm}|m{8cm}|m{3cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
     AD01 & Desiderata for Solar Observing with the EVLA & EVLAM\_70 \\ 
@@ -219,7 +234,7 @@ The following documents may not be directly referenced herein, but may provide n
 The following documents are referenced within this text:
 \begin{center}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|m{2cm}|m{7.5cm}|m{3.5cm}|} \hline
+\begin{tabular}{|m{2cm}|m{8cm}|m{3cm}|} \hline
     \rowcolor{nraoblue}
     Ref. No. & Document Title & Rev/Doc. No.\\ \hline
     RD01 & \citefield{solartemp}{title} & \href{https://ipnpr.jpl.nasa.gov/progress_report/42-175/175E.pdf}{Online} \\ \hline
