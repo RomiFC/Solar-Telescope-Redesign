@@ -7,6 +7,7 @@
 % chktex-file 10
 % chktex-file 17
 % chktex-file 24
+% chktex-file 26
 % chktex-file 36
 % chktex-file 44
 % chktex-file 46
@@ -42,8 +43,8 @@
 \hypersetup{
   colorlinks   = true,  % Colors links instead of ugly boxes
   filecolor    = blue,  % Color for local hyperlinks
-  linkcolor    = black, % Color for internal hyperlinks
-  citecolor    = black, % Color for citations
+  linkcolor    = ., % Color for internal hyperlinks
+  citecolor    = ., % Color for citations
   urlcolor     = blue,  % Color for linked urls
 }
 \usepackage{caption}    % Changes figure/table caption color and size
@@ -493,7 +494,7 @@ Values for solar flux density $S$ must be found within the operating frequency. 
     2.8 GHz & 70 SFU & 150 SFU & 280 SFU \\
     8.8 GHz & 152 SFU & 326 SFU & 608 SFU
 \end{tabular}
-\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.} \label{tab:sfd}
+\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\color{captioncolor}\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.} \label{tab:sfd}
 \end{table}
 
 With values for $S$ and $A_e$ found, we can now calculate $P_{sun}(f)$ with equation~\ref{eq:psd} to be -181.6 dBm/Hz at $S_{\min}$. A problem arises when comparing this to the thermal noise PSD of -174 dBm/Hz at 300 K;\ because the power received by the sun is below the noise floor, the increase in $P_R$ due to $P_{sun}$ will be very small compared to $P_{noise}$.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.8.15)  15 AUG 2023 15:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.8.15)  15 AUG 2023 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -831,7 +831,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip91
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `colorlinks' set `true' on input line 49.
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/03/12 v3.6j Customizing captions (AR)
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
@@ -893,36 +893,36 @@ Package fontspec Info: Font family 'gil.ttf(0)' created for font 'gil.ttf'
 (fontspec)             <->"[gil-bi.ttf]/OT:language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-Package biblatex Info: Redefining '\cite' on input line 78.
+Package biblatex Info: Redefining '\cite' on input line 79.
 \@quotelevel=\count469
 \@quotereset=\count470
  (002.35.25.05.20-002-REP-SolarTeleRedesign.aux)
 \openout1 = `002.35.25.05.20-002-REP-SolarTeleRedesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 129.
  (C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -974,9 +974,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '002.35.25.05.20-002-REP-SolarTeleRedesign.bbl' found.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.bbl)
-Package biblatex Info: Reference section=0 on input line 128.
-Package biblatex Info: Reference segment=0 on input line 128.
-Package hyperref Info: Link coloring ON on input line 128.
+Package biblatex Info: Reference section=0 on input line 129.
+Package biblatex Info: Reference segment=0 on input line 129.
+Package hyperref Info: Link coloring ON on input line 129.
  (002.35.25.05.20-002-REP-SolarTeleRedesign.out) (002.35.25.05.20-002-REP-SolarTeleRedesign.out)
 \@outlinefile=\write5
 \openout5 = `002.35.25.05.20-002-REP-SolarTeleRedesign.out'.
@@ -989,56 +989,56 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 128.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 128.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 128.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 128.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 128.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 128.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 128.
-LaTeX Font Info:    Redeclaring math accent \check on input line 128.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 128.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 128.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 128.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 128.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 128.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 129.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 129.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 129.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 129.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 129.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 129.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 129.
+LaTeX Font Info:    Redeclaring math accent \check on input line 129.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 129.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 129.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 129.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 129.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 128.
+(Font)              `operators' in the math version `normal' on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/gil.ttf(0)/m/n on input line 128.
+(Font)                  OT1/cmr/m/n --> TU/gil.ttf(0)/m/n on input line 129.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 128.
+(Font)              `operators' in the math version `bold' on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/gil.ttf(0)/m/n on input line 128.
+(Font)                  OT1/cmr/bx/n --> TU/gil.ttf(0)/m/n on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/gil.ttf(0)/m/n --> TU/gil.ttf(0)/m/n on input line 128.
+(Font)                  TU/gil.ttf(0)/m/n --> TU/gil.ttf(0)/m/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/gil.ttf(0)/m/it on input line 128.
+(Font)                  OT1/cmr/m/it --> TU/gil.ttf(0)/m/it on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/gil.ttf(0)/b/n on input line 128.
+(Font)                  OT1/cmr/bx/n --> TU/gil.ttf(0)/b/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 128.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 128.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/gil.ttf(0)/m/n --> TU/gil.ttf(0)/b/n on input line 128.
+(Font)                  TU/gil.ttf(0)/m/n --> TU/gil.ttf(0)/b/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/gil.ttf(0)/b/it on input line 128.
+(Font)                  OT1/cmr/bx/it --> TU/gil.ttf(0)/b/it on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 128.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 128.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 129.
 File: images/NRAO Logo Badge.png Graphic file (type bmp)
 <images/NRAO Logo Badge.png>
 File: images/NRAO Logo Badge.png Graphic file (type bmp)
@@ -1059,7 +1059,7 @@ File: images/NRAO Logo Badge.png Graphic file (type bmp)
 File: images/NRAO Logo Badge.png Graphic file (type bmp)
 <images/NRAO Logo Badge.png>
  [3]
-Underfull \hbox (badness 1226) in paragraph at lines 244--244
+Underfull \hbox (badness 1226) in paragraph at lines 245--245
 []|\TU/gil.ttf(0)/m/n/10 10-60 GHz G/T Measurements Using the Sun as a
  []
 
@@ -1076,7 +1076,7 @@ File: images/NRAO Logo Badge.png Graphic file (type bmp)
 \absfshift=\dimen327
 \absfshift=\dimen328
 PGFPlots: reading {"data/Vout vs Pin.txt"}
-Package pgfplots info on input line 415: fill between: activating layered graphics
+Package pgfplots info on input line 416: fill between: activating layered graphics
 \pgf@layerbox@axis background=\box73
 \pgf@layerboxsaved@axis background=\box74
 \pgf@layerbox@axis grid=\box75
@@ -1093,7 +1093,7 @@ Package pgfplots info on input line 415: fill between: activating layered graphi
 \pgf@layerboxsaved@axis descriptions=\box86
 \pgf@layerbox@axis foreground=\box87
 \pgf@layerboxsaved@axis foreground=\box88
-Package pgfplots info on input line 415: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+Package pgfplots info on input line 416: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
 File: images/NRAO Logo Badge.png Graphic file (type bmp)
 <images/NRAO Logo Badge.png>
  [6]
@@ -1127,10 +1127,10 @@ Package logreq Info: Writing requests to '002.35.25.05.20-002-REP-SolarTeleRedes
 Here is how much of TeX's memory you used:
  60246 strings out of 411163
  1530440 string characters out of 5809572
- 2750049 words of memory out of 5000000
+ 2750155 words of memory out of 5000000
  80150 multiletter control sequences out of 15000+600000
  518948 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,21n,376p,1031b,2593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.xdv (10 pages, 348344 bytes).
+Output written on 002.35.25.05.20-002-REP-SolarTeleRedesign.xdv (10 pages, 348412 bytes).
