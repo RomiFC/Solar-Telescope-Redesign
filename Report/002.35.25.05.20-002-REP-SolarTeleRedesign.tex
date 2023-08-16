@@ -29,6 +29,8 @@
 \usepackage{lastpage}   % Allows referencing last page (for footer)
 \usepackage{titling}    % To reference title, author, and date
 \usepackage{array}      % For fixed-width tables
+\usepackage{makecell}   % Formats individual table cells
+\usepackage{multirow}   % For multi-row columns (Top left justify header)
 \usepackage[american]{circuitikz} % Used to draw circuit and block diagrams
 \usepackage{appendix}   
 \usepackage{colortbl}   % For coloring table cells
@@ -97,29 +99,30 @@
 
 % ASSIGN TITLE, AUTHOR, DATE, DOCUMENT NUMBER, STATUS, HERE
 \title{Redesign of the Visitor Center Solar Telescope}
-\author{Remy Nguyen
+\author{R. Nguyen
     }% <-this % stops a space
-\date{Aug 15, 2023}
-\def\docnum{[002.35.25.05.20-002]}
-\def\status{\textcolor{red}{Draft}}
+\date{Aug 16, 2023}
+\def\docnum{002.35.25.05.20-002-REP}
+\def\status{RELEASED}
 
 % HEADERS AND FOOTERS
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset[L,R]{2cm}
-\fancyhead[L]{\vspace{-0.8cm}\includegraphics[width=2cm]{images/NRAO Logo Badge.png}}
+\fancyhead[L]{\vspace{-1cm}\includegraphics[width=2cm]{images/NRAO Logo Badge.png}}
 \fancyhead[R]{
 \renewcommand{\arraystretch}{1.4}
 \renewcommand{\arrayrulewidth}{0.25pt}
-\begin{tabular}{|m{6.7cm}|m{4.9cm}|m{3.4cm}|}
+\begin{tabular}{|w{l}{6.7cm}|w{l}{4.9cm}|w{l}{3.4cm}|}
     \hline
-        \textit{\textbf{Title:}} \thetitle &
+        \multirow[t]{2}{6.7cm}{\textit{\textbf{Title:}} \thetitle} &
         \textit{\textbf{Owner:}} \theauthor &
         \textit{\textbf{Date:}}  \thedate \\
+            &   &   \\
     \hline
         \multicolumn{2}{|l|}{
             \textit{\textbf{NRAO Doc \#:}} \docnum  
         } &
-        \textit{\textbf{Version:}} 1 \\
+        \textit{\textbf{Version:}} A \\
     \hline
 \end{tabular}
 }
@@ -142,39 +145,47 @@
      \vspace*{0.5cm}
      \large\docnum \\
      \Large Status: \status \\
-     \vspace*{1cm} \large
+     \vspace*{0.6cm} \large
      % FIRST TABLE HERE
      \begin{tabular}{|m{6.93cm}|m{4.5cm}|m{2cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Prepared By} & \textbf{Organization} & \textbf{Date} \\ \hline
-        R. Nguyen & NRAO Electronics Div. & 8/15/2023 \\ 
+        \makecell[l]{Remy Nguyen\\Engineering Intern} & NRAO Electronics Div. & 8/16/2023 \\ 
         \hline
     \end{tabular} \\
-    \vspace*{1cm}
+    \vspace*{0.8cm}
     \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Approvals} & \textbf{Organization} & \textbf{Signatures} \\ \hline
     \end{tabular}
-    \renewcommand{\arraystretch}{1.5}
+    \renewcommand{\arraystretch}{2}
     % CONTENT OF SECOND TABLE HERE
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
-        T. Mobraten & NRAO Elec. Division &  \\ 
+    \begin{tabular}{|w{l}{3cm}|m{3.5cm}|m{6.93cm}|} \hline
+        \parbox{3cm}{\raggedright
+        Tyler Mobraten Electronics Engineer II
+        } & NRAO Electronics Division \raggedright &  \\ 
         \hline
-        S. Wimbrow & NRAO Elec. Division &  \\ 
+        \parbox{3cm}{\raggedright
+        Steve Wimbrow Electronics Engineer IV
+        } & NRAO Electronics Division \raggedright &  \\ 
         \hline
-        D. Schafer & NRAO Elec. Division &  \\ 
+        \parbox{3cm}{\raggedright
+        Dave Schafer Division Head
+        } & NRAO Electronics Division \raggedright &  \\ 
         \hline
     \end{tabular} \\
     \renewcommand{\arraystretch}{1}
-    \vspace*{1cm}
+    \vspace*{0.8cm}
     \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|} \hline
         \rowcolor{nraoblue}
         \textbf{Released By} & \textbf{Organization} & \textbf{Signature} \\ \hline
     \end{tabular}
     \renewcommand{\arraystretch}{1.5}
     % CONTENT OF THIRD TABLE HERE
-    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|}
-        D. Schafer & NRAO Elec. Division &  \\ 
+    \begin{tabular}{|m{3cm}|m{3.5cm}|m{6.93cm}|} \hline
+        \parbox{3cm}{\raggedright
+        Dave Schafer Division Head
+        } & NRAO Electronics Division \raggedright &  \\ 
         \hline
     \end{tabular}
     \renewcommand{\arraystretch}{1}
@@ -187,13 +198,13 @@
 \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{|m{1.5cm}|m{2.2cm}|m{2.5cm}|m{1.7cm}|m{5cm}|} \hline
         \rowcolor{nraoblue}
-        Version & Date & Author & Affected\newline Section(s) & Reason\\ \hline \hline
+        Version & Date & Author & Affected\newline Section(s) & Reason\\ \hline
     \end{tabular}
 \renewcommand{\arraystretch}{1.6}
-    \begin{tabular}{|m{1.5cm}|m{2.2cm}|m{2.5cm}|m{1.7cm}|m{5cm}|}
-        1 & \thedate & R. Nguyen & All & Initial Draft \\ \hline
-          &          &           &     &               \\ \hline
-          &          &           &     &               \\ \hline
+    \begin{tabular}{|m{1.5cm}|m{2.2cm}|m{2.5cm}|m{1.7cm}|m{5cm}|} \hline
+        01 & Aug 15, 2023 & R. Nguyen & All & Initial Draft \\ \hline
+        02 & Aug 16, 2023 & \makecell[l]{T. Anderson\\R. Nguyen} & All & Edits \\ \hline
+        A  & Aug 16, 2023 & T. Anderson & All & Review \\ \hline
           &          &           &     &               \\ \hline
           &          &           &     &               \\ \hline
           &          &           &     &               \\ \hline
@@ -215,6 +226,13 @@ Located behind the Visitor Center at the Very Large Array (VLA) is a radio teles
 
 \subsection{Scope}
 This document will describe the design choices made in development of the new solar telescope. Calculations and experiments to support design decisions will be demonstrated along with constraints and requirements.
+
+\subsection{Verb Convention}
+“Must” for an obligation; “must not” for a prohibition. 
+
+“May” for a discretionary action; “should” for a recommendation. 
+
+“Will” is used to indicate a future happening/action. 
 
 
 \section{Related Documents and Drawings}
@@ -280,7 +298,7 @@ The first two requirements were fulfilled by Tristen James in designing the encl
             to[qvprobe = Voltmeter] ++ (2,0)
             -| ++ (0.5,-1) node[ground]{};
         \end{circuitikz}
-    \caption{RF signal block diagram}\label{fig:rfblock}
+    \caption{RF Signal Block Diagram.}\label{fig:rfblock}
     \end{center}
 \end{figure}
 Many of the RF components were either reused from the previous design or gathered at no cost. The RF gain block shown in Fig.~\ref{fig:rfblock} and~\ref{fig:rfgain} utilizes 3 low noise amplifiers (LNAs) and an attenuator. The first 2 LNAs are Mini-Circuits ZX60-06203ALN+ which provide a combined gain of 41 dB;\ they are followed by a ZX60-83LN-S+ which provides a mean gain of 15 dB in the filter bandwidth. These amplifiers are followed by an attenuator whose purpose will be described in Section~\ref{sec:tuning}. It is important to note that the receiver noise figure is about 2 dB -- a higher noise figure could result in an undetectable sun/sky delta.
@@ -306,7 +324,7 @@ Many of the RF components were either reused from the previous design or gathere
             \draw (a3.center) ++ (0, 0.6)
             node[anchor=south]{15 dB};
         \end{circuitikz}
-    \caption{49 dB RF gain block}\label{fig:rfgain}
+    \caption{49 dB RF Gain Block.}\label{fig:rfgain}
     \end{center}
 \end{figure}
 
@@ -372,7 +390,7 @@ The rectifier and DC gain block are integrated into a PCB with SMA connectors. T
     \draw (5v2.north)
     node[anchor = south]{\color{red}5 V};
 \end{circuitikz}
-\caption{DC power distribution block diagram (Maximum ratings)}\label{fig:dcblock}
+\caption{DC Power Distribution Block Diagram (Maximum Ratings).}\label{fig:dcblock}
 \end{center}
 \end{figure}
 As part of the effort to make the telescope more modern and visually appealing, the protoboard on the previous design was replaced with a PCB that contains the voltage regulators, the RF power detector IC, and dual noninverting op amps. The 15 volt supply is dropped to 12 volts and 5 volts via linear regulators, each of which powers different components. Figure~\ref{fig:dcblock} shows the maximum current draw of each component to ensure that the system does not exceed the 1.5 amp rating of the L78XX chips.
@@ -415,7 +433,7 @@ Figure~\ref{fig:vpcurve} shows the voltage-power curve of the ADL5902-EVALZ\foot
                 node[anchor=south]{Incorrect Range};
             \end{axis}
 \end{tikzpicture}
-\caption{Output voltage of the ADL5902-EVALZ as a function of input power.}
+\caption{Output Voltage of the ADL5902-EVALZ as a Function of Input Power.}
 \label{fig:vpcurve}
 \end{center}
 \end{figure}
@@ -446,7 +464,7 @@ Ideally, the RF gain should be adjusted such that the low end is roughly 0 volts
             \draw(amp.north)
             node[anchor=south]{DC Gain Block};
         \end{circuitikz}
-    \caption{Optional output scaling circuit.}\label{fig:scalingcircuit}
+    \caption{Optional Output Scaling Circuit.}\label{fig:scalingcircuit}
     \end{center}
 \end{figure}
 In reality, the sensitivity of the receiver will prevent a perfect 0 to 3 volt scaling at all times. Thus, in order to ensure some amount of voltmeter deflection occurs despite environmental changes, a practical range around 0.5--2.5 volts may be desired.
@@ -494,7 +512,7 @@ Values for solar flux density $S$ must be found within the operating frequency. 
     2.8 GHz & 70 SFU & 150 SFU & 280 SFU \\
     8.8 GHz & 152 SFU & 326 SFU & 608 SFU
 \end{tabular}
-\caption{Solar Flux Density $S$ at 8.8 GHz extrapolated by multiplying $S$ in~\color{captioncolor}\nraocite{solartemp} at 2.8 GHz by a factor of 2.17.} \label{tab:sfd}
+\caption{Solar Flux Density $S$ at 8.8 GHz Extrapolated by Multiplying $S$ in~\color{captioncolor}\nraocite{solartemp} at 2.8 GHz by a Factor of 2.17.} \label{tab:sfd}
 \end{table}
 
 With values for $S$ and $A_e$ found, we can now calculate $P_{sun}(f)$ with equation~\ref{eq:psd} to be -181.6 dBm/Hz at $S_{\min}$. A problem arises when comparing this to the thermal noise PSD of -174 dBm/Hz at 300 K;\ because the power received by the sun is below the noise floor, the increase in $P_R$ due to $P_{sun}$ will be very small compared to $P_{noise}$.
@@ -535,7 +553,7 @@ In order to confirm these calculations, the antenna was connected to an Anritsu 
         \legend{Ground\\(-134.2 dBm/Hz), Sun\\(-136.3 dBm/Hz), Cold Sky\\(-136.9 dBm/Hz)}
     \end{axis}
 \end{tikzpicture}
-\caption{Signal trace with 41 dB of gain from two ZX60-06203ALN+ LNAs.}\label{fig:specan1}
+\caption{Signal Trace With 41 dB of Gain From Two ZX60-06203ALN+ LNAs.}\label{fig:specan1}
 \end {center}
 \end{figure}
 Mean channel power measurements on the Anritsu from 7.95 to 8.85 GHz show a 2.7 dB ground/sky delta and a 0.6 dB sun/sky delta. It is difficult to calculate the RF power received from the ground prior to measurement, however, the sun/sky delta is well within range of expected values.

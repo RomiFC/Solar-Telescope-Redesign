@@ -235,6 +235,10 @@ INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\titling\titling.s
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\titling\titling.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\makecell\makecell.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\makecell\makecell.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\circuitikz\circuitikz.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\latex\circuitikz\circuitikz.sty
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
@@ -460,13 +464,13 @@ INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
 INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
+INPUT .\images\NRAO Logo Badge.png
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
 INPUT C:\Users\rnguyen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
-INPUT .\images\NRAO Logo Badge.png
 INPUT data\FileName_1.txt
 INPUT data\FileName_1.txt
 INPUT data\FileName_1.txt
