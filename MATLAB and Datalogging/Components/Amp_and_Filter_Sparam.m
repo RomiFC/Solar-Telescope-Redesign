@@ -1,7 +1,8 @@
-clear
-clc
 % Amplifier gain calculations for VLA Solar Telescope
 % S parameters measured with 30dB output attenuation
+clear
+clc
+close all
 
 % Importing data
 ZX60A = sparameters('ZX60-83LN-S+ (A), 30dB Output Attenuator.s2p');
