@@ -2,3 +2,34 @@ Connection Diagram/
 Connection*Diagram/
 /PCB*Design/S_Tele/002.35.25.05.20-001-PCB-SolarTele-backups/
 /PCB*Design/S_Tele/*-backups/
+
+# KiCad
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# LaTeX
+data/*
+images/*
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.out
+*.run.xml
+*.toc
+*.xdv
